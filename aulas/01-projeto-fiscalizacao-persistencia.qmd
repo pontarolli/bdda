@@ -480,6 +480,6 @@ grupo (ou aplicação) teria credenciais só suas.
 
 - Trazer o banco do RPi funcionando e testado
 - Próxima **CNVI**: o microsserviço passa a gravar cada leitura direto no banco do RPi de cada grupo
-- Próxima **DBDA**: revisão das consultas de agregação e discussão de performance
+- Próxima **BDDA**: revisão das consultas de agregação e discussão de performance
 
 ## Obrigado!

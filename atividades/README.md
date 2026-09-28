@@ -1,4 +1,4 @@
-# dbda-atividades
+# bdda-atividades
 
 **Nome completo:** <escreva aqui seu nome completo>
 

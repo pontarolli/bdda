@@ -9,7 +9,7 @@ project:
 website:
   title: "Banco de Dados"
   page-navigation: false
-  repo-url: https://github.com/pontarolli/dbda-aulas
+  repo-url: https://github.com/pontarolli/bdda-aulas
   page-footer:
     left: "IFSP Boituva · Técnico em Redes de Computadores"
     right: "Ricardo Pasquati Pontarolli"

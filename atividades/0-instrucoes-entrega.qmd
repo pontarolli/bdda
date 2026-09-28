@@ -12,7 +12,7 @@ format:
 
 ## Repositório (fazer uma única vez)
 
-1. Crie um repositório **privado** no GitHub, na sua conta pessoal, com o nome **exatamente** `dbda-atividades` (todos os alunos devem usar esse mesmo nome, para facilitar a conferência).
+1. Crie um repositório **privado** no GitHub, na sua conta pessoal, com o nome **exatamente** `bdda-atividades` (todos os alunos devem usar esse mesmo nome, para facilitar a conferência).
 2. Baixe o arquivo [`README.md`](README.md), salve-o na raiz do repositório e preencha o campo com seu nome completo.
 3. Em **Settings → Collaborators → Add people**, adicione o professor como colaborador: [github.com/pontarolli](https://github.com/pontarolli).
 
@@ -20,10 +20,10 @@ Esse repositório é único para a disciplina e será reaproveitado nas 6 ativid
 
 ## Estrutura final do repositório
 
-Ao final das 6 atividades, seu repositório `dbda-atividades` deve ficar assim:
+Ao final das 6 atividades, seu repositório `bdda-atividades` deve ficar assim:
 
 ```text
-dbda-atividades/
+bdda-atividades/
 ├── README.md
 ├── atividade-1.md
 ├── atividade-2.md
