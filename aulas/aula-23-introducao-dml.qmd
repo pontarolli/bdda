@@ -1,0 +1,68 @@
+---
+title: "Aula 23 — Introdução à Linguagem DML"
+---
+
+## Objetivos da Aula
+
+- Compreender o que é **DML**.
+- Conhecer os comandos principais.
+- Entender seu papel na manipulação de dados.
+
+## O que é DML?
+
+- **Data Manipulation Language**.
+- Linguagem para **manipular** os dados.
+- Parte da **SQL**.
+
+## Manipular = ?
+
+- **Inserir** dados.
+- **Consultar** dados.
+- **Atualizar** dados.
+- **Excluir** dados.
+
+## Os Quatro Comandos
+
+- **INSERT** — inserir.
+- **SELECT** — consultar.
+- **UPDATE** — atualizar.
+- **DELETE** — excluir.
+
+## DML x DDL
+
+- **DML:** mexe nos **dados**.
+- **DDL:** mexe na **estrutura**.
+- Vamos ver DDL mais adiante.
+
+## Será que Vai Dar Certo?
+
+- A DML trabalha sobre **tabelas existentes**.
+- Primeiro cria-se a estrutura.
+- Depois os dados.
+
+::: {.callout-note}
+DML é o "dia a dia" do banco: consultar, inserir, atualizar e excluir — o que mais se faz na prática.
+:::
+
+## Exemplo
+
+- `SELECT * FROM Cliente;` — lista clientes.
+- `INSERT INTO Cliente ...` — adiciona.
+
+## Resumo da Aula
+
+- **DML** manipula os **dados**.
+- Comandos: **INSERT, SELECT, UPDATE, DELETE**.
+- Trabalha sobre tabelas **já criadas**.
+
+## Atividade Rápida
+
+- Cite os **quatro** comandos DML e o que fazem.
+
+## Referências
+
+- ROB, P.; CORONEL, C. *Sistemas de Banco de Dados*. Cengage.
+
+## Próxima Aula
+
+- **Aula 22:** Apresentando o SGBD MySQL.

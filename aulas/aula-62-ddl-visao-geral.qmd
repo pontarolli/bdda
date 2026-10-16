@@ -1,0 +1,65 @@
+---
+title: "Aula 62 — DDL: Linguagem de Definição de Dados"
+---
+
+## Objetivos da Aula
+
+- Compreender o que é **DDL**.
+- Conhecer seus comandos.
+- Entender o papel da DDL no banco.
+
+## O que é DDL?
+
+- **Data Definition Language**.
+- Define a **estrutura** do banco.
+- Cria, altera e remove objetos.
+
+## DDL x DML
+
+- **DDL:** estrutura (tabelas, colunas, índices).
+- **DML:** dados (linhas).
+- DDL "constrói a casa"; DML "mobília".
+
+## Principais Comandos DDL
+
+- **CREATE** — cria.
+- **ALTER** — altera.
+- **DROP** — remove.
+- **TRUNCATE** — esvazia.
+
+## Objetos do Banco
+
+- Tabelas, **views**, índices.
+- Bancos de dados (**schemas**).
+- Usuários e privilégios.
+
+## Criação de Estrutura
+
+```sql
+CREATE DATABASE escola;
+CREATE TABLE Aluno ( ... );
+CREATE INDEX idx_nome ON Aluno(nome);
+```
+
+::: {.callout-note}
+Mudanças na estrutura (DDL) costumam ser **irreversíveis** com facilidade: pense bem antes de alterar ou apagar.
+:::
+
+## Prática
+
+- Crie um banco e uma tabela.
+- Liste a estrutura com `DESCRIBE`.
+
+## Resumo da Aula
+
+- **DDL** define a **estrutura**.
+- Comandos: **CREATE, ALTER, DROP, TRUNCATE**.
+- Complementa a DML.
+
+## Referências
+
+- ROB, P.; CORONEL, C. *Sistemas de Banco de Dados*. Cengage.
+
+## Próxima Aula
+
+- **Aula 57:** DDL — CREATE TABLE.

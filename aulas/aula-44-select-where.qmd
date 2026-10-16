@@ -1,0 +1,71 @@
+---
+title: "Aula 44 — SELECT ... WHERE: Filtros Básicos"
+---
+
+## Objetivos da Aula
+
+- Filtrar linhas com **WHERE**.
+- Usar **condições** de igualdade.
+- Combinar SELECT com filtros.
+
+## Filtrando Resultados
+
+- Raramente queremos **tudo**.
+- O **WHERE** seleciona **linhas**.
+- Aplica uma **condição**.
+
+## Sintaxe
+
+```sql
+SELECT * FROM Aluno
+WHERE idade = 16;
+```
+
+- Só as linhas que atendem.
+- `=` compara **igualdade**.
+
+## Comparações
+
+- `=` igual
+- `<>` ou `!=` diferente
+- `>` maior
+- `<` menor
+- `>=` / `<=` maior/menor ou igual
+
+## Exemplos
+
+```sql
+SELECT nome FROM Aluno WHERE idade > 18;
+SELECT * FROM Produto WHERE preco < 10;
+```
+
+## Texto Precisa de Aspas
+
+```sql
+SELECT * FROM Aluno WHERE nome = 'Ana';
+```
+
+- Textos entre **aspas simples**.
+
+::: {.callout-note}
+O `WHERE` age **linha a linha** e mantém só as que tornam a condição **verdadeira**.
+:::
+
+## Prática
+
+- Liste alunos com idade maior que 17.
+- Liste produtos com preço igual a 5.
+
+## Resumo da Aula
+
+- **WHERE** filtra linhas.
+- Usa **operadores** de comparação.
+- Textos em **aspas simples**.
+
+## Referências
+
+- ROB, P.; CORONEL, C. *Sistemas de Banco de Dados*. Cengage.
+
+## Próxima Aula
+
+- **Aula 41:** WHERE — operadores de comparação e lógicos.

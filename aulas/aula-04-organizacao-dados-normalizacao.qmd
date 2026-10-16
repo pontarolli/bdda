@@ -1,5 +1,5 @@
 ---
-title: "Aula 04 — Organização de Dados e Normalização: Conceitos"
+title: "Aula 4 — Organização de Dados e Normalização: Conceitos"
 ---
 
 ## Objetivos da Aula

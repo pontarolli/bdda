@@ -1,0 +1,67 @@
+---
+title: "Aula 67 — JOIN: Juntando Dados de Tabelas"
+---
+
+## Objetivos da Aula
+
+- Compreender o conceito de **JOIN**.
+- Entender por que os dados estão **separados**.
+- Conhecer os **tipos** de junção.
+
+## O Problema
+
+- Os dados estão em **tabelas separadas**.
+- Queremos ver **relacionados**.
+- Ex.: o nome do cliente **junto** com o pedido.
+
+## O que é um JOIN?
+
+- **Junta** dados de duas ou mais tabelas.
+- Usa as **chaves** para casar as linhas.
+- Resultado: uma **tabela combinada**.
+
+## Sintaxe Básica
+
+```sql
+SELECT c.nome, p.valor
+FROM Cliente c
+JOIN Pedido p ON p.id_cliente = c.id;
+```
+
+- **ON** define a **condição** de junção.
+
+## Tipos de JOIN
+
+- **INNER JOIN:** só as linhas que **casam**.
+- **LEFT JOIN:** todas da esquerda.
+- **RIGHT JOIN:** todas da direita.
+- **CROSS JOIN:** produto cartesiano.
+
+## Por que Usar Alias
+
+- `c` para Cliente, `p` para Pedido.
+- Evita ambiguidade de colunas.
+- Deixa a consulta **legível**.
+
+::: {.callout-note}
+O JOIN é o que "dá sentido" ao modelo relacional: as tabelas guardam partes e a junção reconstrói a história.
+:::
+
+## Prática
+
+- Liste pedidos com o **nome do cliente**.
+- Escreva a condição **ON** corretamente.
+
+## Resumo da Aula
+
+- **JOIN** junta tabelas pelas **chaves**.
+- **ON** define a condição.
+- Há vários **tipos** de junção.
+
+## Referências
+
+- ROB, P.; CORONEL, C. *Sistemas de Banco de Dados*. Cengage.
+
+## Próxima Aula
+
+- **Aula 62:** INNER JOIN na prática.

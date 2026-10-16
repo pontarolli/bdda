@@ -1,0 +1,66 @@
+---
+title: "Aula 38 — Síntese e Revisão do 2º Bimestre"
+---
+
+## Objetivos da Aula
+
+- **Revisar** os conceitos do bimestre.
+- Organizar o estudo para a **avaliação**.
+- Esclarecer dúvidas.
+
+## O que Estudamos
+
+- **SGBDs** e sua arquitetura.
+- **MySQL**: instalação e clientes.
+- Criação de **bancos e tabelas**.
+- **Chaves** e integridade.
+
+## SGBD
+
+- Software que **gerencia** o banco.
+- Componentes: **consulta, armazenamento, transações**.
+- Catálogo guarda **metadados**.
+
+## MySQL
+
+- SGBD **relacional** livre e popular.
+- Clientes **modo texto** e **gráfico**.
+- Porta padrão **3306**.
+
+## Tabelas e Chaves
+
+- `CREATE TABLE` define a **estrutura**.
+- `PRIMARY KEY` identifica; `AUTO_INCREMENT` gera.
+- `FOREIGN KEY` **liga** tabelas.
+
+## Integridade
+
+- **Referencial:** FK aponta para registro válido.
+- Ações: **RESTRICT, CASCADE, SET NULL**.
+- N:N vira **tabela intermediária**.
+
+::: {.callout-note}
+O fio condutor: sair do **modelo** e chegar a um banco **real**, criado e populado no MySQL.
+:::
+
+## Como se Preparar
+
+- Reler os **resumos**.
+- Praticar **CREATE, INSERT, DESCRIBE**.
+- Revisar **chaves** e **integridade**.
+- Tirar **dúvidas**.
+
+## Resumo da Aula
+
+- Revisamos SGBD, MySQL e criação de tabelas.
+- Reforçamos **chaves** e **integridade referencial**.
+- Prontos para a **avaliação**.
+
+## Referências
+
+- ROB, P.; CORONEL, C. *Sistemas de Banco de Dados*. Cengage.
+- Documentação oficial do MySQL.
+
+## Próxima Aula
+
+- **Aula 37:** Revisão e introdução à linguagem SQL.

@@ -1,5 +1,5 @@
 ---
-title: "Aula 09 — Redação Descritiva dos Requisitos (Minimundo)"
+title: "Aula 9 — Redação Descritiva dos Requisitos (Minimundo)"
 ---
 
 ## Objetivos da Aula

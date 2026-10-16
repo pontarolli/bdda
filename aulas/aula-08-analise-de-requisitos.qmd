@@ -1,5 +1,5 @@
 ---
-title: "Aula 08 — Análise de Requisitos para Banco de Dados"
+title: "Aula 8 — Análise de Requisitos para Banco de Dados"
 ---
 
 ## Objetivos da Aula

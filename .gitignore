@@ -8,9 +8,8 @@
 /material-professor-anterior/
 /livros/
 
-# Provas e atividades avaliativas (contêm gabarito) — não publicar/versionar
-# no repositório público até o professor decidir o contrário.
-/avaliacoes/
+# Avaliações (contêm gabarito) — ficam em aulas/, mas não são publicadas
+/aulas/*.gift
 
 # Material de trabalho do professor (planos, notas, laboratório) — não é conteúdo do aluno
 /BTV*.pdf

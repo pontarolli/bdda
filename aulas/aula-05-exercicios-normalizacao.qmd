@@ -1,5 +1,5 @@
 ---
-title: "Aula 05 — Exercícios de Normalização"
+title: "Aula 5 — Exercícios de Normalização"
 ---
 
 ## Objetivos da Aula

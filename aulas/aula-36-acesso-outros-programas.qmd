@@ -1,0 +1,63 @@
+---
+title: "Aula 36 — Acessando o Banco por Outros Programas"
+---
+
+## Objetivos da Aula
+
+- Conhecer formas de **acessar** o banco fora do SQL.
+- Entender **clientes** e **bibliotecas**.
+- Vislumbrar a **integração** com aplicações.
+
+## Além do Terminal
+
+- O banco não é só para o DBA.
+- Muitos **programas** acessam os dados.
+- A integração é o objetivo final.
+
+## Formas de Acesso
+
+- **Clientes SQL** (Workbench, DBeaver).
+- **Bibliotecas** em linguagens (Python, PHP, Java).
+- **APIs** e conectores.
+
+## Ferramentas de Terceiros
+
+- **DBeaver** (genérico).
+- **phpMyAdmin** (web).
+- Planilhas e relatórios.
+
+## Conexão de Programas
+
+- O programa usa um **driver** (ex.: ODBC).
+- Envia **SQL** ao SGBD.
+- Recebe os **resultados**.
+
+## Exemplos de Uso
+
+- Sistemas escolares.
+- Lojas virtuais.
+- Aplicativos **desktop**.
+- Dashboards.
+
+::: {.callout-note}
+O banco de dados é o **coração** de um sistema: a aplicação é a "cara", mas os dados vivem nele.
+:::
+
+## Prática
+
+- Acesse o banco por um cliente **diferente**.
+- Registre a mesma consulta em duas ferramentas.
+
+## Resumo da Aula
+
+- Vários programas acessam o banco.
+- Usam **drivers e bibliotecas**.
+- A integração com aplicações é o **objetivo**.
+
+## Referências
+
+- Documentação do MySQL e de clientes de terceiros.
+
+## Próxima Aula
+
+- **Aula 35:** Prática — banco de dados completo.

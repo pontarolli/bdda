@@ -1,5 +1,5 @@
 ---
-title: "Aula 02 — Introdução ao Conceito de Dados"
+title: "Aula 2 — Introdução ao Conceito de Dados"
 ---
 
 ## Objetivos da Aula

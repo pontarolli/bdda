@@ -1,0 +1,68 @@
+---
+title: "Aula 28 — Criando um Banco de Dados no MySQL"
+---
+
+## Objetivos da Aula
+
+- Criar um **banco de dados**.
+- Entender o comando **CREATE DATABASE**.
+- Gerenciar bancos (listar, usar, excluir).
+
+## O que é um Banco de Dados no MySQL?
+
+- Um **esquema** (schema).
+- Contém **tabelas** relacionadas.
+- Ex.: `escola`, `loja`, `biblioteca`.
+
+## Criando
+
+- Comando: `CREATE DATABASE escola;`
+- Cria o banco vazio.
+- Pronto para receber **tabelas**.
+
+## Boas Práticas de Nome
+
+- Letras **minúsculas**.
+- Sem espaços nem acentos.
+- Nome **descritivo**.
+- Ex.: `escola`, `vendas_2026`.
+
+## Selecionando
+
+- `USE escola;`
+- Agora os comandos agem **neste** banco.
+
+## Listando e Removendo
+
+- `SHOW DATABASES;` — lista.
+- `DROP DATABASE escola;` — **remove**.
+
+::: {.callout-note}
+`DROP DATABASE` apaga **tudo** dentro do banco, sem papel de bala. Use com muita cautela!
+:::
+
+## Charset e Collation
+
+- **Charset** define caracteres (utf8mb4).
+- **Collation** define comparação/ordenação.
+- Importante para **acentos**.
+
+## Prática
+
+- Crie um banco `escola`.
+- Confirme com `SHOW DATABASES;`.
+- Selecione com `USE escola;`.
+
+## Resumo da Aula
+
+- Criamos bancos com **CREATE DATABASE**.
+- Selecionamos com **USE**.
+- Cuidado ao **DROP**.
+
+## Referências
+
+- Documentação oficial do MySQL.
+
+## Próxima Aula
+
+- **Aula 27:** Tipos de dados e campos.

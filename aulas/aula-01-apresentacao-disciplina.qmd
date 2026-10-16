@@ -1,5 +1,5 @@
 ---
-title: "Aula 01 — Apresentação da Disciplina e Metodologia"
+title: "Aula 1 — Apresentação da Disciplina e Metodologia"
 ---
 
 ## Bem-vindos!

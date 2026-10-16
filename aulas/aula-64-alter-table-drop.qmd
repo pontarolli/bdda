@@ -1,0 +1,73 @@
+---
+title: "Aula 64 — DDL: ALTER TABLE e DROP"
+---
+
+## Objetivos da Aula
+
+- Alterar tabelas com **ALTER TABLE**.
+- Remover objetos com **DROP**.
+- Conhecer os **cuidados** nessas operações.
+
+## ALTER TABLE
+
+- Modifica uma tabela **existente**.
+- Adiciona, altera ou remove colunas.
+- Adiciona ou remove **restrições**.
+
+## Adicionando Coluna
+
+```sql
+ALTER TABLE Aluno ADD telefone VARCHAR(20);
+```
+
+## Alterando Coluna
+
+```sql
+ALTER TABLE Aluno MODIFY telefone VARCHAR(30);
+```
+
+## Removendo Coluna
+
+```sql
+ALTER TABLE Aluno DROP COLUMN telefone;
+```
+
+## Adicionando Restrição
+
+```sql
+ALTER TABLE Aluno ADD UNIQUE (email);
+ALTER TABLE Aluno ADD FOREIGN KEY (id_curso) REFERENCES Curso(id);
+```
+
+## DROP
+
+```sql
+DROP TABLE Aluno;
+DROP DATABASE escola;
+```
+
+- Remove **tabela** ou **banco**.
+- Ação **destrutiva** e difícil de reverter.
+
+::: {.callout-note}
+`DROP TABLE` apaga a estrutura **e** os dados. Antes de rodar, confirme o nome e faça **backup**.
+:::
+
+## Prática
+
+- Adicione e remova uma coluna.
+- Adicione uma restrição.
+
+## Resumo da Aula
+
+- **ALTER TABLE** modifica a estrutura.
+- **DROP** remove tabelas e bancos.
+- São operações **cuidadosas**.
+
+## Referências
+
+- Documentação oficial do MySQL.
+
+## Próxima Aula
+
+- **Aula 59:** Restrições — PRIMARY KEY e FOREIGN KEY.

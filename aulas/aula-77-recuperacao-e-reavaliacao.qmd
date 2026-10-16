@@ -1,0 +1,63 @@
+---
+title: "Aula 77 — Recuperação e Reavaliação"
+---
+
+## Objetivos da Aula
+
+- **Retomar** os conteúdos essenciais do ano.
+- Oferecer oportunidade de **recuperação**.
+- Consolidar a **aprendizagem**.
+
+## Aula de Hoje
+
+- **Revisão** dos conteúdos centrais.
+- Orientação para a **recuperação**.
+- Esclarecimento de **dúvidas**.
+
+## Conteúdos Essenciais
+
+- **Modelagem:** ER, chaves, cardinalidades.
+- **SGBD:** MySQL, criação de tabelas.
+- **SQL:** SELECT, INSERT, UPDATE, DELETE.
+- **Avançado:** JOINs, DDL, transações.
+
+## Temas Mais Cobrados
+
+- **Chave primária** e **estrangeira**.
+- **SELECT** com WHERE e ORDER BY.
+- **JOIN** entre tabelas.
+- **Integridade referencial**.
+
+## Como se Preparar
+
+- Reler os **resumos**.
+- Refazer as **consultas** das aulas.
+- Praticar no **MySQL**.
+- Trazer **dúvidas**.
+
+::: {.callout-note}
+Recuperação é a chance de **fechar lacunas**: identifique o que ficou fraco e pratique exatamente isso.
+:::
+
+## Estratégia de Estudo
+
+| Tema | Tempo sugerido |
+|------|----------------|
+| Modelagem | 1 h |
+| SQL básico | 1 h |
+| JOINs | 1 h |
+
+## Resumo da Aula
+
+- Revisamos os **conteúdos essenciais**.
+- Orientamos a **recuperação**.
+- Organizamos o **estudo**.
+
+## Referências
+
+- ROB, P.; CORONEL, C. *Sistemas de Banco de Dados*. Cengage.
+- HEUSER, C. A. *Projeto de Banco de Dados*. Bookman.
+
+## Próxima Aula
+
+- **Aula 72:** Encerramento do ano letivo.

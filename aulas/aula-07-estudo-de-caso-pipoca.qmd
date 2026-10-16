@@ -1,5 +1,5 @@
 ---
-title: "Aula 07 — Estudo de Caso Comercial: o Vendedor de Pipoca"
+title: "Aula 7 — Estudo de Caso Comercial: o Vendedor de Pipoca"
 ---
 
 ## Objetivos da Aula

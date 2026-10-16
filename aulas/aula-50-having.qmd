@@ -1,0 +1,69 @@
+---
+title: "Aula 50 — SELECT: Filtrando Grupos com HAVING"
+---
+
+## Objetivos da Aula
+
+- Compreender o **HAVING**.
+- Diferenciar **WHERE** de **HAVING**.
+- Filtrar **resultados de grupos**.
+
+## O Problema
+
+- O WHERE filtra **linhas** **antes** de agrupar.
+- E se quisermos filtrar **grupos** **depois**?
+- Usamos o **HAVING**.
+
+## Sintaxe
+
+```sql
+SELECT cidade, COUNT(*) AS total
+FROM Aluno
+GROUP BY cidade
+HAVING COUNT(*) > 5;
+```
+
+- Só cidades com **mais de 5** alunos.
+
+## WHERE x HAVING
+
+- **WHERE:** filtra linhas **antes** do agrupamento.
+- **HAVING:** filtra grupos **depois**.
+- Podem aparecer **juntos**.
+
+## Exemplo Completo
+
+```sql
+SELECT cidade, AVG(idade)
+FROM Aluno
+WHERE idade >= 15
+GROUP BY cidade
+HAVING AVG(idade) > 16;
+```
+
+## Ordem das Cláusulas
+
+- **SELECT → FROM → WHERE → GROUP BY → HAVING → ORDER BY**.
+
+::: {.callout-note}
+`WHERE` não enxerga agregações; para filtrar por `COUNT`, `SUM`, `AVG`... use sempre o **HAVING**.
+:::
+
+## Prática
+
+- Liste cidades com **mais de** 3 clientes.
+- Combine WHERE e HAVING na mesma consulta.
+
+## Resumo da Aula
+
+- **HAVING** filtra grupos.
+- Vem **depois** do GROUP BY.
+- Diferente do WHERE (que filtra linhas).
+
+## Referências
+
+- ROB, P.; CORONEL, C. *Sistemas de Banco de Dados*. Cengage.
+
+## Próxima Aula
+
+- **Aula 47:** Funções de string e de data.

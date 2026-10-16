@@ -1,0 +1,75 @@
+---
+title: "Aula 46 — WHERE: BETWEEN, IN, LIKE e IS NULL"
+---
+
+## Objetivos da Aula
+
+- Usar filtros **especiais**.
+- Trabalhar com **intervalos**, listas e padrões.
+- Lidar com valores **nulos**.
+
+## BETWEEN
+
+```sql
+SELECT * FROM Aluno WHERE idade BETWEEN 15 AND 18;
+```
+
+- Intervalo **inclusivo**.
+- Equivale a `>= 15 AND <= 18`.
+
+## IN
+
+```sql
+SELECT * FROM Aluno WHERE cidade IN ('Boituva', 'Ipero');
+```
+
+- Verifica se está **na lista**.
+- Mais limpo que vários `OR`.
+
+## LIKE
+
+```sql
+SELECT * FROM Aluno WHERE nome LIKE 'A%';
+```
+
+- Busca por **padrão**.
+- `%` = qualquer sequência.
+- `_` = um caractere.
+
+## Exemplos de LIKE
+
+- `'A%'` — começa com A.
+- `'%silva%'` — contém "silva".
+- `'_na'` — termina com "na".
+
+## IS NULL
+
+```sql
+SELECT * FROM Aluno WHERE telefone IS NULL;
+```
+
+- Verifica valores **nulos**.
+- **Não** use `= NULL` (não funciona).
+
+::: {.callout-note}
+`NULL` não é "vazio" nem "zero": é a **ausência** de valor. Por isso usa-se `IS NULL`, não `= NULL`.
+:::
+
+## Prática
+
+- Liste alunos com idade em um **intervalo**.
+- Busque nomes que comecem com certa letra.
+
+## Resumo da Aula
+
+- **BETWEEN** filtra intervalos.
+- **IN** filtra listas.
+- **LIKE** busca padrões; **IS NULL** acha nulos.
+
+## Referências
+
+- Documentação oficial do MySQL.
+
+## Próxima Aula
+
+- **Aula 43:** SELECT — ordenação com ORDER BY.

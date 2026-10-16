@@ -1,0 +1,66 @@
+---
+title: "Aula 73 — Acesso ao Banco de Dados por uma Aplicação"
+---
+
+## Objetivos da Aula
+
+- Entender como uma **aplicação** usa o banco.
+- Conhecer **drivers** e **bibliotecas**.
+- Vislumbrar a arquitetura **cliente-servidor**.
+
+## Do Banco para o Sistema
+
+- O banco guarda os **dados**.
+- A aplicação oferece a **interface**.
+- Juntos formam o **sistema**.
+
+## Arquitetura
+
+- **Cliente:** a aplicação.
+- **Servidor:** o SGBD.
+- Comunicação por **rede**.
+
+## Como a Aplicação Conecta
+
+- Usa um **driver** (conector).
+- Envia comandos **SQL**.
+- Recebe **resultados**.
+
+## Linguagens e Bibliotecas
+
+- **Python:** `mysql.connector`, `PyMySQL`.
+- **PHP:** PDO, mysqli.
+- **Java:** JDBC.
+- **JavaScript:** mysql2.
+
+## Fluxo Típico
+
+- **1.** Abrir a conexão.
+- **2.** Enviar a consulta.
+- **3.** Ler os resultados.
+- **4.** Fechar a conexão.
+
+::: {.callout-note}
+A aplicação **nunca** guarda os dados "de verdade": ela lê e escreve no banco, que é a fonte da verdade.
+:::
+
+## Cuidados
+
+- Não colocar **senhas no código**.
+- Evitar montar SQL por **concatenação**.
+- Usar **parâmetros** (evita SQL Injection).
+
+## Resumo da Aula
+
+- Aplicação e banco formam o **sistema**.
+- Conexão via **drivers** e bibliotecas.
+- Importância da **segurança**.
+
+## Referências
+
+- Documentação oficial do MySQL.
+- ROB, P.; CORONEL, C. *Sistemas de Banco de Dados*. Cengage.
+
+## Próxima Aula
+
+- **Aula 68:** Conectando a aplicação ao banco — visão geral.

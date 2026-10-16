@@ -1,0 +1,69 @@
+---
+title: "Aula 42 — O Comando SELECT: Estrutura Geral"
+---
+
+## Objetivos da Aula
+
+- Compreender a **estrutura** do SELECT.
+- Conhecer as **cláusulas** principais.
+- Executar consultas simples.
+
+## Consultar Dados
+
+- A operação mais comum em bancos.
+- Feita com o comando **SELECT**.
+- "Seleciona" dados de tabelas.
+
+## Estrutura Básica
+
+```sql
+SELECT coluna1, coluna2
+FROM tabela;
+```
+
+- **SELECT:** o que mostrar.
+- **FROM:** de onde.
+
+## Selecionando Tudo
+
+```sql
+SELECT * FROM Aluno;
+```
+
+- `*` significa **todas** as colunas.
+- Útil para **conferir**.
+
+## Cláusulas Principais
+
+- `WHERE` — filtra linhas.
+- `ORDER BY` — ordena.
+- `GROUP BY` — agrupa.
+- `HAVING` — filtra grupos.
+
+## Ordem de Escrita
+
+- **SELECT → FROM → WHERE → GROUP BY → HAVING → ORDER BY**.
+- A SQL exige uma **ordem** de cláusulas.
+
+::: {.callout-note}
+Escrever `*` é prático, mas em tabelas grandes custa desempenho: prefira listar **só as colunas** necessárias.
+:::
+
+## Prática
+
+- Liste todos os alunos.
+- Liste apenas **nome** e **idade**.
+
+## Resumo da Aula
+
+- **SELECT** consulta dados.
+- Estrutura: **SELECT ... FROM**.
+- Tem **cláusulas** com ordem definida.
+
+## Referências
+
+- ROB, P.; CORONEL, C. *Sistemas de Banco de Dados*. Cengage.
+
+## Próxima Aula
+
+- **Aula 39:** SELECT — colunas, alias e DISTINCT.

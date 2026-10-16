@@ -1,0 +1,73 @@
+---
+title: "Aula 53 — INSERT: Múltiplas Linhas e Valores Padrão"
+---
+
+## Objetivos da Aula
+
+- Inserir **várias linhas** de uma vez.
+- Usar **valores padrão**.
+- Inserir dados a partir de outra **consulta**.
+
+## Várias Linhas
+
+```sql
+INSERT INTO Aluno (nome, idade) VALUES
+('Ana', 16),
+('Bia', 17),
+('Caio', 15);
+```
+
+- Um só comando, **vários registros**.
+- Mais **rápido** que vários INSERTs.
+
+## Valores Padrão (DEFAULT)
+
+- Colunas podem ter valor **padrão**.
+- `DEFAULT` define o valor automático.
+- Se não informar, o padrão é usado.
+
+## Inserindo com DEFAULT
+
+```sql
+INSERT INTO Aluno (nome) VALUES ('Duda');
+```
+
+- Só o nome; o resto usa o **padrão** (ou fica nulo).
+
+## INSERT ... SELECT
+
+```sql
+INSERT INTO AlunosAntigos (nome, idade)
+SELECT nome, idade FROM Aluno WHERE idade > 18;
+```
+
+- Copia dados de outra **consulta**.
+- Útil para **migração** e cópias.
+
+## Ignorando Erros
+
+- `INSERT IGNORE` pula violações.
+- Use com **cautela**.
+
+::: {.callout-note}
+O `INSERT ... SELECT` é a forma elegante de **copiar** dados entre tabelas sem sair do banco.
+:::
+
+## Prática
+
+- Insira vários alunos de uma vez.
+- Crie uma tabela e copie dados com `INSERT ... SELECT`.
+
+## Resumo da Aula
+
+- INSERT pode ter **várias linhas**.
+- `DEFAULT` preenche automaticamente.
+- `INSERT ... SELECT` copia de uma consulta.
+
+## Referências
+
+- Documentação oficial do MySQL.
+
+## Próxima Aula
+
+- **Aula 50:** UPDATE — atualizando dados.
