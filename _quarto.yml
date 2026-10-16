@@ -3,7 +3,6 @@ project:
   render:
     - index.qmd
     - aulas/*.qmd
-    - /atividades/*.qmd
   pre-render: scripts/set_version.py
 
 website:

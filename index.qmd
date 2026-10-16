@@ -18,15 +18,3 @@ Módulo prático com Raspberry Pi, em conjunto com Computação em Nuvem e Virtu
 ::: {.callout-note}
 Nos slides, use as setas do teclado para navegar, **S** para abrir as notas do professor e **O** para visão geral dos slides.
 :::
-
-## Atividades Avaliativas
-
-Entrega individual via GitHub. Comece pelas instruções abaixo.
-
-0. [Instruções e Regras de Entrega](atividades/0-instrucoes-entrega.html)
-1. [Introdução a Banco de Dados e Modelos (Conceitual, Lógico e Físico)](atividades/atividade-1-introducao-modelos-bd.html) — **dia 21/08/2026, das 8h00 às 12h00**
-2. [Análise de Requisitos e Modelo Entidade-Relacionamento](atividades/atividade-2-requisitos-mer.html) — **dia 28/08/2026, das 8h00 às 12h00**
-3. [Modelo Relacional e Mapeamento do MER para o Modelo Relacional](atividades/atividade-3-modelo-relacional-mapeamento.html) — **dia 28/08/2026, das 8h00 às 12h00**
-4. Linguagem SQL e DDL (Data Definition Language) (em breve)
-5. DML (Data Manipulation Language) e Instalação e Configuração de SGBD (em breve)
-6. Acesso ao Banco de Dados: Clientes e Aplicações (em breve)
