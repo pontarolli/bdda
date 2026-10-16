@@ -1,0 +1,73 @@
+---
+title: "Aula 02 — Introdução ao Conceito de Dados"
+---
+
+## Objetivos da Aula
+
+- Compreender o que são **dados**.
+- Diferenciar **dado**, **informação** e **conhecimento**.
+- Entender por que armazenar dados.
+
+## O que é um Dado?
+
+- Um **fato bruto**, sem contexto.
+- Ex.: `37`, `João`, `2026-03-17`.
+- Sozinho, diz **pouco**.
+
+## Dado x Informação x Conhecimento
+
+- **Dado:** valor isolado.
+- **Informação:** dado com **contexto**.
+- **Conhecimento:** informação **interpretada**.
+
+::: {.callout-note}
+`37` é um dado. "A temperatura é 37 °C" é informação. "Isso indica febre" é conhecimento.
+:::
+
+## Exemplo Prático
+
+| Nível | Exemplo |
+|-------|---------|
+| Dado | 25 |
+| Informação | "Aluno X tirou 25 na prova" |
+| Conhecimento | "O aluno precisa de reforço" |
+
+## Onde os Dados Estão
+
+- Listas de alunos, notas, estoques.
+- Vendas, clientes, produtos.
+- Praticamente **tudo** gera dados.
+
+## Por que Armazenar?
+
+- **Consultar** depois.
+- Tomar **decisões**.
+- **Automatizar** processos.
+- Manter **histórico**.
+
+## Problemas sem Organização
+
+- Dados **perdidos** ou duplicados.
+- Dificuldade de **buscar**.
+- **Inconsistências**.
+- Retrabalho.
+
+## Atividade Rápida
+
+- Dê um exemplo de **dado** do seu dia.
+- Transforme-o em **informação**.
+
+## Resumo da Aula
+
+- **Dado** é um fato bruto; **informação** tem contexto.
+- Armazenar dados permite **consultar e decidir**.
+- Organizar bem evita **problemas**.
+
+## Referências
+
+- ROB, P.; CORONEL, C. *Sistemas de Banco de Dados*. Cengage.
+- HEUSER, C. A. *Projeto de Banco de Dados*. Bookman.
+
+## Próxima Aula
+
+- **Aula 03:** De sistemas de arquivos a banco de dados.

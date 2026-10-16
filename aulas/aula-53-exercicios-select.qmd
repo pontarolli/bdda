@@ -1,0 +1,69 @@
+---
+title: "Aula 53 — Exercícios de Fixação de SELECT"
+---
+
+## Objetivos da Aula
+
+- **Praticar** o SELECT em profundidade.
+- Combinar cláusulas em consultas **reais**.
+- Ganhar **fluência** em SQL.
+
+## Aula de Hoje
+
+- Aula **prática** de consultas.
+- Vários **exercícios** progressivos.
+- Base para o **trabalho final**.
+
+## Banco de Exemplo
+
+- **Cliente** (id, nome, cidade).
+- **Produto** (id, nome, preco).
+- **Pedido** (id, id_cliente, data, valor).
+
+## Exercícios Básicos
+
+- Liste todos os clientes de **Boituva**.
+- Produtos com preço **acima de 50**.
+- Pedidos ordenados por **valor**.
+
+## Exercícios com Agregação
+
+- Total de **pedidos por cliente**.
+- **Média** de valor dos pedidos.
+- Cidades com **mais de** 2 clientes (GROUP BY + HAVING).
+
+## Exercícios Combinados
+
+```sql
+SELECT c.nome, COUNT(*) AS pedidos
+FROM Cliente c
+JOIN Pedido p ON p.id_cliente = c.id
+GROUP BY c.nome
+HAVING COUNT(*) > 1;
+```
+
+- Junta, agrupa e filtra grupos.
+
+::: {.callout-note}
+A fluência em SQL vem de **praticar muito**: criar consultas é como um idioma — só se aprende usando.
+:::
+
+## Registro
+
+- Anote as **soluções**.
+- Compare **abordagens** diferentes.
+
+## Resumo da Aula
+
+- Praticamos o **SELECT** a fundo.
+- Combinamos **WHERE, GROUP BY, HAVING, ORDER BY**.
+- Preparamos o terreno para os **JOINs**.
+
+## Referências
+
+- ROB, P.; CORONEL, C. *Sistemas de Banco de Dados*. Cengage.
+- Documentação oficial do MySQL.
+
+## Próxima Aula
+
+- **Aula 54:** Síntese e revisão do 3º bimestre.

@@ -1,0 +1,71 @@
+---
+title: "Aula 19 — Introdução aos Sistemas Gerenciadores de Banco de Dados"
+---
+
+## Objetivos da Aula
+
+- Compreender o que é um **SGBD**.
+- Conhecer exemplos de SGBDs.
+- Entender o papel do SGBD na prática.
+
+## Banco de Dados x SGBD
+
+- **Banco de dados:** os **dados** organizados.
+- **SGBD:** o **software** que gerencia esses dados.
+- Muitas vezes usamos os termos juntos.
+
+## O que é um SGBD?
+
+- **Sistema Gerenciador de Banco de Dados**.
+- Cria, armazena, consulta e protege os dados.
+- Intermedeia o **usuário** e os **dados**.
+
+## Principais Funções
+
+- **Armazenar** os dados.
+- **Consultar** (SQL).
+- Controlar **acesso** e segurança.
+- Garantir **integridade** e **recuperação**.
+
+## Exemplos de SGBDs
+
+- **MySQL** e **MariaDB**.
+- **PostgreSQL**.
+- **SQLite**.
+- **Oracle** e **SQL Server**.
+
+## SGBD x Sistema de Arquivos
+
+- SGBD controla **concorrência**.
+- Recuperação de **falhas**.
+- **Integridade** dos dados.
+
+::: {.callout-note}
+O SGBD é o "gerente" do banco: ele organiza, protege e serve os dados para quem precisa.
+:::
+
+## Vantagens
+
+- Padronização (**SQL**).
+- Segurança e **permissões**.
+- Controle de **transações**.
+- Independência dos **dados**.
+
+## Resumo da Aula
+
+- **SGBD** é o software que gerencia o banco.
+- Funções: armazenar, consultar, proteger.
+- Exemplos: **MySQL, PostgreSQL, SQLite**.
+
+## Atividade Rápida
+
+- Cite **três** funções de um SGBD.
+
+## Referências
+
+- ROB, P.; CORONEL, C. *Sistemas de Banco de Dados*. Cengage.
+- ELMASRI, R.; NAVATHE, S. *Sistemas de Banco de Dados*. Pearson.
+
+## Próxima Aula
+
+- **Aula 20:** Componentes e arquitetura de um SGBD.

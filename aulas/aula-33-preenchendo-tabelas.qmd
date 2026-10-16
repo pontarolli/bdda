@@ -1,0 +1,66 @@
+---
+title: "Aula 33 — Preenchendo Tabelas com Dados"
+---
+
+## Objetivos da Aula
+
+- Inserir dados com **INSERT**.
+- Respeitar a **ordem** das FKs.
+- Verificar os dados inseridos.
+
+## Inserindo Dados
+
+```sql
+INSERT INTO Cliente (nome, telefone)
+VALUES ('Ana', '15 99999-0000');
+```
+
+- Lista as **colunas**.
+- Depois os **valores** correspondentes.
+
+## Ordem Importa com FKs
+
+- Primeiro **Cliente**, depois **Pedido**.
+- O pedido precisa do **id_cliente** existente.
+- Inserir fora de ordem → **erro**.
+
+## Evitando Informar o ID
+
+- Com **AUTO_INCREMENT**, não informamos o `id`.
+- O banco **gera** sozinho.
+
+## Vendo os Dados
+
+- `SELECT * FROM Cliente;`
+- Confere o que foi inserido.
+
+## Cuidados
+
+- **Aspas** simples em texto.
+- **Ponto** como separador decimal.
+- Datas no formato **`AAAA-MM-DD`**.
+- Não inserir FK **inexistente**.
+
+::: {.callout-note}
+Popular o banco com dados de teste ajuda a entender o comportamento **antes** de usar em produção.
+:::
+
+## Prática
+
+- Insira alguns clientes.
+- Insira pedidos usando os **ids** corretos.
+- Liste os dados.
+
+## Resumo da Aula
+
+- Inserimos dados com **INSERT**.
+- A **ordem** das FKs deve ser respeitada.
+- Conferimos com **SELECT**.
+
+## Referências
+
+- ROB, P.; CORONEL, C. *Sistemas de Banco de Dados*. Cengage.
+
+## Próxima Aula
+
+- **Aula 34:** Acessando o banco por outros programas.

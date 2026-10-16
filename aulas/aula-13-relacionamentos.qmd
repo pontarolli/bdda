@@ -1,0 +1,73 @@
+---
+title: "Aula 13 — Relacionamentos no Modelo ER"
+---
+
+## Objetivos da Aula
+
+- Compreender o conceito de **relacionamento**.
+- Conhecer grau e cardinalidade.
+- Representar relacionamentos no DER.
+
+## O que é um Relacionamento?
+
+- Uma **associação** entre entidades.
+- Ex.: um **aluno** cursa um **curso**.
+- Representado por **losango**.
+
+## Exemplos
+
+- Cliente **realiza** Pedido.
+- Aluno **matricula-se em** Curso.
+- Funcionário **trabalha em** Projeto.
+
+## Grau do Relacionamento
+
+- **Binário:** duas entidades (mais comum).
+- **Ternário:** três entidades.
+- **Unário:** uma entidade consigo mesma.
+
+## Unário — Exemplo
+
+- Funcionário **gerencia** Funcionário.
+- Uma entidade relacionada com **ela mesma**.
+
+## Cardinalidade
+
+- Quantas entidades participam.
+- **1:1**, **1:N**, **N:N**.
+- Detalharemos na **próxima aula**.
+
+## Atributos no Relacionamento
+
+- Alguns relacionamentos têm **atributos**.
+- Ex.: **data** do empréstimo.
+- Ficam ligados ao **losango**.
+
+::: {.callout-note}
+O relacionamento é o **verbo** do modelo: ele descreve como as entidades interagem.
+:::
+
+## Representação
+
+- **Losango** conectado às entidades.
+- Nome geralmente um **verbo**.
+- Pode ter **atributos**.
+
+## Resumo da Aula
+
+- **Relacionamentos** ligam entidades.
+- Podem ser **binários, ternários, unários**.
+- Podem ter **atributos** próprios.
+
+## Atividade Rápida
+
+- Descreva **dois** relacionamentos de uma escola.
+
+## Referências
+
+- HEUSER, C. A. *Projeto de Banco de Dados*. Bookman.
+- ELMASRI, R.; NAVATHE, S. *Sistemas de Banco de Dados*. Pearson.
+
+## Próxima Aula
+
+- **Aula 14:** Cardinalidades e participação.

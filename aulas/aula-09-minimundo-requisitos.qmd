@@ -1,0 +1,67 @@
+---
+title: "Aula 09 — Redação Descritiva dos Requisitos (Minimundo)"
+---
+
+## Objetivos da Aula
+
+- Compreender o conceito de **minimundo**.
+- Aprender a **descrever** o negócio em texto.
+- Transformar descrição em **modelo**.
+
+## O que é Minimundo?
+
+- Uma **descrição textual** de uma parte do mundo real.
+- Foca no que o banco vai representar.
+- Serve de base para a **modelagem**.
+
+## Como Escrever
+
+- Use **linguagem simples**.
+- Descreva **entidades** e suas **relações**.
+- Inclua **regras** do negócio.
+
+## Exemplo de Minimundo
+
+> "A biblioteca possui livros, cada um com título e autor. Os livros podem ser emprestados a alunos. Um aluno pode pegar vários livros, e cada empréstimo registra a data."
+
+## Destacando Elementos
+
+- **Livro**, **Aluno** → entidades.
+- **Empresta** → relacionamento.
+- **data** → atributo do relacionamento.
+
+## Regras de Negócio
+
+- Uma só **cópia** pode estar emprestada por vez.
+- Um aluno tem limite de **3** livros.
+- Atraso gera **multa**.
+
+::: {.callout-note}
+Um bom minimundo é **claro** o suficiente para outra pessoa desenhar o modelo só lendo o texto.
+:::
+
+## Prática
+
+- Escolha um negócio.
+- Escreva o **minimundo**.
+- Destaque entidades, atributos e relações.
+
+## Da Descrição ao Modelo
+
+- O minimundo vira **entidades** e **relacionamentos**.
+- É o **primeiro passo** do projeto.
+- Vamos converter nas próximas aulas.
+
+## Resumo da Aula
+
+- **Minimundo** é a descrição textual do negócio.
+- Ele contém **entidades, atributos e relações**.
+- É a base do **modelo conceitual**.
+
+## Referências
+
+- HEUSER, C. A. *Projeto de Banco de Dados*. Bookman.
+
+## Próxima Aula
+
+- **Aula 10:** Modelo Entidade-Relacionamento — visão geral.

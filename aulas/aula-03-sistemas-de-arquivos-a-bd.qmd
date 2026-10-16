@@ -1,0 +1,71 @@
+---
+title: "Aula 03 — De Sistemas de Arquivos a Banco de Dados"
+---
+
+## Objetivos da Aula
+
+- Entender como se armazenava dados **antes** dos bancos.
+- Conhecer as **limitações** dos arquivos simples.
+- Compreender a **motivação** dos bancos de dados.
+
+## Sistemas de Arquivos
+
+- Dados guardados em **planilhas** e arquivos.
+- Uma "ilha" para cada setor.
+- Comum em **pequenos** negócios.
+
+## Exemplo
+
+- Setor de **vendas** tem sua planilha.
+- Setor de **estoque** tem outra.
+- Os dados **não conversam**.
+
+## Limitações
+
+- **Redundância** (mesma informação repetida).
+- **Inconsistência** (versões diferentes).
+- **Dificuldade** de acesso e busca.
+- **Falta de segurança** e controle.
+
+## Redundância e Inconsistência
+
+- Nome do cliente repetido em várias planilhas.
+- Muda em uma e **não** na outra.
+- Resultado: dados **conflitantes**.
+
+## Isolamento dos Dados
+
+- Cada aplicação tem seu **próprio** arquivo.
+- Difícil **cruzar** informações.
+- Nenhuma **visão única** do negócio.
+
+::: {.callout-note}
+A grande ideia do banco de dados é **centralizar** os dados e eliminar a redundância descontrolada.
+:::
+
+## A Solução: Banco de Dados
+
+- Dados **centralizados** e **organizados**.
+- Controle de **acesso**.
+- Redução de **redundância**.
+- **Compartilhamento** entre setores.
+
+## Resumo da Aula
+
+- Arquivos simples têm **redundância** e **inconsistência**.
+- Os dados ficam **isolados** por aplicação.
+- O **banco de dados** resolve isso centralizando.
+
+## Atividade Rápida
+
+- Cite **dois** problemas dos sistemas de arquivos.
+- Como o banco de dados resolve?
+
+## Referências
+
+- ROB, P.; CORONEL, C. *Sistemas de Banco de Dados*. Cengage.
+- HEUSER, C. A. *Projeto de Banco de Dados*. Bookman.
+
+## Próxima Aula
+
+- **Aula 04:** Organização de dados e normalização — conceitos.

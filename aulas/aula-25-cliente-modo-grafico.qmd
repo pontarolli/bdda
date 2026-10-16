@@ -1,0 +1,66 @@
+---
+title: "Aula 25 — Clientes Modo Gráfico: MySQL Workbench"
+---
+
+## Objetivos da Aula
+
+- Conhecer o **MySQL Workbench**.
+- Conectar por interface **gráfica**.
+- Conhecer os recursos **visuais**.
+
+## O que é o Workbench?
+
+- Ferramenta **gráfica** oficial do MySQL.
+- Facilita criar, consultar e **visualizar**.
+- Ideal para **iniciantes** e profissionais.
+
+## Vantagens do Modo Gráfico
+
+- Interface **visual**.
+- Menos erros de **digitação**.
+- **Modelagem** integrada.
+- Visualização de **dados**.
+
+## Conhecendo a Tela
+
+- **Navegador** de esquemas.
+- Editor de **consultas** (SQL).
+- Área de **resultados**.
+- Painel de **administração**.
+
+## Conectando
+
+- Criar uma **conexão**.
+- Informar host, porta, usuário.
+- Testar e **salvar**.
+
+## Recursos Úteis
+
+- **Modelagem** (EER Diagram).
+- Executar **scripts** SQL.
+- Exportar/importar **dados**.
+- **Backup**.
+
+::: {.callout-note}
+Modo texto e modo gráfico **se complementam**: a interface ajuda, mas o SQL é o que realmente manda.
+:::
+
+## Prática
+
+- Conecte pelo Workbench.
+- Liste os esquemas.
+- Rode uma consulta simples.
+
+## Resumo da Aula
+
+- O **Workbench** é o cliente gráfico oficial.
+- Facilita criar, consultar e **modelar**.
+- Complementa o **modo texto**.
+
+## Referências
+
+- Documentação oficial do MySQL Workbench.
+
+## Próxima Aula
+
+- **Aula 26:** Criando um banco de dados no MySQL.

@@ -1,0 +1,67 @@
+---
+title: "Aula 14 — Cardinalidades e Participação"
+---
+
+## Objetivos da Aula
+
+- Compreender a **cardinalidade**.
+- Diferenciar **1:1, 1:N e N:N**.
+- Entender **participação** total e parcial.
+
+## O que é Cardinalidade?
+
+- Quantas ocorrências de uma entidade se ligam a outra.
+- Define a **regra** do relacionamento.
+- Escrita junto às **linhas**.
+
+## Um para Um (1:1)
+
+- Cada lado se liga a **no máximo um**.
+- Ex.: **País** tem uma **Capital**.
+- Raro no dia a dia.
+
+## Um para Muitos (1:N)
+
+- Um lado tem **muitos**, o outro tem **um**.
+- Ex.: um **Cliente** tem **vários Pedidos**.
+- Muito comum.
+
+## Muitos para Muitos (N:N)
+
+- Ambos os lados têm **muitos**.
+- Ex.: **Aluno** cursa **vários Cursos**; cada Curso tem vários Alunos.
+- Vira uma **tabela intermediária**.
+
+## Participação
+
+- **Total:** toda entidade **participa**.
+- **Parcial:** algumas **não** participam.
+- Ex.: todo Pedido tem Cliente (total do lado Pedido).
+
+::: {.callout-note}
+A cardinalidade é o **coração** do relacionamento: errar nela gera tabelas erradas.
+:::
+
+## Como Decidir
+
+- Pergunte: "**quantos**?"
+- Um cliente pode ter vários pedidos?
+- Um pedido pertence a quantos clientes?
+
+## Resumo da Aula
+
+- **Cardinalidade** define quantas entidades se ligam.
+- Tipos: **1:1, 1:N, N:N**.
+- **Participação** pode ser total ou parcial.
+
+## Atividade Rápida
+
+- Classifique "Departamento–Funcionário" em cardinalidade.
+
+## Referências
+
+- HEUSER, C. A. *Projeto de Banco de Dados*. Bookman.
+
+## Próxima Aula
+
+- **Aula 15:** Chave primária — conceito.

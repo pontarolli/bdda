@@ -1,0 +1,78 @@
+---
+title: "Aula 39 — SELECT: Colunas, Alias e DISTINCT"
+---
+
+## Objetivos da Aula
+
+- Selecionar **colunas específicas**.
+- Usar **alias** (apelidos).
+- Remover **duplicatas** com DISTINCT.
+
+## Escolhendo Colunas
+
+```sql
+SELECT nome, idade FROM Aluno;
+```
+
+- Só as colunas **pedidas**.
+- Mais **eficiente** que `*`.
+
+## Alias de Coluna
+
+```sql
+SELECT nome AS NomeDoAluno FROM Aluno;
+```
+
+- `AS` dá um **apelido** à coluna.
+- Aparece no **cabeçalho** do resultado.
+- Útil para **relatórios**.
+
+## Alias de Tabela
+
+```sql
+SELECT a.nome FROM Aluno AS a;
+```
+
+- Encurta a **escrita**.
+- Essencial nos **JOINs** (mais adiante).
+
+## DISTINCT
+
+```sql
+SELECT DISTINCT cidade FROM Cliente;
+```
+
+- Retorna cada valor **uma vez**.
+- Remove **repetições** do resultado.
+
+## Expressões e Cálculos
+
+```sql
+SELECT nome, salario * 12 AS anual FROM Funcionario;
+```
+
+- Colunas podem ter **cálculos**.
+- O resultado vem calculado.
+
+::: {.callout-note}
+`DISTINCT` atua sobre a **combinação** de todas as colunas selecionadas, não sobre uma só.
+:::
+
+## Prática
+
+- Liste cidades **distintas** dos clientes.
+- Crie um alias para uma **soma**.
+
+## Resumo da Aula
+
+- Selecionamos **colunas específicas**.
+- Usamos **alias** com `AS`.
+- Removemos duplicatas com **DISTINCT**.
+
+## Referências
+
+- Documentação oficial do MySQL.
+
+## Próxima Aula
+
+- **Aula 40:** SELECT ... WHERE — filtros básicos.

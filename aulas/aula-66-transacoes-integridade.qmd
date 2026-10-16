@@ -1,0 +1,68 @@
+---
+title: "Aula 66 — Transações e Integridade"
+---
+
+## Objetivos da Aula
+
+- Compreender o conceito de **transação**.
+- Conhecer as propriedades **ACID**.
+- Usar **COMMIT** e **ROLLBACK**.
+
+## O que é uma Transação?
+
+- Um **conjunto** de operações.
+- Que deve ser executado **por inteiro**.
+- Ou **nada** é aplicado.
+
+## Exemplo — Transferência
+
+- Tirar 100 da conta A.
+- Colocar 100 na conta B.
+- As duas ações devem ocorrer **juntas**.
+
+## As Propriedades ACID
+
+- **Atomicidade:** tudo ou nada.
+- **Consistência:** dados válidos.
+- **Isolamento:** transações não se atrapalham.
+- **Durabilidade:** o que foi confirmado **persiste**.
+
+## Comandos
+
+```sql
+START TRANSACTION;
+UPDATE Conta SET saldo = saldo - 100 WHERE id = 1;
+UPDATE Conta SET saldo = saldo + 100 WHERE id = 2;
+COMMIT;   -- confirma
+-- ou ROLLBACK; -- desfaz
+```
+
+## COMMIT e ROLLBACK
+
+- **COMMIT:** confirma as mudanças.
+- **ROLLBACK:** **desfaz** tudo desde o início.
+- Ferramenta de **segurança**.
+
+::: {.callout-note}
+A transação é a "rede de proteção" do banco: se algo falhar no meio do caminho, tudo volta ao estado anterior.
+:::
+
+## Prática
+
+- Simule uma transferência.
+- Faça um ROLLBACK e observe.
+
+## Resumo da Aula
+
+- **Transação:** operações atômicas.
+- Propriedades **ACID**.
+- **COMMIT** confirma; **ROLLBACK** desfaz.
+
+## Referências
+
+- ELMASRI, R.; NAVATHE, S. *Sistemas de Banco de Dados*. Pearson.
+- SILBERSCHATZ, A. et al. *Sistema de Banco de Dados*. Elsevier.
+
+## Próxima Aula
+
+- **Aula 67:** Acesso ao banco de dados por uma aplicação.

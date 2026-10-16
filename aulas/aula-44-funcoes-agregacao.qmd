@@ -1,0 +1,69 @@
+---
+title: "Aula 44 — SELECT: Funções de Agregação"
+---
+
+## Objetivos da Aula
+
+- Conhecer as **funções de agregação**.
+- Calcular **totais, médias e contagens**.
+- Entender o que elas fazem com as linhas.
+
+## O que são Agregações?
+
+- Resumem **várias linhas** em **um valor**.
+- Também chamadas de **funções de grupo**.
+- Muito usadas em **relatórios**.
+
+## As Principais
+
+- **COUNT()** — conta linhas.
+- **SUM()** — soma.
+- **AVG()** — média.
+- **MAX()** — maior valor.
+- **MIN()** — menor valor.
+
+## Exemplos
+
+```sql
+SELECT COUNT(*) FROM Aluno;
+SELECT AVG(idade) FROM Aluno;
+SELECT MAX(salario) FROM Funcionario;
+```
+
+## COUNT com Condição
+
+```sql
+SELECT COUNT(*) FROM Aluno WHERE idade > 18;
+```
+
+- Combina agregação com **filtro**.
+
+## NULL é Ignorado
+
+- `AVG` e `SUM` **ignoram** valores nulos.
+- `COUNT(coluna)` conta só **não nulos**.
+- `COUNT(*)` conta **todas** as linhas.
+
+::: {.callout-note}
+Cuidado: `AVG` ignora nulos. Se houver valores ausentes, a média pode enganar.
+:::
+
+## Prática
+
+- Conte quantos alunos existem.
+- Calcule a **média** das idades.
+- Encontre o **maior** preço.
+
+## Resumo da Aula
+
+- Agregações resumem linhas em **um valor**.
+- **COUNT, SUM, AVG, MAX, MIN**.
+- **NULL** é ignorado (exceto `COUNT(*)`).
+
+## Referências
+
+- ROB, P.; CORONEL, C. *Sistemas de Banco de Dados*. Cengage.
+
+## Próxima Aula
+
+- **Aula 45:** SELECT — agrupamento com GROUP BY.

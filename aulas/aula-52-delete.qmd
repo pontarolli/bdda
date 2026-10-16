@@ -1,0 +1,67 @@
+---
+title: "Aula 52 — DELETE: Excluindo Dados"
+---
+
+## Objetivos da Aula
+
+- Compreender o comando **DELETE**.
+- Excluir registros com **segurança**.
+- Diferenciar **DELETE** de **TRUNCATE** e **DROP**.
+
+## O comando DELETE
+
+- Remove **linhas** de uma tabela.
+- Parte da **DML**.
+- A **estrutura** permanece.
+
+## Sintaxe
+
+```sql
+DELETE FROM Aluno WHERE id = 3;
+```
+
+- O `WHERE` escolhe as linhas.
+- **Sem WHERE:** apaga **tudo**.
+
+## Excluindo Várias
+
+```sql
+DELETE FROM Aluno WHERE idade < 15;
+```
+
+- Remove por **condição**.
+
+## DELETE x TRUNCATE x DROP
+
+- **DELETE:** remove linhas (com WHERE), pode ser desfeito.
+- **TRUNCATE:** esvazia a tabela rapidamente.
+- **DROP:** apaga a **tabela inteira**.
+
+## Integridade Referencial
+
+- Excluir um cliente **com pedidos** pode ser **bloqueado**.
+- Depende das **ações referenciais**.
+- Use `ON DELETE` conforme a regra.
+
+::: {.callout-note}
+`DELETE`, `TRUNCATE` e `DROP` removem dados — sempre confira a tabela e faça **backup** antes.
+:::
+
+## Prática
+
+- Exclua um aluno por id.
+- Tente excluir um cliente com pedidos e observe.
+
+## Resumo da Aula
+
+- **DELETE** remove linhas.
+- Podem ser **bloqueadas** por FKs.
+- Não confunda com **TRUNCATE** e **DROP**.
+
+## Referências
+
+- ROB, P.; CORONEL, C. *Sistemas de Banco de Dados*. Cengage.
+
+## Próxima Aula
+
+- **Aula 53:** Exercícios de fixação de SELECT.

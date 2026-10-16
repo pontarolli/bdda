@@ -1,0 +1,65 @@
+---
+title: "Aula 54 — Síntese e Revisão do 3º Bimestre"
+---
+
+## Objetivos da Aula
+
+- **Revisar** os conceitos do bimestre.
+- Organizar o estudo para a **avaliação**.
+- Esclarecer dúvidas.
+
+## O que Estudamos
+
+- A linguagem **SQL** e suas categorias.
+- O comando **SELECT** e suas cláusulas.
+- **INSERT, UPDATE, DELETE**.
+- **Funções** de texto, data e agregação.
+
+## O SELECT
+
+- **SELECT ... FROM**.
+- `WHERE` filtra linhas.
+- `ORDER BY` ordena.
+- `GROUP BY` / `HAVING` agrupam e filtram grupos.
+
+## Ordem das Cláusulas
+
+- **SELECT → FROM → WHERE → GROUP BY → HAVING → ORDER BY**.
+
+## Agregações
+
+- **COUNT, SUM, AVG, MAX, MIN**.
+- Resumem várias linhas em **uma**.
+- **NULL** é ignorado.
+
+## Manipulação
+
+- **INSERT** insere; **UPDATE** altera; **DELETE** exclui.
+- **WHERE** é essencial em UPDATE e DELETE.
+- Cuidado com operações **sem WHERE**.
+
+::: {.callout-note}
+O fio condutor do bimestre: **extrair informação** dos dados com consultas — e **alterá-los** com responsabilidade.
+:::
+
+## Como se Preparar
+
+- Reler os **resumos**.
+- Praticar **SELECT** e **UPDATE/DELETE**.
+- Rever a **ordem** das cláusulas.
+- Tirar **dúvidas**.
+
+## Resumo da Aula
+
+- Revisamos SQL: seleção e manipulação.
+- Reforçamos **agregações e cláusulas**.
+- Prontos para a **avaliação**.
+
+## Referências
+
+- ROB, P.; CORONEL, C. *Sistemas de Banco de Dados*. Cengage.
+- Documentação oficial do MySQL.
+
+## Próxima Aula
+
+- **Aula 55:** Mapeamento do modelo ER para o relacional.

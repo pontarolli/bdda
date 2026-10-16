@@ -1,0 +1,70 @@
+---
+title: "Aula 08 — Análise de Requisitos para Banco de Dados"
+---
+
+## Objetivos da Aula
+
+- Compreender a **análise de requisitos**.
+- Entender seu papel no **projeto** do banco.
+- Conhecer técnicas de **levantamento**.
+
+## Por que Analisar Requisitos?
+
+- Antes de criar, é preciso **entender**.
+- Requisitos errados → banco **errado**.
+- Corrigir depois é **caro**.
+
+## O que São Requisitos?
+
+- O que o **usuário** precisa.
+- O que o **sistema** deve guardar.
+- O que o negócio **faz**.
+
+## Tipos de Requisitos
+
+- **De dados:** o que armazenar.
+- **De operações:** o que consultar/atualizar.
+- **De restrições:** regras do negócio.
+
+## Técnicas de Levantamento
+
+- **Entrevistas** com usuários.
+- **Questionários**.
+- **Observação** do processo.
+- Análise de **documentos** existentes.
+
+## Perguntas-Chave
+
+- Que dados o negócio **produz**?
+- Quem **acessa** esses dados?
+- Que **regras** existem?
+- Que **relatórios** são precisos?
+
+::: {.callout-note}
+O analista é um "detetive": precisa **perguntar** e **entender** antes de desenhar qualquer tabela.
+:::
+
+## Exemplo
+
+- Cliente: "quero saber quais produtos vendem mais".
+- Requisito de dados: registrar **itens de venda**.
+- Requisito de operação: **somar** vendas por produto.
+
+## Resumo da Aula
+
+- A **análise de requisitos** vem antes do modelo.
+- Existem técnicas para **levantar** informações.
+- Requisitos definem o **sucesso** do banco.
+
+## Atividade Rápida
+
+- Escreva **três** perguntas para entrevistar um cliente.
+
+## Referências
+
+- HEUSER, C. A. *Projeto de Banco de Dados*. Bookman.
+- ELMASRI, R.; NAVATHE, S. *Sistemas de Banco de Dados*. Pearson.
+
+## Próxima Aula
+
+- **Aula 09:** Redação descritiva dos requisitos (minimundo).

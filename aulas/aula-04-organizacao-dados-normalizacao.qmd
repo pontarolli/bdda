@@ -1,0 +1,72 @@
+---
+title: "Aula 04 — Organização de Dados e Normalização: Conceitos"
+---
+
+## Objetivos da Aula
+
+- Compreender a importância de **organizar** os dados.
+- Conhecer o conceito de **normalização**.
+- Entender por que evitar **redundância**.
+
+## Organizar é Preciso
+
+- Dados "jogados" geram **problemas**.
+- Organizar = definir **tabelas** e **relações**.
+- Base para qualquer banco de dados.
+
+## O que é Normalização?
+
+- Técnica de **organizar** os dados em tabelas.
+- Objetivo: reduzir **redundância**.
+- Objetivo: evitar **inconsistência**.
+
+## Exemplo de Bagunça
+
+| Pedido | Cliente | Cidade | Produto |
+|--------|---------|--------|---------|
+| 1 | Ana | Boituva | Caneta |
+| 2 | Ana | Boituva | Lápis |
+
+- "Ana" e "Boituva" repetidos → **redundância**.
+
+## Separando em Tabelas
+
+- **Clientes** (id, nome, cidade).
+- **Produtos** (id, nome).
+- **Pedidos** (id, cliente, produto).
+
+## Vantagens
+
+- Menos **repetição**.
+- Dados **consistentes**.
+- Mais fácil **manter** e **consultar**.
+
+::: {.callout-note}
+Normalizar é "arrumar a casa": cada informação em um só lugar, referenciada quando necessário.
+:::
+
+## As Formas Normais (visão geral)
+
+- **1FN, 2FN, 3FN** — níveis de organização.
+- Cada uma remove um tipo de problema.
+- Vamos aprofundar mais adiante.
+
+## Resumo da Aula
+
+- Organizar dados = evitar **problemas**.
+- **Normalização** reduz redundância e inconsistência.
+- Dados ficam em **tabelas relacionadas**.
+
+## Atividade Rápida
+
+- Aponte a redundância em uma lista de pedidos.
+- Como separar em tabelas?
+
+## Referências
+
+- HEUSER, C. A. *Projeto de Banco de Dados*. Bookman.
+- ROB, P.; CORONEL, C. *Sistemas de Banco de Dados*. Cengage.
+
+## Próxima Aula
+
+- **Aula 05:** Exercícios de normalização.

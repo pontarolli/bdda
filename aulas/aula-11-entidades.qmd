@@ -1,0 +1,72 @@
+---
+title: "Aula 11 — Entidades e Tipos Formais de Representação"
+---
+
+## Objetivos da Aula
+
+- Compreender o conceito de **entidade**.
+- Diferenciar **entidade** de **conjunto de entidades**.
+- Conhecer a representação formal.
+
+## O que é uma Entidade?
+
+- Um **objeto** do mundo real.
+- Ex.: um aluno específico, um livro específico.
+- Possui **existência própria**.
+
+## Conjunto de Entidades
+
+- Grupo de entidades **do mesmo tipo**.
+- Ex.: o conjunto de **todos os alunos**.
+- No DER, representamos o **conjunto**.
+
+## Exemplos
+
+- Aluno, Curso, Professor.
+- Produto, Cliente, Venda.
+- Livro, Autor, Empréstimo.
+
+## Tipos de Entidades
+
+- **Fortes:** existem por si.
+- **Fracas:** dependem de outra.
+- Ex. fraco: **Dependente** de um **Funcionário**.
+
+## Representação
+
+- **Retângulo** = entidade forte.
+- **Retângulo duplo** = entidade fraca.
+- Nome no **singular**, maiúsculo inicial.
+
+## Como Identificar Entidades
+
+- É um **substantivo** importante?
+- O negócio precisa **guardar dados** dele?
+- Tem **existência própria**?
+
+::: {.callout-note}
+Se o negócio precisa "guardar informações" sobre algo, provavelmente é uma **entidade**.
+:::
+
+## Atributos da Entidade
+
+- Cada entidade tem **características**.
+- Vamos detalhar na **próxima aula**.
+
+## Resumo da Aula
+
+- **Entidade** é um objeto do mundo real.
+- Representamos o **conjunto** de entidades.
+- Há entidades **fortes** e **fracas**.
+
+## Atividade Rápida
+
+- Liste **cinco** entidades de uma escola.
+
+## Referências
+
+- HEUSER, C. A. *Projeto de Banco de Dados*. Bookman.
+
+## Próxima Aula
+
+- **Aula 12:** Atributos no modelo ER.

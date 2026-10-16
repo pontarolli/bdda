@@ -1,0 +1,74 @@
+---
+title: "Aula 15 — Chave Primária: Conceito"
+---
+
+## Objetivos da Aula
+
+- Compreender o conceito de **chave primária**.
+- Entender sua importância.
+- Identificar a chave primária de uma entidade.
+
+## O Problema
+
+- Duas pessoas podem ter o **mesmo nome**.
+- Como saber **qual é qual**?
+- Precisamos de um **identificador único**.
+
+## Chave Primária
+
+- Atributo que identifica **unicamente** cada registro.
+- Não pode **repetir**.
+- Não pode ser **nulo**.
+
+## Exemplos
+
+- **CPF** de uma pessoa.
+- **Matrícula** de um aluno.
+- **Código** de um produto.
+
+## Características
+
+- **Única:** sem repetição.
+- **Não nula:** sempre preenchida.
+- **Imutável:** não deveria mudar.
+
+## No Modelo ER
+
+- Atributo **sublinhado**.
+- Chamado de **atributo identificador**.
+- Cada entidade deve ter um.
+
+## Chave Natural x Surrogada
+
+- **Natural:** existe no mundo real (CPF).
+- **Surrogada:** criada pelo sistema (id).
+- Muitas vezes usa-se um **id** numérico.
+
+::: {.callout-note}
+Imagine uma lista sem identificador: você não consegue apontar "aquela" linha com certeza.
+:::
+
+## Por que é Fundamental?
+
+- Base para os **relacionamentos**.
+- Garante **integridade**.
+- Evita **duplicidade**.
+
+## Resumo da Aula
+
+- A **chave primária** identifica unicamente.
+- É **única, não nula e imutável**.
+- Pode ser **natural** ou **surrogada**.
+
+## Atividade Rápida
+
+- Qual a chave primária de um **livro**?
+
+## Referências
+
+- ROB, P.; CORONEL, C. *Sistemas de Banco de Dados*. Cengage.
+- HEUSER, C. A. *Projeto de Banco de Dados*. Bookman.
+
+## Próxima Aula
+
+- **Aula 16:** Chave estrangeira — conceito.

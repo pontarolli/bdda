@@ -1,0 +1,74 @@
+---
+title: "Aula 12 — Atributos no Modelo ER"
+---
+
+## Objetivos da Aula
+
+- Compreender o conceito de **atributo**.
+- Conhecer os **tipos** de atributos.
+- Representar atributos corretamente.
+
+## O que é um Atributo?
+
+- Uma **característica** de uma entidade.
+- Ex.: nome, idade, telefone de um Aluno.
+- Descreve a entidade.
+
+## Representação
+
+- **Elipse** ligada à entidade.
+- Nome em minúsculo.
+- Ex.: (Aluno) — (nome).
+
+## Tipos de Atributos
+
+- **Simples:** um valor.
+- **Composto:** subdividido.
+- **Multivalorado:** vários valores.
+- **Derivado:** calculado.
+
+## Atributo Composto
+
+- Pode ser **dividido**.
+- Ex.: **endereço** → rua, número, cidade.
+- Representado por elipses **ligadas**.
+
+## Atributo Multivalorado
+
+- Tem **vários valores**.
+- Ex.: **telefones** de uma pessoa.
+- Representado por **elipse dupla**.
+
+## Atributo Derivado
+
+- Obtido a partir de **outros**.
+- Ex.: **idade** (a partir da data de nascimento).
+- Representado por **elipse tracejada**.
+
+::: {.callout-note}
+Nem toda característica vira atributo: só o que o negócio realmente precisa **guardar**.
+:::
+
+## Atributo Identificador
+
+- Identifica **unicamente** a entidade.
+- Anotado com **sublinhado**.
+- Será a **chave primária**.
+
+## Resumo da Aula
+
+- **Atributos** descrevem as entidades.
+- Podem ser **simples, compostos, multivalorados, derivados**.
+- O **identificador** será a chave primária.
+
+## Atividade Rápida
+
+- Classifique os atributos de um **cliente**.
+
+## Referências
+
+- HEUSER, C. A. *Projeto de Banco de Dados*. Bookman.
+
+## Próxima Aula
+
+- **Aula 13:** Relacionamentos no modelo ER.

@@ -1,0 +1,63 @@
+---
+title: "Aula 24 — Primeiros Passos: Cliente Modo Texto"
+---
+
+## Objetivos da Aula
+
+- Conectar ao MySQL pela **linha de comando**.
+- Conhecer os comandos **básicos** do cliente.
+- Criar e listar bancos de dados.
+
+## O Cliente de Linha de Comando
+
+- Programa **`mysql`** no terminal.
+- Conceito de **prompt** `mysql>`.
+- Útil e **leve**.
+
+## Conectando
+
+- Comando: `mysql -u root -p`.
+- Informar a **senha**.
+- Pronto: prompt `mysql>`.
+
+## Comandos de Navegação
+
+- `SHOW DATABASES;` — lista os bancos.
+- `USE nome;` — seleciona um banco.
+- `SHOW TABLES;` — lista tabelas.
+
+## Comandos Básicos
+
+- `SELECT VERSION();`
+- `SELECT USER();`
+- `EXIT;` para sair.
+
+## Ponto e Vírgula!
+
+- Cada comando termina com **`;`**.
+- Sem ele, o cliente **espera**.
+- Detalhe que causa **erros** comuns.
+
+::: {.callout-note}
+A linha de comando parece "crua", mas ensina o essencial: cada comando e seus resultados ficam claros.
+:::
+
+## Prática
+
+- Conecte ao servidor.
+- Liste os bancos existentes.
+- Verifique a **versão**.
+
+## Resumo da Aula
+
+- Conectamos pelo cliente **modo texto**.
+- Usamos comandos **básicos**.
+- Entendemos o papel do **`;`**.
+
+## Referências
+
+- Documentação oficial do MySQL.
+
+## Próxima Aula
+
+- **Aula 25:** Clientes modo gráfico — MySQL Workbench.

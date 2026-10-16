@@ -1,0 +1,70 @@
+---
+title: "Aula 07 — Estudo de Caso Comercial: o Vendedor de Pipoca"
+---
+
+## Objetivos da Aula
+
+- Analisar um **negócio real** simples.
+- Identificar **dados** e **tabelas**.
+- Elaborar **relacionamentos**.
+
+## O Cenário
+
+- Um **vendedor de pipoca**.
+- Vende **produtos** para **clientes**.
+- Registra **vendas** e **pagamentos**.
+
+## Levantando as Informações
+
+- O que o vendedor precisa **guardar**?
+- Produtos e **preços**.
+- Clientes **fiéis**.
+- Vendas e **datas**.
+
+## Possíveis Tabelas
+
+- **Produto** (id, nome, preço).
+- **Cliente** (id, nome, telefone).
+- **Venda** (id, cliente, data).
+- **ItemVenda** (venda, produto, quantidade).
+
+## Relacionamentos
+
+- Uma **venda** pertence a um **cliente**.
+- Uma venda tem vários **itens**.
+- Cada item se refere a um **produto**.
+
+## Por que ItemVenda?
+
+- Uma venda pode ter **vários** produtos.
+- Resolve a relação **N para N**.
+- Guarda **quantidade** por item.
+
+::: {.callout-note}
+Toda modelagem começa entendendo o **negócio**: o que ele faz e quais informações precisa guardar.
+:::
+
+## Desenhando
+
+- Esboce as tabelas.
+- Ligue pelos **ids**.
+- Verifique se faltou algo.
+
+## Atividade
+
+- Em grupo, refaça o modelo.
+- Pense em um negócio **próximo** e modele.
+
+## Resumo da Aula
+
+- Analisamos um negócio **real**.
+- Identificamos **tabelas e relacionamentos**.
+- Vimos como resolver relações **N:N**.
+
+## Referências
+
+- ROB, P.; CORONEL, C. *Sistemas de Banco de Dados*. Cengage.
+
+## Próxima Aula
+
+- **Aula 08:** Análise de requisitos para banco de dados.

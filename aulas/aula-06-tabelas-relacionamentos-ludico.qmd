@@ -1,0 +1,67 @@
+---
+title: "Aula 06 — Tabelas e Relacionamentos: Abordagem Lúdica"
+---
+
+## Objetivos da Aula
+
+- Entender **tabelas** e **relacionamentos** de forma prática.
+- Perceber como os dados se **conectam**.
+- Construir a intuição antes da teoria.
+
+## Por que a Abordagem Lúdica?
+
+- Conceitos abstratos ficam **difíceis**.
+- Comparar com **situações do dia a dia** ajuda.
+- Aprendemos **fazendo**.
+
+## Analogia: a Sala de Aula
+
+- **Professores** (tabela).
+- **Alunos** (tabela).
+- **Matrículas** liga alunos a cursos.
+
+## Tabela
+
+- Linhas = **registros**.
+- Colunas = **campos**.
+- Ex.: tabela **Aluno** (matrícula, nome).
+
+## Relacionamento
+
+- Uma **ligação** entre tabelas.
+- Ex.: aluno **está** em um curso.
+- Usa uma **chave** para conectar.
+
+## Exemplo Visual
+
+| Aluno | Curso |
+|-------|-------|
+| João | Redes |
+| Maria | Redes |
+
+- Duas tabelas: **Aluno** e **Curso**.
+- Ligadas por **id_curso**.
+
+::: {.callout-note}
+Relacionar tabelas é como ligar pontos: cada tabela guarda "uma parte da história" e as chaves fazem a ponte.
+:::
+
+## Atividade Lúdica
+
+- Montar tabelas de um **jogo** (personagens, itens).
+- Definir **relações**.
+- Apresentar ao grupo.
+
+## Resumo da Aula
+
+- **Tabelas** guardam registros e campos.
+- **Relacionamentos** conectam tabelas.
+- Chaves fazem a **ponte** entre elas.
+
+## Referências
+
+- ROB, P.; CORONEL, C. *Sistemas de Banco de Dados*. Cengage.
+
+## Próxima Aula
+
+- **Aula 07:** Estudo de caso comercial — o vendedor de pipoca.
