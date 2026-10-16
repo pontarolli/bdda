@@ -123,7 +123,8 @@ As aulas estão na pasta [`aulas/`](aulas/), numeradas de **01 a 72**.
 ```
 .
 ├── README.md            # este arquivo
-├── cronograma.md        # cronograma completo (72 aulas + avaliações)
+├── docs/
+│   └── cronograma.md    # cronograma completo (72 aulas + avaliações)
 └── aulas/
     ├── aula-01.pdf      # slides (para estudar)
     ├── aula-01-*.qmd     # fonte editável (Quarto/Markdown)
