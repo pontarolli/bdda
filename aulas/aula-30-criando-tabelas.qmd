@@ -65,4 +65,4 @@ Criar a tabela é como **montar a ficha** em branco: definimos os campos antes d
 
 ## Próxima Aula
 
-- **Aula 29:** Criando tabelas — o papel das chaves primárias.
+- **Aula 31:** Criando tabelas — o papel das chaves primárias.

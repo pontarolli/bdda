@@ -68,4 +68,4 @@ O SGBD é o "gerente" do banco: ele organiza, protege e serve os dados para quem
 
 ## Próxima Aula
 
-- **Aula 20:** Componentes e arquitetura de um SGBD.
+- **Aula 22:** Componentes e arquitetura de um SGBD.

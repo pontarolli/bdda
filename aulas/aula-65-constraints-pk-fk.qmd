@@ -69,4 +69,4 @@ As chaves não servem só para ligar tabelas: elas também tornam as **consultas
 
 ## Próxima Aula
 
-- **Aula 60:** Restrições — NOT NULL, UNIQUE, CHECK e DEFAULT.
+- **Aula 66:** Restrições — NOT NULL, UNIQUE, CHECK e DEFAULT.

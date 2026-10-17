@@ -64,4 +64,4 @@ A senha do usuário **root** é o "crachá mestre" do servidor: guarde com cuida
 
 ## Próxima Aula
 
-- **Aula 24:** Primeiros passos — cliente modo texto.
+- **Aula 26:** Primeiros passos — cliente modo texto.

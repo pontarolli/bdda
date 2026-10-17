@@ -69,4 +69,4 @@ Guardar **dinheiro** em `FLOAT` causa arredondamentos errados: para valores exat
 
 ## Próxima Aula
 
-- **Aula 28:** Criando tabelas de dados no SGBD.
+- **Aula 30:** Criando tabelas de dados no SGBD.

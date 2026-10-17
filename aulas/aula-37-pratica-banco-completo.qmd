@@ -60,4 +60,4 @@ Este é o ensaio do **trabalho final**: modelar, criar e popular um banco do com
 
 ## Próxima Aula
 
-- **Aula 36:** Síntese e revisão do 2º bimestre.
+- **Aula 38:** Síntese e revisão do 2º bimestre.

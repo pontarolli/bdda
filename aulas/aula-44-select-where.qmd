@@ -68,4 +68,4 @@ O `WHERE` age **linha a linha** e mantém só as que tornam a condição **verda
 
 ## Próxima Aula
 
-- **Aula 41:** WHERE — operadores de comparação e lógicos.
+- **Aula 45:** WHERE — operadores de comparação e lógicos.

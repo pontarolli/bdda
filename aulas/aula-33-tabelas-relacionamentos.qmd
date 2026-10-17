@@ -64,4 +64,4 @@ O relacionamento N:N **nunca** fica "solto": ele sempre se materializa numa tabe
 
 ## Próxima Aula
 
-- **Aula 32:** Integridade referencial na prática.
+- **Aula 34:** Integridade referencial na prática.

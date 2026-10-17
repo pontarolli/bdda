@@ -62,4 +62,4 @@ O fio condutor do bimestre: **extrair informação** dos dados com consultas —
 
 ## Próxima Aula
 
-- **Aula 55:** Mapeamento do modelo ER para o relacional.
+- **Aula 61:** Mapeamento do modelo ER para o relacional.

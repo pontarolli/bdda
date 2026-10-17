@@ -78,4 +78,4 @@ Sempre liste as **colunas** no INSERT: se a tabela mudar, seu comando continua f
 
 ## Próxima Aula
 
-- **Aula 49:** INSERT — múltiplas linhas e valores padrão.
+- **Aula 53:** INSERT — múltiplas linhas e valores padrão.

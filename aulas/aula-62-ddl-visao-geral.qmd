@@ -62,4 +62,4 @@ Mudanças na estrutura (DDL) costumam ser **irreversíveis** com facilidade: pen
 
 ## Próxima Aula
 
-- **Aula 57:** DDL — CREATE TABLE.
+- **Aula 63:** DDL — CREATE TABLE.

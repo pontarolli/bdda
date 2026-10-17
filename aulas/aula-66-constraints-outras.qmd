@@ -74,4 +74,4 @@ Colocar as regras **no banco** (e não só na aplicação) protege os dados cont
 
 ## Próxima Aula
 
-- **Aula 61:** JOIN — juntando dados de tabelas.
+- **Aula 67:** JOIN — juntando dados de tabelas.

@@ -70,4 +70,4 @@ O `INSERT ... SELECT` é a forma elegante de **copiar** dados entre tabelas sem 
 
 ## Próxima Aula
 
-- **Aula 50:** UPDATE — atualizando dados.
+- **Aula 54:** UPDATE — atualizando dados.

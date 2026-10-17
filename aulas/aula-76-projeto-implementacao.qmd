@@ -75,4 +75,4 @@ Um banco que "roda" é a prova final: as tabelas se relacionam, as consultas fun
 
 ## Próxima Aula
 
-- **Aula 71:** Recuperação e reavaliação.
+- **Aula 77:** Recuperação e reavaliação.

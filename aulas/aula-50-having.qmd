@@ -66,4 +66,4 @@ HAVING AVG(idade) > 16;
 
 ## Próxima Aula
 
-- **Aula 47:** Funções de string e de data.
+- **Aula 51:** Funções de string e de data.

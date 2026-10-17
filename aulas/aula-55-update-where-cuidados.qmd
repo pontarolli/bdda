@@ -72,4 +72,4 @@ Regra de ouro: **sempre** verifique o `WHERE` antes de executar um UPDATE ou DEL
 
 ## Próxima Aula
 
-- **Aula 52:** DELETE — excluindo dados.
+- **Aula 56:** DELETE — excluindo dados.

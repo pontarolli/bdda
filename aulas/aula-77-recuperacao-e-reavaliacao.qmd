@@ -60,4 +60,4 @@ Recuperação é a chance de **fechar lacunas**: identifique o que ficou fraco e
 
 ## Próxima Aula
 
-- **Aula 72:** Encerramento do ano letivo.
+- **Aula 78:** Encerramento do ano letivo.

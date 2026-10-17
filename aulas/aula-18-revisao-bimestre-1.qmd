@@ -63,4 +63,4 @@ O fio condutor do bimestre: **organizar** os dados e **modelar** o negócio ante
 
 ## Próxima Aula
 
-- **Aula 19:** Introdução aos Sistemas Gerenciadores de Banco de Dados.
+- **Aula 21:** Introdução aos Sistemas Gerenciadores de Banco de Dados.

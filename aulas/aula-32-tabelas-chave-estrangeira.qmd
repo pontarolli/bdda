@@ -66,4 +66,4 @@ A **integridade referencial** é o que impede um pedido "órfão", apontando par
 
 ## Próxima Aula
 
-- **Aula 31:** Criando tabelas e estabelecendo relacionamentos.
+- **Aula 33:** Criando tabelas e estabelecendo relacionamentos.

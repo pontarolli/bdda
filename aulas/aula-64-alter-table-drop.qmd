@@ -70,4 +70,4 @@ DROP DATABASE escola;
 
 ## Próxima Aula
 
-- **Aula 59:** Restrições — PRIMARY KEY e FOREIGN KEY.
+- **Aula 65:** Restrições — PRIMARY KEY e FOREIGN KEY.

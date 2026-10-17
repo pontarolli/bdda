@@ -66,4 +66,4 @@ A fluência em SQL vem de **praticar muito**: criar consultas é como um idioma 
 
 ## Próxima Aula
 
-- **Aula 54:** Síntese e revisão do 3º bimestre.
+- **Aula 58:** Síntese e revisão do 3º bimestre.

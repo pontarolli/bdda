@@ -66,4 +66,4 @@ O **SELECT** é o comando mais usado no mundo dos bancos: quase todo trabalho co
 
 ## Próxima Aula
 
-- **Aula 38:** O comando SELECT — estrutura geral.
+- **Aula 42:** O comando SELECT — estrutura geral.

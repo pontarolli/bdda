@@ -72,4 +72,4 @@ SELECT * FROM Aluno WHERE telefone IS NULL;
 
 ## Próxima Aula
 
-- **Aula 43:** SELECT — ordenação com ORDER BY.
+- **Aula 47:** SELECT — ordenação com ORDER BY.

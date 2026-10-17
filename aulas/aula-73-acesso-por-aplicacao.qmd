@@ -63,4 +63,4 @@ A aplicação **nunca** guarda os dados "de verdade": ela lê e escreve no banco
 
 ## Próxima Aula
 
-- **Aula 68:** Conectando a aplicação ao banco — visão geral.
+- **Aula 74:** Conectando a aplicação ao banco — visão geral.

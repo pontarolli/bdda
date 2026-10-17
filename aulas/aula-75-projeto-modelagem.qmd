@@ -62,4 +62,4 @@ O projeto final mostra se você consegue **percorrer todo o caminho**: do entend
 
 ## Próxima Aula
 
-- **Aula 70:** Projeto final — implementação no banco.
+- **Aula 76:** Projeto final — implementação no banco.

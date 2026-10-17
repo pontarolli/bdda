@@ -66,4 +66,4 @@ Os **metadados** são como a "planta baixa" do banco: descrevem o que existe, se
 
 ## Próxima Aula
 
-- **Aula 21:** Introdução à linguagem DML.
+- **Aula 23:** Introdução à linguagem DML.

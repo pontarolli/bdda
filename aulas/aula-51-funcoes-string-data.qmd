@@ -68,4 +68,4 @@ As funções permitem **calcular e formatar** direto na consulta, sem alterar os
 
 ## Próxima Aula
 
-- **Aula 48:** INSERT — inserindo dados.
+- **Aula 52:** INSERT — inserindo dados.

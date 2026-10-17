@@ -60,4 +60,4 @@ A linha de comando parece "crua", mas ensina o essencial: cada comando e seus re
 
 ## Próxima Aula
 
-- **Aula 25:** Clientes modo gráfico — MySQL Workbench.
+- **Aula 27:** Clientes modo gráfico — MySQL Workbench.

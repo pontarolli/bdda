@@ -78,4 +78,4 @@ O JOIN **filtra implicitamente**: quem não tem correspondência fica de fora �
 
 ## Próxima Aula
 
-- **Aula 63:** LEFT e RIGHT JOIN.
+- **Aula 69:** LEFT e RIGHT JOIN.

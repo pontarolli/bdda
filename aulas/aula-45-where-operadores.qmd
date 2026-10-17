@@ -70,4 +70,4 @@ Na dúvida, use **parênteses**: eles deixam a intenção clara e evitam resulta
 
 ## Próxima Aula
 
-- **Aula 42:** WHERE — BETWEEN, IN, LIKE, IS NULL.
+- **Aula 46:** WHERE — BETWEEN, IN, LIKE, IS NULL.

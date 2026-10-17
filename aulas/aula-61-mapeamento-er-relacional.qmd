@@ -65,4 +65,4 @@ O mapeamento é **mecânico**: seguindo as regras, o DER vira tabelas de forma s
 
 ## Próxima Aula
 
-- **Aula 56:** DDL — linguagem de definição de dados.
+- **Aula 62:** DDL — linguagem de definição de dados.

@@ -63,4 +63,4 @@ O fio condutor: sair do **modelo** e chegar a um banco **real**, criado e popula
 
 ## Próxima Aula
 
-- **Aula 37:** Revisão e introdução à linguagem SQL.
+- **Aula 41:** Revisão e introdução à linguagem SQL.

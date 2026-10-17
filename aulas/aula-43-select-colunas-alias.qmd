@@ -75,4 +75,4 @@ SELECT nome, salario * 12 AS anual FROM Funcionario;
 
 ## Próxima Aula
 
-- **Aula 40:** SELECT ... WHERE — filtros básicos.
+- **Aula 44:** SELECT ... WHERE — filtros básicos.

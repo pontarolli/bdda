@@ -71,4 +71,4 @@ SELECT nome, idade FROM Aluno ORDER BY 2;
 
 ## Próxima Aula
 
-- **Aula 44:** SELECT — funções de agregação.
+- **Aula 48:** SELECT — funções de agregação.

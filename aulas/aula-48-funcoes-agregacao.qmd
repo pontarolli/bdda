@@ -66,4 +66,4 @@ Cuidado: `AVG` ignora nulos. Se houver valores ausentes, a média pode enganar.
 
 ## Próxima Aula
 
-- **Aula 45:** SELECT — agrupamento com GROUP BY.
+- **Aula 49:** SELECT — agrupamento com GROUP BY.

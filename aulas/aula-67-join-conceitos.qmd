@@ -64,4 +64,4 @@ O JOIN é o que "dá sentido" ao modelo relacional: as tabelas guardam partes e 
 
 ## Próxima Aula
 
-- **Aula 62:** INNER JOIN na prática.
+- **Aula 68:** INNER JOIN na prática.

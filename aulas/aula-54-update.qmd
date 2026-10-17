@@ -75,4 +75,4 @@ Antes de rodar um UPDATE, faça um `SELECT` com o **mesmo WHERE** para ver o que
 
 ## Próxima Aula
 
-- **Aula 51:** UPDATE ... WHERE — cuidados.
+- **Aula 55:** UPDATE ... WHERE — cuidados.

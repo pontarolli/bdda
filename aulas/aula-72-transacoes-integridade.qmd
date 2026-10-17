@@ -65,4 +65,4 @@ A transação é a "rede de proteção" do banco: se algo falhar no meio do cami
 
 ## Próxima Aula
 
-- **Aula 67:** Acesso ao banco de dados por uma aplicação.
+- **Aula 73:** Acesso ao banco de dados por uma aplicação.

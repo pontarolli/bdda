@@ -65,4 +65,4 @@ DML é o "dia a dia" do banco: consultar, inserir, atualizar e excluir — o que
 
 ## Próxima Aula
 
-- **Aula 22:** Apresentando o SGBD MySQL.
+- **Aula 24:** Apresentando o SGBD MySQL.

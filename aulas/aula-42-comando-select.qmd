@@ -66,4 +66,4 @@ Escrever `*` é prático, mas em tabelas grandes custa desempenho: prefira lista
 
 ## Próxima Aula
 
-- **Aula 39:** SELECT — colunas, alias e DISTINCT.
+- **Aula 43:** SELECT — colunas, alias e DISTINCT.

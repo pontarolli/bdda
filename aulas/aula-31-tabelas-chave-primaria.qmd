@@ -63,4 +63,4 @@ CREATE TABLE Aluno (
 
 ## Próxima Aula
 
-- **Aula 30:** Criando tabelas — o papel das chaves estrangeiras.
+- **Aula 32:** Criando tabelas — o papel das chaves estrangeiras.

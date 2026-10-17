@@ -74,4 +74,4 @@ Definir as **restrições** já na criação evita dados inválidos desde o prim
 
 ## Próxima Aula
 
-- **Aula 58:** DDL — ALTER TABLE e DROP.
+- **Aula 64:** DDL — ALTER TABLE e DROP.

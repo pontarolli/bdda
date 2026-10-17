@@ -65,4 +65,4 @@ title: "Aula 28 — Criando um Banco de Dados no MySQL"
 
 ## Próxima Aula
 
-- **Aula 27:** Tipos de dados e campos.
+- **Aula 29:** Tipos de dados e campos.

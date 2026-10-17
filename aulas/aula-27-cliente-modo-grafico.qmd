@@ -63,4 +63,4 @@ Modo texto e modo gráfico **se complementam**: a interface ajuda, mas o SQL é 
 
 ## Próxima Aula
 
-- **Aula 26:** Criando um banco de dados no MySQL.
+- **Aula 28:** Criando um banco de dados no MySQL.

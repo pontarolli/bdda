@@ -78,4 +78,4 @@ Subconsultas permitem **pensar em etapas**: resolva o problema interno primeiro 
 
 ## Próxima Aula
 
-- **Aula 65:** Views e índices.
+- **Aula 71:** Views e índices.

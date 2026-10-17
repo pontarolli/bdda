@@ -67,4 +67,4 @@ Escolhemos o MySQL pela **popularidade**: é fácil encontrar material, tutoriai
 
 ## Próxima Aula
 
-- **Aula 23:** Instalação e configuração do MySQL.
+- **Aula 25:** Instalação e configuração do MySQL.

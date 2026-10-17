@@ -64,4 +64,4 @@ DELETE FROM Aluno WHERE idade < 15;
 
 ## Próxima Aula
 
-- **Aula 53:** Exercícios de fixação de SELECT.
+- **Aula 57:** Exercícios de fixação de SELECT.
