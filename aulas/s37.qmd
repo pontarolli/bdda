@@ -1,0 +1,216 @@
+---
+title: "Semana 37 — Conteúdo de 2 aulas"
+---
+
+## Semana 37 — Conteúdo de 2 aulas
+
+- **Aula 59:** Transações e Integridade
+- **Aula 60:** Acesso ao banco de dados por uma aplicação
+
+## Aula 59 — Transações e Integridade
+
+## Objetivos da Aula
+
+- Compreender o conceito de **transação**.
+- Conhecer as propriedades **ACID**.
+- Usar **COMMIT** e **ROLLBACK**.
+
+## O que é uma Transação?
+
+- Um **conjunto** de operações.
+- Que deve ser executado **por inteiro**.
+- Ou **nada** é aplicado.
+
+## Exemplo — Transferência
+
+- Tirar 100 da conta A.
+- Colocar 100 na conta B.
+- As duas ações devem ocorrer **juntas**.
+
+## As Propriedades ACID
+
+- **Atomicidade:** tudo ou nada.
+- **Consistência:** dados válidos.
+- **Isolamento:** transações não se atrapalham.
+- **Durabilidade:** o que foi confirmado **persiste**.
+
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\footnotesize,node distance=9mm and 10mm,
+  b/.style={draw,rounded corners,fill=blue!10,minimum width=3.1cm,minimum height=1cm,align=center,inner sep=4pt}]
+  \node[b] (a) {Atomicidade\\ \scriptsize tudo ou nada};
+  \node[b,right=of a] (c) {Consistência\\ \scriptsize dados válidos};
+  \node[b,below=of a] (i) {Isolamento\\ \scriptsize sem conflitos};
+  \node[b,below=of c] (d) {Durabilidade\\ \scriptsize persiste};
+\end{tikzpicture}
+\end{center}
+```
+
+## Comandos
+
+```sql
+START TRANSACTION;
+UPDATE Conta SET saldo = saldo - 100 WHERE id = 1;
+UPDATE Conta SET saldo = saldo + 100 WHERE id = 2;
+COMMIT;   -- confirma
+-- ou ROLLBACK; -- desfaz
+```
+
+## COMMIT e ROLLBACK
+
+- **COMMIT:** confirma as mudanças.
+- **ROLLBACK:** **desfaz** tudo desde o início.
+- Ferramenta de **segurança**.
+
+::: {.callout-note}
+A transação é a "rede de proteção" do banco: se algo falhar no meio do caminho, tudo volta ao estado anterior.
+:::
+
+## Prática
+
+- Simule uma transferência.
+- Faça um ROLLBACK e observe.
+
+## Resumo da Aula
+
+- **Transação:** operações atômicas.
+- Propriedades **ACID**.
+- **COMMIT** confirma; **ROLLBACK** desfaz.
+
+## Referências
+
+- ELMASRI, R.; NAVATHE, S. *Sistemas de Banco de Dados*. Pearson.
+- SILBERSCHATZ, A. et al. *Sistema de Banco de Dados*. Elsevier.
+
+## Aula 60 — Acesso ao banco de dados por uma aplicação
+
+## Objetivos da Aula
+
+- Entender como uma **aplicação** usa o banco.
+- Conhecer **drivers** e **bibliotecas**.
+- Vislumbrar a arquitetura **cliente-servidor**.
+
+## Do Banco para o Sistema
+
+- O banco guarda os **dados**.
+- A aplicação oferece a **interface**.
+- Juntos formam o **sistema**.
+
+## Arquitetura
+
+- **Cliente:** a aplicação.
+- **Servidor:** o SGBD.
+- Comunicação por **rede**.
+
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\footnotesize,node distance=6mm,
+  b/.style={draw,rounded corners,minimum width=2cm,minimum height=0.85cm,align=center,inner sep=4pt}]
+  \node[b,fill=blue!10] (a) {Aplicação};
+  \node[b,fill=orange!20,right=of a] (d) {Driver};
+  \node[b,fill=green!12,right=of d] (s) {SGBD};
+  \node[b,fill=gray!15,right=of s] (db) {Banco};
+  \draw[<->] (a)--(d); \draw[<->] (d)--(s); \draw[<->] (s)--(db);
+\end{tikzpicture}
+\end{center}
+```
+
+## Como a Aplicação Conecta
+
+- Usa um **driver** (conector).
+- Envia comandos **SQL**.
+- Recebe **resultados**.
+
+## Linguagens e Bibliotecas
+
+- **Python:** `mysql.connector`, `PyMySQL`.
+- **PHP:** PDO, mysqli.
+- **Java:** JDBC.
+- **JavaScript:** mysql2.
+
+## Fluxo Típico
+
+- **1.** Abrir a conexão.
+- **2.** Enviar a consulta.
+- **3.** Ler os resultados.
+- **4.** Fechar a conexão.
+
+::: {.callout-note}
+A aplicação **nunca** guarda os dados "de verdade": ela lê e escreve no banco, que é a fonte da verdade.
+:::
+
+## Cuidados
+
+- Não colocar **senhas no código**.
+- Evitar montar SQL por **concatenação**.
+- Usar **parâmetros** (evita SQL Injection).
+
+## Resumo da Aula
+
+- Aplicação e banco formam o **sistema**.
+- Conexão via **drivers** e bibliotecas.
+- Importância da **segurança**.
+
+## Referências
+
+- Documentação oficial do MySQL.
+- ROB, P.; CORONEL, C. *Sistemas de Banco de Dados*. Cengage.
+
+## Objetivos da Aula
+
+- Ver, na prática, uma **conexão** aplicação–banco.
+- Entender o papel das **credenciais**.
+- Conhecer **boas práticas** de conexão.
+
+## Aula de Hoje
+
+- **Demonstração** de conexão.
+- Uso de uma biblioteca simples.
+- Foco na **compreensão**, não na linguagem.
+
+## Passos da Conexão
+
+- **1.** Informar **host, porta, banco**.
+- **2.** Informar **usuário e senha**.
+- **3.** Estabelecer a conexão.
+- **4.** Executar uma consulta.
+
+## Exemplo Conceitual
+
+```
+conectar(host, usuario, senha, banco)
+executar("SELECT * FROM Cliente")
+para cada linha: mostrar
+fechar()
+```
+
+## Credenciais
+
+- Ficam em **variáveis de ambiente**.
+- **Nunca** no código-fonte.
+- **Nunca** no repositório (Git).
+
+## Segurança
+
+- Usuário com **privilégios mínimos**.
+- **Parâmetros** em vez de concatenar SQL.
+- Conexões **criptografadas** quando possível.
+
+::: {.callout-note}
+A senha do banco é **segredo**: se ela vazar no repositório, o banco inteiro fica exposto.
+:::
+
+## Prática/Demonstração
+
+- Conectar a um banco **local**.
+- Fazer uma consulta simples via código.
+
+## Resumo da Aula
+
+- Conectar exige **credenciais** e um driver.
+- Segredos **fora** do código.
+- Siga as boas práticas de **segurança**.
+
+## Referências
+
+- Documentação oficial do MySQL.

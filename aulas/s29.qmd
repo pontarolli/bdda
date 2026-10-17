@@ -1,0 +1,145 @@
+---
+title: "Semana 29 — Conteúdo de 2 aulas"
+---
+
+## Semana 29 — Conteúdo de 2 aulas
+
+- **Aula 47:** DELETE: Excluindo Dados
+- **Aula 48:** Exercícios de Fixação de SELECT
+
+## Aula 47 — DELETE: Excluindo Dados
+
+## Objetivos da Aula
+
+- Compreender o comando **DELETE**.
+- Excluir registros com **segurança**.
+- Diferenciar **DELETE** de **TRUNCATE** e **DROP**.
+
+## O comando DELETE
+
+- Remove **linhas** de uma tabela.
+- Parte da **DML**.
+- A **estrutura** permanece.
+
+## Sintaxe
+
+```sql
+DELETE FROM Aluno WHERE id = 3;
+```
+
+- O `WHERE` escolhe as linhas.
+- **Sem WHERE:** apaga **tudo**.
+
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\footnotesize,node distance=20mm,
+  t/.style={draw,rounded corners,fill=blue!10,align=center,inner sep=6pt}]
+  \node[t] (a) {id 1\\id 2\\id 3};
+  \node[t,fill=red!12,right=of a] (b) {id 1\\id 2};
+  \draw[-{Latex}] (a) -- node[above,font=\scriptsize]{DELETE} (b);
+\end{tikzpicture}
+\end{center}
+```
+
+## Excluindo Várias
+
+```sql
+DELETE FROM Aluno WHERE idade < 15;
+```
+
+- Remove por **condição**.
+
+## DELETE x TRUNCATE x DROP
+
+- **DELETE:** remove linhas (com WHERE), pode ser desfeito.
+- **TRUNCATE:** esvazia a tabela rapidamente.
+- **DROP:** apaga a **tabela inteira**.
+
+## Integridade Referencial
+
+- Excluir um cliente **com pedidos** pode ser **bloqueado**.
+- Depende das **ações referenciais**.
+- Use `ON DELETE` conforme a regra.
+
+::: {.callout-note}
+`DELETE`, `TRUNCATE` e `DROP` removem dados — sempre confira a tabela e faça **backup** antes.
+:::
+
+## Prática
+
+- Exclua um aluno por id.
+- Tente excluir um cliente com pedidos e observe.
+
+## Resumo da Aula
+
+- **DELETE** remove linhas.
+- Podem ser **bloqueadas** por FKs.
+- Não confunda com **TRUNCATE** e **DROP**.
+
+## Referências
+
+- ROB, P.; CORONEL, C. *Sistemas de Banco de Dados*. Cengage.
+
+## Aula 48 — Exercícios de Fixação de SELECT
+
+## Objetivos da Aula
+
+- **Praticar** o SELECT em profundidade.
+- Combinar cláusulas em consultas **reais**.
+- Ganhar **fluência** em SQL.
+
+## Aula de Hoje
+
+- Aula **prática** de consultas.
+- Vários **exercícios** progressivos.
+- Base para o **trabalho final**.
+
+## Banco de Exemplo
+
+- **Cliente** (id, nome, cidade).
+- **Produto** (id, nome, preco).
+- **Pedido** (id, id_cliente, data, valor).
+
+## Exercícios Básicos
+
+- Liste todos os clientes de **Boituva**.
+- Produtos com preço **acima de 50**.
+- Pedidos ordenados por **valor**.
+
+## Exercícios com Agregação
+
+- Total de **pedidos por cliente**.
+- **Média** de valor dos pedidos.
+- Cidades com **mais de** 2 clientes (GROUP BY + HAVING).
+
+## Exercícios Combinados
+
+```sql
+SELECT c.nome, COUNT(*) AS pedidos
+FROM Cliente c
+JOIN Pedido p ON p.id_cliente = c.id
+GROUP BY c.nome
+HAVING COUNT(*) > 1;
+```
+
+- Junta, agrupa e filtra grupos.
+
+::: {.callout-note}
+A fluência em SQL vem de **praticar muito**: criar consultas é como um idioma — só se aprende usando.
+:::
+
+## Registro
+
+- Anote as **soluções**.
+- Compare **abordagens** diferentes.
+
+## Resumo da Aula
+
+- Praticamos o **SELECT** a fundo.
+- Combinamos **WHERE, GROUP BY, HAVING, ORDER BY**.
+- Preparamos o terreno para os **JOINs**.
+
+## Referências
+
+- ROB, P.; CORONEL, C. *Sistemas de Banco de Dados*. Cengage.
+- Documentação oficial do MySQL.

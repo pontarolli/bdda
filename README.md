@@ -12,124 +12,148 @@ do **Curso Técnico em Redes de Computadores** do **IFSP — Câmpus Boituva**.
 
 ## Como usar este repositório
 
-As aulas estão na pasta [`aulas/`](aulas/), numeradas de **01 a 80**.
+As aulas estão na pasta [`aulas/`](aulas/), organizadas em **40 semanas** (`s01` a `s40`). Cada **semana** reúne as **2 aulas** do período num único arquivo.
 
-- Para **estudar**, abra o arquivo **`.pdf`** da aula (ex.: [`aulas/aula-01.pdf`](aulas/aula-01.pdf)).
-- Cada aula também tem a **fonte editável** `.qmd` (mesmo nome), para quem quiser adaptar o conteúdo.
+- Para **estudar**, abra o arquivo **`.pdf`** da semana (ex.: [`aulas/s01.pdf`](aulas/s01.pdf)).
+- Cada semana também tem a **fonte editável** `.qmd` (mesmo nome), para quem quiser adaptar o conteúdo.
 - As **avaliações** (`.gift`, com gabarito) ficam na pasta `aulas/` junto das aulas e **não** são publicadas.
 
 > Dica: no GitHub, clique no arquivo `.pdf` e depois em **Download** para abrir os slides.
 
 ---
 
+## Plano de Ensino
+
+> Baseado no **Plano de Ensino** e no **Plano de Aulas** do PPC do curso (arquivos `BTVBDDA.pdf` e `plano-de-aula.pdf`).
+
+### Identificação
+
+| Campo | Valor |
+|---|---|
+| Curso | Técnico em Redes de Computadores Integrado ao Ensino Médio |
+| Componente curricular | Banco de Dados |
+| Tipo | Obrigatório/Técnica |
+| Núcleo | NET |
+| Série | 2º |
+| Sigla | BTVBDDA |
+| Aulas semanais | 2 |
+| Total de aulas | 80 |
+| Carga horária presencial | 60 h |
+| Carga horária em laboratório | 60 h |
+| Docentes | Rogerio dos Santos · Ricardo Pasquati Pontarolli |
+
+### Conhecimentos essenciais do currículo de referência
+
+Programação/Redes de Computadores.
+
+### Ementa
+
+O componente curricular aborda fundamentos e conceitos de banco de dados e as técnicas para o projeto, implementação e uso de bancos de dados. Apresenta o modelo relacional, instalação e configuração de um sistema gerenciador de banco de dados, a manipulação de informações armazenadas por meio da linguagem SQL e o acesso a banco de dados a partir de uma linguagem de programação.
+
+### Objetivos
+
+- Compreender e utilizar modelos para definição e projeto de Banco de Dados;
+- Aplicar ferramentas no desenvolvimento e manipulação de bancos de dados em um Sistema Gerenciador de Banco de Dados com comandos SQL padrão ANSI;
+- Implementar e usar bancos de dados, com a linguagem SQL para criação, armazenamento e recuperação de dados e na integração com uma linguagem de programação.
+
+### Conteúdo Programático
+
+- Introdução a Banco de Dados, Modelo Conceitual, Modelo Lógico e Modelo Físico;
+- Bases da análise de requisitos para elaboração do modelo conceitual;
+- Modelo Entidade-Relacionamento;
+- Modelo Relacional;
+- Mapeamento do Modelo Entidade-Relacionamento para o Modelo Relacional;
+- Linguagem SQL;
+- DDL — *Data Definition Language*;
+- DML — *Data Manipulation Language*;
+- Instalação e configuração de um sistema gerenciador de bancos de dados;
+- Acesso ao banco de dados utilizando clientes modo texto e modo gráfico;
+- Acesso ao banco de dados por uma aplicação.
+
+### Avaliação
+
+**Instrumentos:** avaliação por exercícios em sala de aula; avaliação por projetos em laboratório; avaliação por instrumento escrito em sala de aula e em laboratório; avaliação da evolução individual.
+
+**Critérios:** média simples de todas as notas do bimestre para as notas bimestrais; média simples de todas as notas para a nota final.
+
+### Bibliografia Básica
+
+- ROB, Peter; CORONEL, Carlos. *Sistemas de banco de dados: projeto, implementação e gerenciamento*. São Paulo: Cengage Learning, 2011.
+
+### Bibliografia Complementar
+
+- ELMASRI, Ramez; NAVATHE, Shamkant B. *Sistemas de banco de dados*. 6. ed. São Paulo: Pearson Education do Brasil, 2011.
+- HEUSER, Carlos Alberto. *Projeto de banco de dados*. 6. ed. Porto Alegre: Bookman, 2009.
+- SILBERSCHATZ, Abraham; KORTH, Henry F.; SUDARSHAN, S. *Sistema de banco de dados*. Rio de Janeiro: Elsevier, 2012.
+
+---
+
 ## Conteúdo por Bimestre
 
-Cronograma com **72 aulas de conteúdo** (18 por bimestre) e **8 avaliações** (2 por bimestre), em formato **GIFT** para importação no Moodle (10 questões cada).
-
-> As aulas são apresentações **Beamer (PDF)** geradas a partir das fontes `.qmd`.
-> As avaliações (`.gift`) ficam na pasta `aulas/` e **não** são publicadas.
+Cronograma com **64 aulas de conteúdo** (16 por bimestre), organizadas em **32 semanas de 2 aulas** cada, e **8 avaliações** (2 por bimestre), em formato **GIFT** para importação no Moodle (10 questões cada).
 
 ### 1º Bimestre — Fundamentos e Modelagem Conceitual
 
-| # | Aula | PDF | Fonte (.qmd) |
-|---|---|-----|-----|
-| 01 | Apresentação da disciplina e metodologia | [aula-01](aulas/aula-01.pdf) | [.qmd](aulas/aula-01-apresentacao-disciplina.qmd) |
-| 02 | Introdução ao conceito de dados | [aula-02](aulas/aula-02.pdf) | [.qmd](aulas/aula-02-introducao-conceito-de-dados.qmd) |
-| 03 | De sistemas de arquivos a banco de dados | [aula-03](aulas/aula-03.pdf) | [.qmd](aulas/aula-03-sistemas-de-arquivos-a-bd.qmd) |
-| 04 | Organização de dados e normalização: conceitos | [aula-04](aulas/aula-04.pdf) | [.qmd](aulas/aula-04-organizacao-dados-normalizacao.qmd) |
-| 05 | Exercícios de normalização | [aula-05](aulas/aula-05.pdf) | [.qmd](aulas/aula-05-exercicios-normalizacao.qmd) |
-| 06 | Tabelas e relacionamentos: abordagem lúdica | [aula-06](aulas/aula-06.pdf) | [.qmd](aulas/aula-06-tabelas-relacionamentos-ludico.qmd) |
-| 07 | Estudo de caso comercial: o vendedor de pipoca | [aula-07](aulas/aula-07.pdf) | [.qmd](aulas/aula-07-estudo-de-caso-pipoca.qmd) |
-| 08 | Análise de requisitos para banco de dados | [aula-08](aulas/aula-08.pdf) | [.qmd](aulas/aula-08-analise-de-requisitos.qmd) |
-| 09 | Redação descritiva dos requisitos (minimundo) | [aula-09](aulas/aula-09.pdf) | [.qmd](aulas/aula-09-minimundo-requisitos.qmd) |
-| 10 | **Avaliação 1 (GIFT, 10 questões)** | — | `aula-10-avaliacao-b1-av1.gift` |
-| 11 | Modelo Entidade-Relacionamento: visão geral | [aula-11](aulas/aula-11.pdf) | [.qmd](aulas/aula-11-modelo-er-visao-geral.qmd) |
-| 12 | Entidades e tipos formais de representação | [aula-12](aulas/aula-12.pdf) | [.qmd](aulas/aula-12-entidades.qmd) |
-| 13 | Atributos no modelo ER | [aula-13](aulas/aula-13.pdf) | [.qmd](aulas/aula-13-atributos.qmd) |
-| 14 | Relacionamentos no modelo ER | [aula-14](aulas/aula-14.pdf) | [.qmd](aulas/aula-14-relacionamentos.qmd) |
-| 15 | Cardinalidades e participação | [aula-15](aulas/aula-15.pdf) | [.qmd](aulas/aula-15-cardinalidades.qmd) |
-| 16 | Chave primária: conceito | [aula-16](aulas/aula-16.pdf) | [.qmd](aulas/aula-16-chave-primaria-conceito.qmd) |
-| 17 | Chave estrangeira: conceito | [aula-17](aulas/aula-17.pdf) | [.qmd](aulas/aula-17-chave-estrangeira-conceito.qmd) |
-| 18 | Exercícios de fixação da modelagem | [aula-18](aulas/aula-18.pdf) | [.qmd](aulas/aula-18-exercicios-modelagem.qmd) |
-| 19 | Síntese e revisão do 1º bimestre | [aula-19](aulas/aula-19.pdf) | [.qmd](aulas/aula-19-revisao-bimestre-1.qmd) |
-| 20 | **Avaliação 2 (GIFT, 10 questões)** | — | `aula-20-avaliacao-b1-av2.gift` |
+| Semana | Conteúdo | PDF | Fonte (.qmd) |
+|---|---|---|---|
+| 1 | **Aula 1:** Apresentação da Disciplina e Metodologia · **Aula 2:** Introdução ao Conceito de Dados | [s01](aulas/s01.pdf) | [.qmd](aulas/s01.qmd) |
+| 2 | **Aula 3:** De Sistemas de Arquivos a Banco de Dados · **Aula 4:** Organização de Dados e Normalização: Conceitos | [s02](aulas/s02.pdf) | [.qmd](aulas/s02.qmd) |
+| 3 | **Aula 5:** Exercícios de Normalização · **Aula 6:** Tabelas e Relacionamentos: Abordagem Lúdica | [s03](aulas/s03.pdf) | [.qmd](aulas/s03.qmd) |
+| 4 | **Aula 7:** Estudo de Caso Comercial: o Vendedor de Pipoca · **Aula 8:** Análise de requisitos e redação descritiva (minimundo) | [s04](aulas/s04.pdf) | [.qmd](aulas/s04.qmd) |
+| 5 | **Avaliação 1 (GIFT, 10 questões)** | — | `s05-avaliacao-1.gift` |
+| 6 | **Aula 9:** Modelo Entidade-Relacionamento: Visão Geral · **Aula 10:** Entidades e Tipos Formais de Representação | [s06](aulas/s06.pdf) | [.qmd](aulas/s06.qmd) |
+| 7 | **Aula 11:** Atributos no Modelo ER · **Aula 12:** Relacionamentos no Modelo ER | [s07](aulas/s07.pdf) | [.qmd](aulas/s07.qmd) |
+| 8 | **Aula 13:** Cardinalidades e Participação · **Aula 14:** Chave Primária: Conceito | [s08](aulas/s08.pdf) | [.qmd](aulas/s08.qmd) |
+| 9 | **Aula 15:** Chave Estrangeira: Conceito · **Aula 16:** Exercícios de Fixação da Modelagem | [s09](aulas/s09.pdf) | [.qmd](aulas/s09.qmd) |
+| 10 | **Avaliação 2 (GIFT, 10 questões)** | — | `s10-avaliacao-2.gift` |
 
 ### 2º Bimestre — SGBD e Criação de Tabelas com SQL
 
-| # | Aula | PDF | Fonte (.qmd) |
-|---|---|-----|-----|
-| 21 | Introdução aos Sistemas Gerenciadores de Banco de Dados | [aula-21](aulas/aula-21.pdf) | [.qmd](aulas/aula-21-introducao-sgbd.qmd) |
-| 22 | Componentes e arquitetura de um SGBD | [aula-22](aulas/aula-22.pdf) | [.qmd](aulas/aula-22-arquitetura-sgbd.qmd) |
-| 23 | Introdução à linguagem DML | [aula-23](aulas/aula-23.pdf) | [.qmd](aulas/aula-23-introducao-dml.qmd) |
-| 24 | Apresentando o SGBD MySQL | [aula-24](aulas/aula-24.pdf) | [.qmd](aulas/aula-24-apresentando-mysql.qmd) |
-| 25 | Instalação e configuração do MySQL | [aula-25](aulas/aula-25.pdf) | [.qmd](aulas/aula-25-instalacao-mysql.qmd) |
-| 26 | Primeiros passos: cliente modo texto | [aula-26](aulas/aula-26.pdf) | [.qmd](aulas/aula-26-cliente-modo-texto.qmd) |
-| 27 | Clientes modo gráfico: MySQL Workbench | [aula-27](aulas/aula-27.pdf) | [.qmd](aulas/aula-27-cliente-modo-grafico.qmd) |
-| 28 | Criando um banco de dados no MySQL | [aula-28](aulas/aula-28.pdf) | [.qmd](aulas/aula-28-criando-banco-de-dados.qmd) |
-| 29 | Tipos de dados e campos | [aula-29](aulas/aula-29.pdf) | [.qmd](aulas/aula-29-tipos-de-dados.qmd) |
-| 30 | **Avaliação 1 (GIFT, 10 questões)** | — | `aula-30-avaliacao-b2-av1.gift` |
-| 31 | Criando tabelas de dados no SGBD | [aula-31](aulas/aula-31.pdf) | [.qmd](aulas/aula-31-criando-tabelas.qmd) |
-| 32 | Criando tabelas: o papel das chaves primárias | [aula-32](aulas/aula-32.pdf) | [.qmd](aulas/aula-32-tabelas-chave-primaria.qmd) |
-| 33 | Criando tabelas: o papel das chaves estrangeiras | [aula-33](aulas/aula-33.pdf) | [.qmd](aulas/aula-33-tabelas-chave-estrangeira.qmd) |
-| 34 | Criando tabelas e estabelecendo relacionamentos | [aula-34](aulas/aula-34.pdf) | [.qmd](aulas/aula-34-tabelas-relacionamentos.qmd) |
-| 35 | Integridade referencial na prática | [aula-35](aulas/aula-35.pdf) | [.qmd](aulas/aula-35-integridade-referencial.qmd) |
-| 36 | Preenchendo tabelas com dados | [aula-36](aulas/aula-36.pdf) | [.qmd](aulas/aula-36-preenchendo-tabelas.qmd) |
-| 37 | Acessando o banco por outros programas | [aula-37](aulas/aula-37.pdf) | [.qmd](aulas/aula-37-acesso-outros-programas.qmd) |
-| 38 | Prática: banco de dados completo | [aula-38](aulas/aula-38.pdf) | [.qmd](aulas/aula-38-pratica-banco-completo.qmd) |
-| 39 | Síntese e revisão do 2º bimestre | [aula-39](aulas/aula-39.pdf) | [.qmd](aulas/aula-39-revisao-bimestre-2.qmd) |
-| 40 | **Avaliação 2 (GIFT, 10 questões)** | — | `aula-40-avaliacao-b2-av2.gift` |
+| Semana | Conteúdo | PDF | Fonte (.qmd) |
+|---|---|---|---|
+| 1 | **Aula 17:** Introdução aos Sistemas Gerenciadores de Banco de Dados · **Aula 18:** Componentes e Arquitetura de um SGBD | [s11](aulas/s11.pdf) | [.qmd](aulas/s11.qmd) |
+| 2 | **Aula 19:** Introdução à Linguagem DML · **Aula 20:** Apresentando o SGBD MySQL | [s12](aulas/s12.pdf) | [.qmd](aulas/s12.qmd) |
+| 3 | **Aula 21:** Instalação e Configuração do MySQL · **Aula 22:** Clientes MySQL: modo texto e Workbench | [s13](aulas/s13.pdf) | [.qmd](aulas/s13.qmd) |
+| 4 | **Aula 23:** Criando um Banco de Dados no MySQL · **Aula 24:** Tipos de Dados e Campos | [s14](aulas/s14.pdf) | [.qmd](aulas/s14.qmd) |
+| 5 | **Avaliação 1 (GIFT, 10 questões)** | — | `s15-avaliacao-1.gift` |
+| 6 | **Aula 25:** Criando Tabelas de Dados no SGBD · **Aula 26:** Criando Tabelas: o Papel das Chaves Primárias | [s16](aulas/s16.pdf) | [.qmd](aulas/s16.qmd) |
+| 7 | **Aula 27:** Criando Tabelas: o Papel das Chaves Estrangeiras · **Aula 28:** Criando Tabelas e Estabelecendo Relacionamentos | [s17](aulas/s17.pdf) | [.qmd](aulas/s17.qmd) |
+| 8 | **Aula 29:** Integridade Referencial na Prática · **Aula 30:** Preenchendo Tabelas com Dados | [s18](aulas/s18.pdf) | [.qmd](aulas/s18.qmd) |
+| 9 | **Aula 31:** Acessando o Banco por Outros Programas · **Aula 32:** Prática: Banco de Dados Completo | [s19](aulas/s19.pdf) | [.qmd](aulas/s19.qmd) |
+| 10 | **Avaliação 2 (GIFT, 10 questões)** | — | `s20-avaliacao-2.gift` |
 
 ### 3º Bimestre — Linguagem SQL: Consultas e Manipulação
 
-| # | Aula | PDF | Fonte (.qmd) |
-|---|---|-----|-----|
-| 41 | Revisão e introdução à linguagem SQL | [aula-41](aulas/aula-41.pdf) | [.qmd](aulas/aula-41-introducao-sql.qmd) |
-| 42 | O comando SELECT: estrutura geral | [aula-42](aulas/aula-42.pdf) | [.qmd](aulas/aula-42-comando-select.qmd) |
-| 43 | SELECT: colunas, alias e DISTINCT | [aula-43](aulas/aula-43.pdf) | [.qmd](aulas/aula-43-select-colunas-alias.qmd) |
-| 44 | SELECT ... WHERE: filtros básicos | [aula-44](aulas/aula-44.pdf) | [.qmd](aulas/aula-44-select-where.qmd) |
-| 45 | WHERE: operadores de comparação e lógicos | [aula-45](aulas/aula-45.pdf) | [.qmd](aulas/aula-45-where-operadores.qmd) |
-| 46 | WHERE: BETWEEN, IN, LIKE, IS NULL | [aula-46](aulas/aula-46.pdf) | [.qmd](aulas/aula-46-where-avancado.qmd) |
-| 47 | SELECT: ordenação com ORDER BY | [aula-47](aulas/aula-47.pdf) | [.qmd](aulas/aula-47-order-by.qmd) |
-| 48 | SELECT: funções de agregação | [aula-48](aulas/aula-48.pdf) | [.qmd](aulas/aula-48-funcoes-agregacao.qmd) |
-| 49 | SELECT: agrupamento com GROUP BY | [aula-49](aulas/aula-49.pdf) | [.qmd](aulas/aula-49-group-by.qmd) |
-| 50 | **Avaliação 1 (GIFT, 10 questões)** | — | `aula-50-avaliacao-b3-av1.gift` |
-| 51 | SELECT: filtrando grupos com HAVING | [aula-51](aulas/aula-51.pdf) | [.qmd](aulas/aula-51-having.qmd) |
-| 52 | Funções de string e de data | [aula-52](aulas/aula-52.pdf) | [.qmd](aulas/aula-52-funcoes-string-data.qmd) |
-| 53 | INSERT: inserindo dados | [aula-53](aulas/aula-53.pdf) | [.qmd](aulas/aula-53-insert.qmd) |
-| 54 | INSERT: múltiplas linhas e valores padrão | [aula-54](aulas/aula-54.pdf) | [.qmd](aulas/aula-54-insert-multiplas-linhas.qmd) |
-| 55 | UPDATE: atualizando dados | [aula-55](aulas/aula-55.pdf) | [.qmd](aulas/aula-55-update.qmd) |
-| 56 | UPDATE ... WHERE: cuidados | [aula-56](aulas/aula-56.pdf) | [.qmd](aulas/aula-56-update-where-cuidados.qmd) |
-| 57 | DELETE: excluindo dados | [aula-57](aulas/aula-57.pdf) | [.qmd](aulas/aula-57-delete.qmd) |
-| 58 | Exercícios de fixação de SELECT | [aula-58](aulas/aula-58.pdf) | [.qmd](aulas/aula-58-exercicios-select.qmd) |
-| 59 | Síntese e revisão do 3º bimestre | [aula-59](aulas/aula-59.pdf) | [.qmd](aulas/aula-59-revisao-bimestre-3.qmd) |
-| 60 | **Avaliação 2 (GIFT, 10 questões)** | — | `aula-60-avaliacao-b3-av2.gift` |
+| Semana | Conteúdo | PDF | Fonte (.qmd) |
+|---|---|---|---|
+| 1 | **Aula 33:** Revisão e Introdução à Linguagem SQL · **Aula 34:** O Comando SELECT: Estrutura Geral | [s21](aulas/s21.pdf) | [.qmd](aulas/s21.qmd) |
+| 2 | **Aula 35:** SELECT: Colunas, Alias e DISTINCT · **Aula 36:** SELECT ... WHERE: Filtros Básicos | [s22](aulas/s22.pdf) | [.qmd](aulas/s22.qmd) |
+| 3 | **Aula 37:** WHERE: Operadores de Comparação e Lógicos · **Aula 38:** WHERE: BETWEEN, IN, LIKE e IS NULL | [s23](aulas/s23.pdf) | [.qmd](aulas/s23.qmd) |
+| 4 | **Aula 39:** SELECT: Ordenação com ORDER BY · **Aula 40:** SELECT: Funções de Agregação | [s24](aulas/s24.pdf) | [.qmd](aulas/s24.qmd) |
+| 5 | **Avaliação 1 (GIFT, 10 questões)** | — | `s25-avaliacao-1.gift` |
+| 6 | **Aula 41:** SELECT: Agrupamento com GROUP BY · **Aula 42:** SELECT: Filtrando Grupos com HAVING | [s26](aulas/s26.pdf) | [.qmd](aulas/s26.qmd) |
+| 7 | **Aula 43:** Funções de String e de Data · **Aula 44:** INSERT: inserindo dados | [s27](aulas/s27.pdf) | [.qmd](aulas/s27.qmd) |
+| 8 | **Aula 45:** UPDATE: Atualizando Dados · **Aula 46:** UPDATE ... WHERE: Cuidados | [s28](aulas/s28.pdf) | [.qmd](aulas/s28.qmd) |
+| 9 | **Aula 47:** DELETE: Excluindo Dados · **Aula 48:** Exercícios de Fixação de SELECT | [s29](aulas/s29.pdf) | [.qmd](aulas/s29.qmd) |
+| 10 | **Avaliação 2 (GIFT, 10 questões)** | — | `s30-avaliacao-2.gift` |
 
 ### 4º Bimestre — SQL Avançado, DDL e Integração com Aplicação
 
-| # | Aula | PDF | Fonte (.qmd) |
-|---|---|-----|-----|
-| 61 | Mapeamento do modelo ER para o relacional | [aula-61](aulas/aula-61.pdf) | [.qmd](aulas/aula-61-mapeamento-er-relacional.qmd) |
-| 62 | DDL: linguagem de definição de dados | [aula-62](aulas/aula-62.pdf) | [.qmd](aulas/aula-62-ddl-visao-geral.qmd) |
-| 63 | DDL: CREATE TABLE | [aula-63](aulas/aula-63.pdf) | [.qmd](aulas/aula-63-create-table.qmd) |
-| 64 | DDL: ALTER TABLE e DROP | [aula-64](aulas/aula-64.pdf) | [.qmd](aulas/aula-64-alter-table-drop.qmd) |
-| 65 | Restrições: PRIMARY KEY e FOREIGN KEY | [aula-65](aulas/aula-65.pdf) | [.qmd](aulas/aula-65-constraints-pk-fk.qmd) |
-| 66 | Restrições: NOT NULL, UNIQUE, CHECK e DEFAULT | [aula-66](aulas/aula-66.pdf) | [.qmd](aulas/aula-66-constraints-outras.qmd) |
-| 67 | JOIN: juntando dados de tabelas | [aula-67](aulas/aula-67.pdf) | [.qmd](aulas/aula-67-join-conceitos.qmd) |
-| 68 | INNER JOIN na prática | [aula-68](aulas/aula-68.pdf) | [.qmd](aulas/aula-68-inner-join.qmd) |
-| 69 | LEFT e RIGHT JOIN | [aula-69](aulas/aula-69.pdf) | [.qmd](aulas/aula-69-left-right-join.qmd) |
-| 70 | **Avaliação 1 (GIFT, 10 questões)** | — | `aula-70-avaliacao-b4-av1.gift` |
-| 71 | Subconsultas (subqueries) | [aula-71](aulas/aula-71.pdf) | [.qmd](aulas/aula-71-subconsultas.qmd) |
-| 72 | Views e índices | [aula-72](aulas/aula-72.pdf) | [.qmd](aulas/aula-72-views-indices.qmd) |
-| 73 | Transações e integridade | [aula-73](aulas/aula-73.pdf) | [.qmd](aulas/aula-73-transacoes-integridade.qmd) |
-| 74 | Acesso ao banco de dados por uma aplicação | [aula-74](aulas/aula-74.pdf) | [.qmd](aulas/aula-74-acesso-por-aplicacao.qmd) |
-| 75 | Conectando a aplicação ao banco: visão geral | [aula-75](aulas/aula-75.pdf) | [.qmd](aulas/aula-75-conectando-aplicacao.qmd) |
-| 76 | Projeto final: modelagem de um negócio | [aula-76](aulas/aula-76.pdf) | [.qmd](aulas/aula-76-projeto-modelagem.qmd) |
-| 77 | Projeto final: implementação no banco | [aula-77](aulas/aula-77.pdf) | [.qmd](aulas/aula-77-projeto-implementacao.qmd) |
-| 78 | Recuperação e reavaliação | [aula-78](aulas/aula-78.pdf) | [.qmd](aulas/aula-78-recuperacao-e-reavaliacao.qmd) |
-| 79 | Encerramento do ano letivo | [aula-79](aulas/aula-79.pdf) | [.qmd](aulas/aula-79-encerramento-ano-letivo.qmd) |
-| 80 | **Avaliação 2 (GIFT, 10 questões)** | — | `aula-80-avaliacao-b4-av2.gift` |
+| Semana | Conteúdo | PDF | Fonte (.qmd) |
+|---|---|---|---|
+| 1 | **Aula 49:** Mapeamento do Modelo ER para o Relacional · **Aula 50:** DDL: Linguagem de Definição de Dados | [s31](aulas/s31.pdf) | [.qmd](aulas/s31.qmd) |
+| 2 | **Aula 51:** DDL: CREATE TABLE, ALTER e DROP · **Aula 52:** Restrições: PRIMARY KEY e FOREIGN KEY | [s32](aulas/s32.pdf) | [.qmd](aulas/s32.qmd) |
+| 3 | **Aula 53:** Restrições: NOT NULL, UNIQUE, CHECK e DEFAULT · **Aula 54:** JOIN: Juntando Dados de Tabelas | [s33](aulas/s33.pdf) | [.qmd](aulas/s33.qmd) |
+| 4 | **Aula 55:** INNER JOIN na Prática · **Aula 56:** LEFT e RIGHT JOIN | [s34](aulas/s34.pdf) | [.qmd](aulas/s34.qmd) |
+| 5 | **Avaliação 1 (GIFT, 10 questões)** | — | `s35-avaliacao-1.gift` |
+| 6 | **Aula 57:** Subconsultas (Subqueries) · **Aula 58:** Views e Índices | [s36](aulas/s36.pdf) | [.qmd](aulas/s36.qmd) |
+| 7 | **Aula 59:** Transações e Integridade · **Aula 60:** Acesso ao banco de dados por uma aplicação | [s37](aulas/s37.pdf) | [.qmd](aulas/s37.qmd) |
+| 8 | **Aula 61:** Projeto Final: Modelagem de um Negócio · **Aula 62:** Projeto Final: Implementação no Banco | [s38](aulas/s38.pdf) | [.qmd](aulas/s38.qmd) |
+| 9 | **Aula 63:** Recuperação e Reavaliação · **Aula 64:** Encerramento do Ano Letivo | [s39](aulas/s39.pdf) | [.qmd](aulas/s39.qmd) |
+| 10 | **Avaliação 2 (GIFT, 10 questões)** | — | `s40-avaliacao-2.gift` |
 
 ---
+
 
 ## Estrutura do repositório
 
@@ -137,10 +161,10 @@ Cronograma com **72 aulas de conteúdo** (18 por bimestre) e **8 avaliações** 
 .
 ├── README.md            # este arquivo (inclui o cronograma)
 └── aulas/
-    ├── aula-01.pdf      # slides (para estudar)
-    ├── aula-01-*.qmd     # fonte editável (Quarto/Markdown)
-    ├── aula-NN-avaliacao-*.gift  # avaliações (não publicadas)
-    ├── images/          # ilustrações e diagramas
+    ├── s01.pdf         # slides da semana (para estudar)
+    ├── s01.qmd         # fonte editável (Quarto/Markdown)
+    ├── s05-avaliacao-1.gift      # avaliações (não publicadas)
+    ├── images/         # ilustrações e diagramas
     └── ...
 ```
 

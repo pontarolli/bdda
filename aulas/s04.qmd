@@ -1,0 +1,237 @@
+---
+title: "Semana 04 — Conteúdo de 2 aulas"
+---
+
+## Semana 04 — Conteúdo de 2 aulas
+
+- **Aula 7:** Estudo de Caso Comercial: o Vendedor de Pipoca
+- **Aula 8:** Análise de requisitos e redação descritiva (minimundo)
+
+## Aula 7 — Estudo de Caso Comercial: o Vendedor de Pipoca
+
+## Objetivos da Aula
+
+- Analisar um **negócio real** simples.
+- Identificar **dados** e **tabelas**.
+- Elaborar **relacionamentos**.
+
+## O Cenário
+
+- Um **vendedor de pipoca**.
+- Vende **produtos** para **clientes**.
+- Registra **vendas** e **pagamentos**.
+
+## Levantando as Informações
+
+- O que o vendedor precisa **guardar**?
+- Produtos e **preços**.
+- Clientes **fiéis**.
+- Vendas e **datas**.
+
+## Possíveis Tabelas
+
+- **Produto** (id, nome, preço).
+- **Cliente** (id, nome, telefone).
+- **Venda** (id, cliente, data).
+- **ItemVenda** (venda, produto, quantidade).
+
+## Relacionamentos
+
+- Uma **venda** pertence a um **cliente**.
+- Uma venda tem vários **itens**.
+- Cada item se refere a um **produto**.
+
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\footnotesize,
+  t/.style={draw,rounded corners,fill=blue!10,align=center,inner sep=4pt}]
+  \node[t] (cli) {Cliente};
+  \node[t,below=15mm of cli] (vend) {Venda};
+  \node[t,below=15mm of vend] (item) {ItemVenda};
+  \node[t,right=24mm of item,fill=green!12] (prod) {Produto};
+  \draw[-{Latex}] (vend) -- (cli);
+  \draw[-{Latex}] (item) -- (vend);
+  \draw[-{Latex}] (item) -- (prod);
+\end{tikzpicture}
+\end{center}
+```
+
+## Por que ItemVenda?
+
+- Uma venda pode ter **vários** produtos.
+- Resolve a relação **N para N**.
+- Guarda **quantidade** por item.
+
+::: {.callout-note}
+Toda modelagem começa entendendo o **negócio**: o que ele faz e quais informações precisa guardar.
+:::
+
+## Desenhando
+
+- Esboce as tabelas.
+- Ligue pelos **ids**.
+- Verifique se faltou algo.
+
+## Atividade
+
+- Em grupo, refaça o modelo.
+- Pense em um negócio **próximo** e modele.
+
+## Resumo da Aula
+
+- Analisamos um negócio **real**.
+- Identificamos **tabelas e relacionamentos**.
+- Vimos como resolver relações **N:N**.
+
+## Referências
+
+- ROB, P.; CORONEL, C. *Sistemas de Banco de Dados*. Cengage.
+
+## Aula 8 — Análise de requisitos e redação descritiva (minimundo)
+
+## Objetivos da Aula
+
+- Compreender a **análise de requisitos**.
+- Entender seu papel no **projeto** do banco.
+- Conhecer técnicas de **levantamento**.
+
+## Por que Analisar Requisitos?
+
+- Antes de criar, é preciso **entender**.
+- Requisitos errados → banco **errado**.
+- Corrigir depois é **caro**.
+
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\footnotesize,node distance=6mm,
+  p/.style={draw,rounded corners,fill=blue!10,minimum height=0.7cm,align=center,inner sep=4pt}]
+  \node[p] (e) {Entender};
+  \node[p,right=of e] (r) {Requisitos};
+  \node[p,right=of r,fill=green!12] (m) {Modelo};
+  \node[p,right=of m,fill=orange!20] (bd) {Banco};
+  \draw[-{Latex}] (e)--(r); \draw[-{Latex}] (r)--(m); \draw[-{Latex}] (m)--(bd);
+\end{tikzpicture}
+\end{center}
+```
+
+## O que São Requisitos?
+
+- O que o **usuário** precisa.
+- O que o **sistema** deve guardar.
+- O que o negócio **faz**.
+
+## Tipos de Requisitos
+
+- **De dados:** o que armazenar.
+- **De operações:** o que consultar/atualizar.
+- **De restrições:** regras do negócio.
+
+## Técnicas de Levantamento
+
+- **Entrevistas** com usuários.
+- **Questionários**.
+- **Observação** do processo.
+- Análise de **documentos** existentes.
+
+## Perguntas-Chave
+
+- Que dados o negócio **produz**?
+- Quem **acessa** esses dados?
+- Que **regras** existem?
+- Que **relatórios** são precisos?
+
+::: {.callout-note}
+O analista é um "detetive": precisa **perguntar** e **entender** antes de desenhar qualquer tabela.
+:::
+
+## Exemplo
+
+- Cliente: "quero saber quais produtos vendem mais".
+- Requisito de dados: registrar **itens de venda**.
+- Requisito de operação: **somar** vendas por produto.
+
+## Resumo da Aula
+
+- A **análise de requisitos** vem antes do modelo.
+- Existem técnicas para **levantar** informações.
+- Requisitos definem o **sucesso** do banco.
+
+## Atividade Rápida
+
+- Escreva **três** perguntas para entrevistar um cliente.
+
+## Referências
+
+- HEUSER, C. A. *Projeto de Banco de Dados*. Bookman.
+- ELMASRI, R.; NAVATHE, S. *Sistemas de Banco de Dados*. Pearson.
+
+## Objetivos da Aula
+
+- Compreender o conceito de **minimundo**.
+- Aprender a **descrever** o negócio em texto.
+- Transformar descrição em **modelo**.
+
+## O que é Minimundo?
+
+- Uma **descrição textual** de uma parte do mundo real.
+- Foca no que o banco vai representar.
+- Serve de base para a **modelagem**.
+
+## Como Escrever
+
+- Use **linguagem simples**.
+- Descreva **entidades** e suas **relações**.
+- Inclua **regras** do negócio.
+
+## Exemplo de Minimundo
+
+> "A biblioteca possui livros, cada um com título e autor. Os livros podem ser emprestados a alunos. Um aluno pode pegar vários livros, e cada empréstimo registra a data."
+
+## Destacando Elementos
+
+- **Livro**, **Aluno** → entidades.
+- **Empresta** → relacionamento.
+- **data** → atributo do relacionamento.
+
+## Regras de Negócio
+
+- Uma só **cópia** pode estar emprestada por vez.
+- Um aluno tem limite de **3** livros.
+- Atraso gera **multa**.
+
+::: {.callout-note}
+Um bom minimundo é **claro** o suficiente para outra pessoa desenhar o modelo só lendo o texto.
+:::
+
+## Prática
+
+- Escolha um negócio.
+- Escreva o **minimundo**.
+- Destaque entidades, atributos e relações.
+
+## Da Descrição ao Modelo
+
+- O minimundo vira **entidades** e **relacionamentos**.
+- É o **primeiro passo** do projeto.
+- Vamos converter nas próximas aulas.
+
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\footnotesize,node distance=18mm,
+  b/.style={draw,rounded corners,minimum height=0.9cm,align=center,inner sep=5pt}]
+  \node[b,fill=green!12] (t) {Minimundo\\(texto)};
+  \node[b,right=of t,align=center] (der) {DER\\(entidades, atributos,\\relacionamentos)};
+  \draw[-{Latex}] (t) -- (der);
+\end{tikzpicture}
+\end{center}
+```
+
+## Resumo da Aula
+
+- **Minimundo** é a descrição textual do negócio.
+- Ele contém **entidades, atributos e relações**.
+- É a base do **modelo conceitual**.
+
+## Referências
+
+- HEUSER, C. A. *Projeto de Banco de Dados*. Bookman.

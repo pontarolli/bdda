@@ -1,0 +1,164 @@
+---
+title: "Semana 31 — Conteúdo de 2 aulas"
+---
+
+## Semana 31 — Conteúdo de 2 aulas
+
+- **Aula 49:** Mapeamento do Modelo ER para o Relacional
+- **Aula 50:** DDL: Linguagem de Definição de Dados
+
+## Aula 49 — Mapeamento do Modelo ER para o Relacional
+
+## Objetivos da Aula
+
+- Compreender o **mapeamento** ER → relacional.
+- Aplicar as regras de **conversão**.
+- Transformar o DER em **tabelas**.
+
+## Por que Mapear?
+
+- O DER é **conceitual**.
+- O SGBD trabalha com **tabelas**.
+- Precisamos de regras para **converter**.
+
+## Regra 1 — Entidades
+
+- Cada **entidade** vira uma **tabela**.
+- Os atributos viram **colunas**.
+- O identificador vira **chave primária**.
+
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\footnotesize,node distance=22mm,
+  b/.style={draw,rounded corners,align=center,inner sep=6pt}]
+  \node[b,fill=blue!10] (e) {Entidade\\ \scriptsize (retângulo)};
+  \node[b,fill=green!12,right=of e] (t) {Tabela\\ \scriptsize (colunas + PK)};
+  \draw[-{Latex}] (e) -- (t);
+\end{tikzpicture}
+\end{center}
+```
+
+## Regra 2 — Relacionamentos 1:N
+
+- A chave do lado "**1**" vira **FK** no lado "**N**".
+- Ex.: Cliente(1) → Pedido(N).
+- `Pedido` recebe `id_cliente`.
+
+## Regra 3 — Relacionamentos 1:1
+
+- A FK pode ir para **qualquer** lado.
+- Costuma ir para o lado de **participação total**.
+
+## Regra 4 — Relacionamentos N:N
+
+- Cria-se uma **tabela nova**.
+- Contém as **duas FKs**.
+- Chave composta pelas duas.
+
+## Regra 5 — Atributos Especiais
+
+- **Multivalorados:** viram **tabela** própria.
+- **Compostos:** viram **várias colunas**.
+- **Derivados:** geralmente **não** armazenados.
+
+::: {.callout-note}
+O mapeamento é **mecânico**: seguindo as regras, o DER vira tabelas de forma sistemática e sem "adivinhação".
+:::
+
+## Prática
+
+- Pegue um DER e aplique as regras.
+- Chegue ao **esquema relacional**.
+
+## Resumo da Aula
+
+- **Entidades** viram tabelas.
+- **1:N** = FK no lado N; **1:1** = FK em um lado.
+- **N:N** = tabela intermediária.
+
+## Referências
+
+- HEUSER, C. A. *Projeto de Banco de Dados*. Bookman.
+- ELMASRI, R.; NAVATHE, S. *Sistemas de Banco de Dados*. Pearson.
+
+## Aula 50 — DDL: Linguagem de Definição de Dados
+
+## Objetivos da Aula
+
+- Compreender o que é **DDL**.
+- Conhecer seus comandos.
+- Entender o papel da DDL no banco.
+
+## O que é DDL?
+
+- **Data Definition Language**.
+- Define a **estrutura** do banco.
+- Cria, altera e remove objetos.
+
+## DDL x DML
+
+- **DDL:** estrutura (tabelas, colunas, índices).
+- **DML:** dados (linhas).
+- DDL "constrói a casa"; DML "mobília".
+
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\footnotesize,node distance=24mm,
+  b/.style={draw,rounded corners,align=center,inner sep=6pt}]
+  \node[b,fill=blue!10] (d) {DDL\\ \scriptsize constrói a casa\\ \scriptsize (estrutura)};
+  \node[b,fill=orange!20,right=of d] (m) {DML\\ \scriptsize mobília\\ \scriptsize (dados)};
+\end{tikzpicture}
+\end{center}
+```
+
+## Principais Comandos DDL
+
+- **CREATE** — cria.
+- **ALTER** — altera.
+- **DROP** — remove.
+- **TRUNCATE** — esvazia.
+
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\footnotesize,node distance=9mm and 12mm,
+  c/.style={draw,rounded corners,fill=blue!10,minimum width=2.6cm,minimum height=0.85cm,align=center}]
+  \node[c] (cr) {CREATE\\ \scriptsize cria};
+  \node[c,right=of cr] (al) {ALTER\\ \scriptsize altera};
+  \node[c,below=of cr] (dr) {DROP\\ \scriptsize remove};
+  \node[c,below=of al] (tr) {TRUNCATE\\ \scriptsize esvazia};
+\end{tikzpicture}
+\end{center}
+```
+
+## Objetos do Banco
+
+- Tabelas, **views**, índices.
+- Bancos de dados (**schemas**).
+- Usuários e privilégios.
+
+## Criação de Estrutura
+
+```sql
+CREATE DATABASE escola;
+CREATE TABLE Aluno ( ... );
+CREATE INDEX idx_nome ON Aluno(nome);
+```
+
+::: {.callout-note}
+Mudanças na estrutura (DDL) costumam ser **irreversíveis** com facilidade: pense bem antes de alterar ou apagar.
+:::
+
+## Prática
+
+- Crie um banco e uma tabela.
+- Liste a estrutura com `DESCRIBE`.
+
+## Resumo da Aula
+
+- **DDL** define a **estrutura**.
+- Comandos: **CREATE, ALTER, DROP, TRUNCATE**.
+- Complementa a DML.
+
+## Referências
+
+- ROB, P.; CORONEL, C. *Sistemas de Banco de Dados*. Cengage.

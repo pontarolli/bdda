@@ -1,0 +1,132 @@
+---
+title: "Semana 16 — Conteúdo de 2 aulas"
+---
+
+## Semana 16 — Conteúdo de 2 aulas
+
+- **Aula 25:** Criando Tabelas de Dados no SGBD
+- **Aula 26:** Criando Tabelas: o Papel das Chaves Primárias
+
+## Aula 25 — Criando Tabelas de Dados no SGBD
+
+## Objetivos da Aula
+
+- Criar **tabelas** com `CREATE TABLE`.
+- Definir **colunas e tipos**.
+- Compreender a estrutura de uma tabela.
+
+## O que é uma Tabela?
+
+- Estrutura com **linhas** (registros) e **colunas** (campos).
+- Criada dentro de um **banco**.
+- Base do modelo **relacional**.
+
+## O Comando CREATE TABLE
+
+```sql
+CREATE TABLE Aluno (
+    id INT,
+    nome VARCHAR(100),
+    idade INT
+);
+```
+
+## Estrutura do Comando
+
+- `CREATE TABLE nome` ...
+- Colunas entre **parênteses**.
+- Cada coluna: **nome tipo**.
+- Termina com **`;`**.
+
+## Vendo a Estrutura
+
+- `SHOW TABLES;` — lista tabelas.
+- `DESCRIBE Aluno;` — mostra colunas.
+- `SHOW CREATE TABLE Aluno;` — SQL de criação.
+
+## Regras de Nomes
+
+- **minúsculas** ou CamelCase consistente.
+- Sem espaços (use `_`).
+- Nome **descritivo**.
+
+::: {.callout-note}
+Criar a tabela é como **montar a ficha** em branco: definimos os campos antes de preencher os dados.
+:::
+
+## Prática
+
+- Crie um banco `escola`.
+- Crie a tabela `Aluno`.
+- Verifique com `DESCRIBE`.
+
+## Resumo da Aula
+
+- Criamos tabelas com **CREATE TABLE**.
+- Definimos **colunas e tipos**.
+- Inspecionamos com **DESCRIBE**.
+
+## Referências
+
+- ROB, P.; CORONEL, C. *Sistemas de Banco de Dados*. Cengage.
+
+## Aula 26 — Criando Tabelas: o Papel das Chaves Primárias
+
+## Objetivos da Aula
+
+- Definir a **chave primária** na criação da tabela.
+- Entender **AUTO_INCREMENT**.
+- Garantir unicidade dos registros.
+
+## Relembrando
+
+- A **chave primária** identifica unicamente.
+- Não pode repetir nem ser nula.
+- Cada tabela deve ter uma.
+
+## Definindo na Criação
+
+```sql
+CREATE TABLE Aluno (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(100) NOT NULL
+);
+```
+
+## AUTO_INCREMENT
+
+- O banco **gera** o número automaticamente.
+- Não precisamos informar o `id`.
+- Sequência **crescente** e única.
+
+## PRIMARY KEY
+
+- Pode ser definida **na coluna**.
+- Ou ao **final** da tabela.
+- Ex.: `PRIMARY KEY (id)`.
+
+## Chave Composta
+
+- Várias colunas juntas formam a chave.
+- Ex.: `PRIMARY KEY (id_pedido, id_produto)`.
+- Útil em tabelas de **relacionamento**.
+
+::: {.callout-note}
+`AUTO_INCREMENT` poupa trabalho e evita erro humano ao digitar o identificador manualmente.
+:::
+
+## Prática
+
+- Crie `Aluno` com `id` auto-incrementado.
+- Teste o `DESCRIBE`.
+- Veja a **chave** marcada como PRI.
+
+## Resumo da Aula
+
+- **PRIMARY KEY** garante unicidade.
+- **AUTO_INCREMENT** gera o id.
+- A chave pode ser **composta**.
+
+## Referências
+
+- ROB, P.; CORONEL, C. *Sistemas de Banco de Dados*. Cengage.

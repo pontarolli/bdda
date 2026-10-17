@@ -1,0 +1,124 @@
+---
+title: "Semana 19 — Conteúdo de 2 aulas"
+---
+
+## Semana 19 — Conteúdo de 2 aulas
+
+- **Aula 31:** Acessando o Banco por Outros Programas
+- **Aula 32:** Prática: Banco de Dados Completo
+
+## Aula 31 — Acessando o Banco por Outros Programas
+
+## Objetivos da Aula
+
+- Conhecer formas de **acessar** o banco fora do SQL.
+- Entender **clientes** e **bibliotecas**.
+- Vislumbrar a **integração** com aplicações.
+
+## Além do Terminal
+
+- O banco não é só para o DBA.
+- Muitos **programas** acessam os dados.
+- A integração é o objetivo final.
+
+## Formas de Acesso
+
+- **Clientes SQL** (Workbench, DBeaver).
+- **Bibliotecas** em linguagens (Python, PHP, Java).
+- **APIs** e conectores.
+
+## Ferramentas de Terceiros
+
+- **DBeaver** (genérico).
+- **phpMyAdmin** (web).
+- Planilhas e relatórios.
+
+## Conexão de Programas
+
+- O programa usa um **driver** (ex.: ODBC).
+- Envia **SQL** ao SGBD.
+- Recebe os **resultados**.
+
+## Exemplos de Uso
+
+- Sistemas escolares.
+- Lojas virtuais.
+- Aplicativos **desktop**.
+- Dashboards.
+
+::: {.callout-note}
+O banco de dados é o **coração** de um sistema: a aplicação é a "cara", mas os dados vivem nele.
+:::
+
+## Prática
+
+- Acesse o banco por um cliente **diferente**.
+- Registre a mesma consulta em duas ferramentas.
+
+## Resumo da Aula
+
+- Vários programas acessam o banco.
+- Usam **drivers e bibliotecas**.
+- A integração com aplicações é o **objetivo**.
+
+## Referências
+
+- Documentação do MySQL e de clientes de terceiros.
+
+## Aula 32 — Prática: Banco de Dados Completo
+
+## Objetivos da Aula
+
+- Construir um **banco completo** do zero.
+- Aplicar **DDL** e **DML** juntos.
+- Consolidar o bimestre com a mão na massa.
+
+## Aula de Hoje
+
+- Aula **prática** integradora.
+- Do **modelo** ao **banco populado**.
+- Trabalho em **duplas**.
+
+## Roteiro
+
+- **1.** Desenhar o **DER**.
+- **2.** Criar o **banco**.
+- **3.** Criar as **tabelas**.
+- **4.** Definir **chaves e FKs**.
+- **5.** **Inserir** dados.
+- **6.** **Conferir**.
+
+## Sugestão de Tema
+
+- **Loja de pipoca** (relembrando a aula 07).
+- **Biblioteca**.
+- **Escola**.
+- Ou um tema **escolhido** pela dupla.
+
+## Checklist
+
+- [ ] Todas as entidades viraram tabelas
+- [ ] Chaves primárias definidas
+- [ ] FKs ligando as tabelas
+- [ ] Dados inseridos na ordem correta
+- [ ] Consultas de conferência
+
+::: {.callout-note}
+Este é o ensaio do **trabalho final**: modelar, criar e popular um banco do começo ao fim.
+:::
+
+## Apresentação
+
+- Cada dupla mostra o **DER** e o banco.
+- Discussão dos **desafios**.
+
+## Resumo da Aula
+
+- Construímos um banco **completo**.
+- Unimos **modelagem, DDL e DML**.
+- Preparamos para o **trabalho final**.
+
+## Referências
+
+- ROB, P.; CORONEL, C. *Sistemas de Banco de Dados*. Cengage.
+- HEUSER, C. A. *Projeto de Banco de Dados*. Bookman.

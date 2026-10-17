@@ -1,0 +1,152 @@
+---
+title: "Semana 01 — Conteúdo de 2 aulas"
+---
+
+## Semana 01 — Conteúdo de 2 aulas
+
+- **Aula 1:** Apresentação da Disciplina e Metodologia
+- **Aula 2:** Introdução ao Conceito de Dados
+
+## Aula 1 — Apresentação da Disciplina e Metodologia
+
+## Bem-vindos!
+
+- Disciplina: **Banco de Dados (BDDA)**.
+- Curso Técnico em **Redes de Computadores**.
+- IFSP — Câmpus Boituva.
+
+## Quem Somos
+
+- **Professores:** Rogerio dos Santos · Ricardo Pasquati Pontarolli.
+- **Contato:** pasquati@ifsp.edu.br.
+
+## Sobre a Disciplina
+
+- **Carga horária:** 60 h (60 h em laboratório).
+- **Aulas:** 2 por semana, 40 semanas.
+- Foco **prático**: aprender fazendo.
+
+## Objetivos
+
+- Entender **bancos de dados** e sua importância.
+- **Modelar** dados do mundo real.
+- Usar a linguagem **SQL** para criar e consultar.
+- **Integrar** o banco a uma aplicação.
+
+## Conteúdo do Curso
+
+- Fundamentos e **modelagem**.
+- **SGBDs** e criação de tabelas.
+- Linguagem **SQL** (consultas e manipulação).
+- SQL avançado e **integração**.
+
+## Metodologia
+
+- Aulas **expositivas** com exercícios.
+- Práticas em **laboratório**.
+- **Projetos** de modelagem.
+- Avaliações **escritas e práticas**.
+
+::: {.callout-note}
+Quase tudo em Banco de Dados se aprende **praticando**. Traga sempre disposição para testar no laboratório.
+:::
+
+## Avaliação
+
+- Exercícios em sala.
+- Projetos em laboratório.
+- Prova escrita e prática.
+- Evolução **individual**.
+
+## Combinados
+
+- **Participação** nas aulas.
+- Entregas **no prazo**.
+- **Dúvidas** são bem-vindas.
+
+## Resumo da Aula
+
+- Conhecemos a **ementa** e a **metodologia**.
+- O curso é essencialmente **prático**.
+- Vamos aprender a **modelar e consultar** dados.
+
+## Aula 2 — Introdução ao Conceito de Dados
+
+## Objetivos da Aula
+
+- Compreender o que são **dados**.
+- Diferenciar **dado**, **informação** e **conhecimento**.
+- Entender por que armazenar dados.
+
+## O que é um Dado?
+
+- Um **fato bruto**, sem contexto.
+- Ex.: `37`, `João`, `2026-03-17`.
+- Sozinho, diz **pouco**.
+
+## Dado x Informação x Conhecimento
+
+- **Dado:** valor isolado.
+- **Informação:** dado com **contexto**.
+- **Conhecimento:** informação **interpretada**.
+
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\small,node distance=10mm,
+  b/.style={draw,rounded corners,minimum width=2.5cm,minimum height=0.9cm,align=center}]
+  \node[b,fill=blue!12] (d) {Dado};
+  \node[b,fill=green!15,right=of d] (i) {Informação};
+  \node[b,fill=orange!20,right=of i] (c) {Conhecimento};
+  \draw[-{Latex}] (d) -- (i);
+  \draw[-{Latex}] (i) -- (c);
+\end{tikzpicture}
+\end{center}
+```
+
+::: {.callout-note}
+`37` é um dado. "A temperatura é 37 °C" é informação. "Isso indica febre" é conhecimento.
+:::
+
+## Exemplo Prático
+
+| Nível | Exemplo |
+|-------|---------|
+| Dado | 25 |
+| Informação | "Aluno X tirou 25 na prova" |
+| Conhecimento | "O aluno precisa de reforço" |
+
+## Onde os Dados Estão
+
+- Listas de alunos, notas, estoques.
+- Vendas, clientes, produtos.
+- Praticamente **tudo** gera dados.
+
+## Por que Armazenar?
+
+- **Consultar** depois.
+- Tomar **decisões**.
+- **Automatizar** processos.
+- Manter **histórico**.
+
+## Problemas sem Organização
+
+- Dados **perdidos** ou duplicados.
+- Dificuldade de **buscar**.
+- **Inconsistências**.
+- Retrabalho.
+
+## Atividade Rápida
+
+- Dê um exemplo de **dado** do seu dia.
+- Transforme-o em **informação**.
+
+## Resumo da Aula
+
+- **Dado** é um fato bruto; **informação** tem contexto.
+- Armazenar dados permite **consultar e decidir**.
+- Organizar bem evita **problemas**.
+
+## Referências
+
+- ROB, P.; CORONEL, C. *Sistemas de Banco de Dados*. Cengage.
+- HEUSER, C. A. *Projeto de Banco de Dados*. Bookman.

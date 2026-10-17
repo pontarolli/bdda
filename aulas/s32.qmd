@@ -1,0 +1,252 @@
+---
+title: "Semana 32 — Conteúdo de 2 aulas"
+---
+
+## Semana 32 — Conteúdo de 2 aulas
+
+- **Aula 51:** DDL: CREATE TABLE, ALTER e DROP
+- **Aula 52:** Restrições: PRIMARY KEY e FOREIGN KEY
+
+## Aula 51 — DDL: CREATE TABLE, ALTER e DROP
+
+## Objetivos da Aula
+
+- Dominar o **CREATE TABLE**.
+- Definir colunas, tipos e restrições.
+- Criar estruturas bem planejadas.
+
+## Estrutura Completa
+
+```sql
+CREATE TABLE Cliente (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(100) NOT NULL,
+    email VARCHAR(120) UNIQUE,
+    cidade VARCHAR(60),
+    ativo BOOLEAN DEFAULT TRUE
+);
+```
+
+## Analisando o Comando
+
+- **id:** chave, auto-incremento.
+- **nome:** obrigatório.
+- **email:** único.
+- **ativo:** com valor padrão.
+
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\footnotesize,node distance=0mm,
+  c/.style={draw,minimum width=2.9cm,minimum height=0.5cm,align=center,fill=blue!10},
+  r/.style={font=\scriptsize,align=left,right=5mm}]
+  \node[c] (id) {id INT};
+  \node[c,below=of id] (no) {nome VARCHAR};
+  \node[c,below=of no] (em) {email VARCHAR};
+  \node[c,below=of em] (at) {ativo BOOLEAN};
+  \node[font=\scriptsize,right=5mm of id] (idr) {PRIMARY KEY, AUTO\_INCREMENT};
+  \node[font=\scriptsize,right=5mm of no] (nor) {NOT NULL};
+  \node[font=\scriptsize,right=5mm of em] (emr) {UNIQUE};
+  \node[font=\scriptsize,right=5mm of at] (atr) {DEFAULT TRUE};
+\end{tikzpicture}
+\end{center}
+```
+
+## Escolhendo Tipos
+
+- Números: **INT, DECIMAL**.
+- Texto: **VARCHAR, TEXT**.
+- Datas: **DATE, DATETIME**.
+- Lógico: **BOOLEAN**.
+
+## Restrições na Coluna
+
+- **PRIMARY KEY**
+- **NOT NULL**
+- **UNIQUE**
+- **DEFAULT**
+- **CHECK**
+
+## Criando com FK
+
+```sql
+CREATE TABLE Pedido (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    id_cliente INT NOT NULL,
+    data DATE,
+    FOREIGN KEY (id_cliente) REFERENCES Cliente(id)
+);
+```
+
+::: {.callout-note}
+Definir as **restrições** já na criação evita dados inválidos desde o primeiro dia — é mais fácil prevenir que corrigir.
+:::
+
+## Prática
+
+- Crie a tabela `Cliente`.
+- Crie `Pedido` com a **FK**.
+
+## Resumo da Aula
+
+- **CREATE TABLE** define a estrutura.
+- Inclui **tipos e restrições**.
+- FKs ligam as tabelas.
+
+## Referências
+
+- ROB, P.; CORONEL, C. *Sistemas de Banco de Dados*. Cengage.
+
+## Objetivos da Aula
+
+- Alterar tabelas com **ALTER TABLE**.
+- Remover objetos com **DROP**.
+- Conhecer os **cuidados** nessas operações.
+
+## ALTER TABLE
+
+- Modifica uma tabela **existente**.
+- Adiciona, altera ou remove colunas.
+- Adiciona ou remove **restrições**.
+
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\footnotesize,node distance=26mm,
+  t/.style={draw,rounded corners,fill=blue!10,align=center,inner sep=6pt}]
+  \node[t] (a) {Aluno\\ \scriptsize id, nome};
+  \node[t,fill=green!12,right=of a] (b2) {Aluno\\ \scriptsize id, nome, telefone};
+  \draw[-{Latex}] (a) -- node[above,font=\scriptsize]{ALTER ... ADD} (b2);
+\end{tikzpicture}
+\end{center}
+```
+
+## Adicionando Coluna
+
+```sql
+ALTER TABLE Aluno ADD telefone VARCHAR(20);
+```
+
+## Alterando Coluna
+
+```sql
+ALTER TABLE Aluno MODIFY telefone VARCHAR(30);
+```
+
+## Removendo Coluna
+
+```sql
+ALTER TABLE Aluno DROP COLUMN telefone;
+```
+
+## Adicionando Restrição
+
+```sql
+ALTER TABLE Aluno ADD UNIQUE (email);
+ALTER TABLE Aluno ADD FOREIGN KEY (id_curso) REFERENCES Curso(id);
+```
+
+## DROP
+
+```sql
+DROP TABLE Aluno;
+DROP DATABASE escola;
+```
+
+- Remove **tabela** ou **banco**.
+- Ação **destrutiva** e difícil de reverter.
+
+::: {.callout-note}
+`DROP TABLE` apaga a estrutura **e** os dados. Antes de rodar, confirme o nome e faça **backup**.
+:::
+
+## Prática
+
+- Adicione e remova uma coluna.
+- Adicione uma restrição.
+
+## Resumo da Aula
+
+- **ALTER TABLE** modifica a estrutura.
+- **DROP** remove tabelas e bancos.
+- São operações **cuidadosas**.
+
+## Referências
+
+- Documentação oficial do MySQL.
+
+## Aula 52 — Restrições: PRIMARY KEY e FOREIGN KEY
+
+## Objetivos da Aula
+
+- Aprofundar as restrições de **chave**.
+- Entender o papel da **integridade**.
+- Aplicar boas práticas de modelagem.
+
+## O que são Restrições?
+
+- **Regras** aplicadas às colunas.
+- Garantem a **integridade** dos dados.
+- Verificadas automaticamente pelo SGBD.
+
+## PRIMARY KEY
+
+- Identifica **unicamente** cada linha.
+- **Única** e **não nula**.
+- Uma por tabela.
+
+## FOREIGN KEY
+
+- Referencia a **chave primária** de outra tabela.
+- Cria o **relacionamento**.
+- Garante **integridade referencial**.
+
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\footnotesize,node distance=26mm,
+  t/.style={draw,rounded corners,fill=blue!10,align=center,inner sep=5pt}]
+  \node[t] (cli) {Cliente\\ \scriptsize \underline{id} (PK)};
+  \node[t,right=of cli,fill=green!12] (ped) {Pedido\\ \scriptsize id (PK)\\ \scriptsize id\_cliente (FK)};
+  \draw[-{Latex}] (ped.west) -- (cli.east) node[midway,above,font=\scriptsize]{FK};
+\end{tikzpicture}
+\end{center}
+```
+
+## Chave Primária Composta
+
+```sql
+PRIMARY KEY (id_pedido, id_produto)
+```
+
+- Várias colunas identificam juntas.
+- Comum em **tabelas de relação**.
+
+## Chaves e Desempenho
+
+- O SGBD cria um **índice** para a PK.
+- Acelera as **buscas**.
+- FKs também costumam ser **indexadas**.
+
+::: {.callout-note}
+As chaves não servem só para ligar tabelas: elas também tornam as **consultas mais rápidas**.
+:::
+
+## Boas Práticas
+
+- Toda tabela deve ter **PK**.
+- Nomear as FKs.
+- Escolher chaves **estáveis**.
+
+## Prática
+
+- Crie uma tabela com chave **composta**.
+- Verifique os índices com `SHOW INDEX`.
+
+## Resumo da Aula
+
+- **PRIMARY KEY:** unicidade.
+- **FOREIGN KEY:** relacionamento e integridade.
+- Chaves também **aceleram** consultas.
+
+## Referências
+
+- ROB, P.; CORONEL, C. *Sistemas de Banco de Dados*. Cengage.
+- HEUSER, C. A. *Projeto de Banco de Dados*. Bookman.

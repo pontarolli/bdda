@@ -1,0 +1,161 @@
+---
+title: "Semana 11 — Conteúdo de 2 aulas"
+---
+
+## Semana 11 — Conteúdo de 2 aulas
+
+- **Aula 17:** Introdução aos Sistemas Gerenciadores de Banco de Dados
+- **Aula 18:** Componentes e Arquitetura de um SGBD
+
+## Aula 17 — Introdução aos Sistemas Gerenciadores de Banco de Dados
+
+## Objetivos da Aula
+
+- Compreender o que é um **SGBD**.
+- Conhecer exemplos de SGBDs.
+- Entender o papel do SGBD na prática.
+
+## Banco de Dados x SGBD
+
+- **Banco de dados:** os **dados** organizados.
+- **SGBD:** o **software** que gerencia esses dados.
+- Muitas vezes usamos os termos juntos.
+
+## O que é um SGBD?
+
+- **Sistema Gerenciador de Banco de Dados**.
+- Cria, armazena, consulta e protege os dados.
+- Intermedeia o **usuário** e os **dados**.
+
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\small,node distance=13mm,
+  b/.style={draw,rounded corners,minimum width=4.5cm,minimum height=0.85cm,align=center}]
+  \node[b,fill=blue!12] (u) {Usuário / Aplicação};
+  \node[b,fill=orange!25,below=of u] (s) {\textbf{SGBD}};
+  \node[b,fill=green!12,below=of s] (d) {Banco de Dados};
+  \draw[<->] (u) -- (s); \draw[<->] (s) -- (d);
+\end{tikzpicture}
+\end{center}
+```
+
+## Principais Funções
+
+- **Armazenar** os dados.
+- **Consultar** (SQL).
+- Controlar **acesso** e segurança.
+- Garantir **integridade** e **recuperação**.
+
+## Exemplos de SGBDs
+
+- **MySQL** e **MariaDB**.
+- **PostgreSQL**.
+- **SQLite**.
+- **Oracle** e **SQL Server**.
+
+## SGBD x Sistema de Arquivos
+
+- SGBD controla **concorrência**.
+- Recuperação de **falhas**.
+- **Integridade** dos dados.
+
+::: {.callout-note}
+O SGBD é o "gerente" do banco: ele organiza, protege e serve os dados para quem precisa.
+:::
+
+## Vantagens
+
+- Padronização (**SQL**).
+- Segurança e **permissões**.
+- Controle de **transações**.
+- Independência dos **dados**.
+
+## Resumo da Aula
+
+- **SGBD** é o software que gerencia o banco.
+- Funções: armazenar, consultar, proteger.
+- Exemplos: **MySQL, PostgreSQL, SQLite**.
+
+## Atividade Rápida
+
+- Cite **três** funções de um SGBD.
+
+## Referências
+
+- ROB, P.; CORONEL, C. *Sistemas de Banco de Dados*. Cengage.
+- ELMASRI, R.; NAVATHE, S. *Sistemas de Banco de Dados*. Pearson.
+
+## Aula 18 — Componentes e Arquitetura de um SGBD
+
+## Objetivos da Aula
+
+- Conhecer os **componentes** de um SGBD.
+- Entender a **arquitetura** em camadas.
+- Compreender os **níveis** de dados.
+
+## Visão Geral
+
+- O SGBD tem **vários módulos**.
+- Cada um com uma **responsabilidade**.
+- Trabalham juntos para servir os dados.
+
+## Principais Componentes
+
+- **Processador de consultas.**
+- **Gerenciador de armazenamento.**
+- **Gerenciador de transações.**
+- **Catálogo** (metadados).
+
+## Arquitetura de Três Níveis
+
+- **Externo:** visões dos usuários.
+- **Conceitual:** estrutura geral.
+- **Interno:** armazenamento físico.
+
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\small,node distance=6mm,
+  l/.style={draw,rounded corners,minimum width=8cm,minimum height=0.7cm,align=center}]
+  \node[l,fill=blue!12] (ext) {Nível Externo --- visões dos usuários};
+  \node[l,fill=green!12,below=of ext] (con) {Nível Conceitual --- estrutura geral};
+  \node[l,fill=gray!20,below=of con] (int) {Nível Interno --- armazenamento físico};
+\end{tikzpicture}
+\end{center}
+```
+
+## Independência de Dados
+
+- Mudar o nível interno **sem** afetar o externo.
+- Vantagem de usar SGBD.
+- Facilita **manutenção**.
+
+## O Catálogo
+
+- Guarda os **metadados** (dados sobre os dados).
+- Nomes de tabelas, colunas, tipos.
+- É o "índice" do banco.
+
+::: {.callout-note}
+Os **metadados** são como a "planta baixa" do banco: descrevem o que existe, sem guardar os dados em si.
+:::
+
+## Gerenciador de Transações
+
+- Controla operações **simultâneas**.
+- Garante **atomicidade**.
+- Trata **falhas** e recuperação.
+
+## Resumo da Aula
+
+- O SGBD tem módulos para **consulta, armazenamento e transações**.
+- Usa arquitetura de **três níveis**.
+- O **catálogo** guarda os metadados.
+
+## Atividade Rápida
+
+- O que são **metadados**?
+
+## Referências
+
+- ELMASRI, R.; NAVATHE, S. *Sistemas de Banco de Dados*. Pearson.
+- SILBERSCHATZ, A. et al. *Sistema de Banco de Dados*. Elsevier.

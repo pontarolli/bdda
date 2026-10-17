@@ -1,0 +1,141 @@
+---
+title: "Semana 38 — Conteúdo de 2 aulas"
+---
+
+## Semana 38 — Conteúdo de 2 aulas
+
+- **Aula 61:** Projeto Final: Modelagem de um Negócio
+- **Aula 62:** Projeto Final: Implementação no Banco
+
+## Aula 61 — Projeto Final: Modelagem de um Negócio
+
+## Objetivos da Aula
+
+- Iniciar o **projeto final**.
+- Escolher um **negócio** e levantar requisitos.
+- Produzir o **DER** e o **minimundo**.
+
+## O Projeto Final
+
+- **Trabalho** que integra todo o curso.
+- Modelagem **completa** de um negócio.
+- Entrega com **documentação**.
+
+## Escolhendo o Negócio
+
+- Loja, escola, clínica, biblioteca.
+- Restaurante, academia, oficina.
+- Um negócio **real** ou **realista**.
+
+## Etapas do Dia
+
+- **1.** Escolher o **negócio**.
+- **2.** Escrever o **minimundo**.
+- **3.** Levantar **requisitos**.
+- **4.** Esboçar o **DER**.
+
+## Requisitos a Considerar
+
+- Quais dados **guardar**?
+- Que **relatórios** são precisos?
+- Que **regras** existem?
+
+## Documentação
+
+- **Minimundo** claro.
+- **DER** com entidades, atributos, chaves e cardinalidades.
+- Justificativa das **decisões**.
+
+::: {.callout-note}
+O projeto final mostra se você consegue **percorrer todo o caminho**: do entendimento do negócio até o banco funcionando.
+:::
+
+## Checklist
+
+- [ ] Negócio escolhido
+- [ ] Minimundo escrito
+- [ ] Entidades e atributos
+- [ ] Cardinalidades definidas
+
+## Resumo da Aula
+
+- Iniciamos o **projeto final**.
+- Escolhemos negócio e **requisitos**.
+- Esboçamos o **DER**.
+
+## Referências
+
+- HEUSER, C. A. *Projeto de Banco de Dados*. Bookman.
+
+## Aula 62 — Projeto Final: Implementação no Banco
+
+## Objetivos da Aula
+
+- **Implementar** o projeto no MySQL.
+- Criar tabelas, chaves e dados.
+- Validar com **consultas**.
+
+## Aula de Hoje
+
+- Passar do **DER** para o **banco real**.
+- Usar tudo o que aprendemos.
+- **Validar** o resultado.
+
+## Roteiro
+
+- **1.** Criar o **banco**.
+- **2.** Criar as **tabelas** (DDL).
+- **3.** Definir **chaves e restrições**.
+- **4.** **Inserir** dados de exemplo.
+- **5.** Testar **consultas**.
+
+## Criando as Tabelas
+
+```sql
+CREATE DATABASE projeto;
+USE projeto;
+CREATE TABLE Cliente (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(100) NOT NULL
+);
+-- demais tabelas...
+```
+
+## Populando
+
+- Inserir dados **realistas**.
+- Respeitar a **ordem** das FKs.
+- Dados suficientes para **testar**.
+
+## Validando com Consultas
+
+```sql
+SELECT c.nome, COUNT(*) AS pedidos
+FROM Cliente c
+JOIN Pedido p ON p.id_cliente = c.id
+GROUP BY c.nome;
+```
+
+- Confirma se tudo **funciona**.
+
+::: {.callout-note}
+Um banco que "roda" é a prova final: as tabelas se relacionam, as consultas funcionam e os dados fazem sentido.
+:::
+
+## Checklist Final
+
+- [ ] Banco e tabelas criados
+- [ ] Chaves e FKs corretas
+- [ ] Dados inseridos
+- [ ] Consultas testadas
+
+## Resumo da Aula
+
+- Implementamos o projeto no **MySQL**.
+- Criamos tabelas, dados e **consultas**.
+- Validamos a **solução**.
+
+## Referências
+
+- ROB, P.; CORONEL, C. *Sistemas de Banco de Dados*. Cengage.
+- Documentação oficial do MySQL.

@@ -1,0 +1,171 @@
+---
+title: "Semana 23 — Conteúdo de 2 aulas"
+---
+
+## Semana 23 — Conteúdo de 2 aulas
+
+- **Aula 37:** WHERE: Operadores de Comparação e Lógicos
+- **Aula 38:** WHERE: BETWEEN, IN, LIKE e IS NULL
+
+## Aula 37 — WHERE: Operadores de Comparação e Lógicos
+
+## Objetivos da Aula
+
+- Combinar condições com **AND, OR, NOT**.
+- Entender a **precedência** dos operadores.
+- Montar filtros mais **complexos**.
+
+## Combinando Condições
+
+- Muitas vezes precisamos de **mais de uma** condição.
+- Operadores **lógicos** fazem a combinação.
+
+## AND
+
+```sql
+SELECT * FROM Aluno
+WHERE idade > 15 AND cidade = 'Boituva';
+```
+
+- **As duas** condições precisam ser verdadeiras.
+
+## OR
+
+```sql
+SELECT * FROM Aluno
+WHERE cidade = 'Boituva' OR idade < 12;
+```
+
+- **Pelo menos uma** verdadeira.
+
+## NOT
+
+```sql
+SELECT * FROM Aluno WHERE NOT cidade = 'Boituva';
+```
+
+- **Inverte** a condição.
+
+## Precedência
+
+- **NOT** → **AND** → **OR**.
+- Use **parênteses** para clareza.
+
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\footnotesize,node distance=12mm,
+  b/.style={draw,rounded corners,minimum width=1.7cm,minimum height=0.75cm,align=center}]
+  \node[b,fill=red!18] (n) {NOT};
+  \node[b,fill=orange!25,right=of n] (a) {AND};
+  \node[b,fill=green!18,right=of a] (o) {OR};
+  \draw[-{Latex}] (n) -- node[above,font=\scriptsize]{1º} (a);
+  \draw[-{Latex}] (a) -- node[above,font=\scriptsize]{2º} (o);
+\end{tikzpicture}
+\end{center}
+```
+
+```sql
+WHERE (cidade = 'Boituva' OR cidade = 'Ipero')
+  AND idade > 15;
+```
+
+::: {.callout-note}
+Na dúvida, use **parênteses**: eles deixam a intenção clara e evitam resultados inesperados.
+:::
+
+## Prática
+
+- Filtre alunos de uma cidade **e** com certa idade.
+- Use `NOT` em uma consulta.
+
+## Resumo da Aula
+
+- **AND, OR, NOT** combinam condições.
+- A **precedência** é NOT > AND > OR.
+- **Parênteses** garantem a leitura correta.
+
+## Referências
+
+- ROB, P.; CORONEL, C. *Sistemas de Banco de Dados*. Cengage.
+
+## Aula 38 — WHERE: BETWEEN, IN, LIKE e IS NULL
+
+## Objetivos da Aula
+
+- Usar filtros **especiais**.
+- Trabalhar com **intervalos**, listas e padrões.
+- Lidar com valores **nulos**.
+
+## BETWEEN
+
+```sql
+SELECT * FROM Aluno WHERE idade BETWEEN 15 AND 18;
+```
+
+- Intervalo **inclusivo**.
+- Equivale a `>= 15 AND <= 18`.
+
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\footnotesize]
+  \draw[<->] (0,0) -- (6.2,0);
+  \foreach \x/\l in {0.2/14,1.9/15,3.7/18,5.6/20}
+     \draw (\x,0) -- (\x,-0.15) node[below] {\l};
+  \draw[ultra thick,orange] (1.9,0) -- (3.7,0);
+  \node[above,font=\scriptsize] at (2.8,0.05) {\textbf{BETWEEN 15 AND 18}};
+\end{tikzpicture}
+\end{center}
+```
+
+## IN
+
+```sql
+SELECT * FROM Aluno WHERE cidade IN ('Boituva', 'Ipero');
+```
+
+- Verifica se está **na lista**.
+- Mais limpo que vários `OR`.
+
+## LIKE
+
+```sql
+SELECT * FROM Aluno WHERE nome LIKE 'A%';
+```
+
+- Busca por **padrão**.
+- `%` = qualquer sequência.
+- `_` = um caractere.
+
+## Exemplos de LIKE
+
+- `'A%'` — começa com A.
+- `'%silva%'` — contém "silva".
+- `'_na'` — termina com "na".
+
+## IS NULL
+
+```sql
+SELECT * FROM Aluno WHERE telefone IS NULL;
+```
+
+- Verifica valores **nulos**.
+- **Não** use `= NULL` (não funciona).
+
+::: {.callout-note}
+`NULL` não é "vazio" nem "zero": é a **ausência** de valor. Por isso usa-se `IS NULL`, não `= NULL`.
+:::
+
+## Prática
+
+- Liste alunos com idade em um **intervalo**.
+- Busque nomes que comecem com certa letra.
+
+## Resumo da Aula
+
+- **BETWEEN** filtra intervalos.
+- **IN** filtra listas.
+- **LIKE** busca padrões; **IS NULL** acha nulos.
+
+## Referências
+
+- Documentação oficial do MySQL.

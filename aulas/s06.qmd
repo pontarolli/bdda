@@ -1,0 +1,181 @@
+---
+title: "Semana 06 — Conteúdo de 2 aulas"
+---
+
+## Semana 06 — Conteúdo de 2 aulas
+
+- **Aula 9:** Modelo Entidade-Relacionamento: Visão Geral
+- **Aula 10:** Entidades e Tipos Formais de Representação
+
+## Aula 9 — Modelo Entidade-Relacionamento: Visão Geral
+
+## Objetivos da Aula
+
+- Conhecer o **Modelo Entidade-Relacionamento (ER)**.
+- Entender entidades, atributos e relacionamentos.
+- Saber por que o modelo ER é importante.
+
+## O que é o Modelo ER?
+
+- Modelo **conceitual** de dados.
+- Representa o **mundo real**.
+- Proposto por **Peter Chen** (1976).
+
+## Por que Usar?
+
+- Independe do **SGBD**.
+- Fácil de **comunicar** com o cliente.
+- Base para o modelo **relacional**.
+
+## Os Três Elementos
+
+- **Entidades:** coisas do mundo.
+- **Atributos:** características.
+- **Relacionamentos:** ligações.
+
+## Representação Gráfica (DER)
+
+- **Retângulo:** entidade.
+- **Elipse:** atributo.
+- **Losango:** relacionamento.
+- **Linhas:** conexões.
+
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[node distance=6mm and 14mm,font=\small]
+  \node[ent] (e) {Entidade};
+  \node[att,right=of e] (a) {Atributo};
+  \node[rel,right=of a] (r) {Relac.};
+\end{tikzpicture}
+\end{center}
+```
+
+## Exemplo
+
+- Cliente — realiza — Pedido.
+- Cliente tem atributos **nome, telefone**.
+- Pedido tem atributo **data**.
+
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[node distance=14mm and 20mm,font=\small]
+  \node[ent] (cli) {Cliente};
+  \node[rel,right=of cli] (rel) {realiza};
+  \node[ent,right=of rel] (ped) {Pedido};
+  \node[att,above=of cli] (nome) {nome};
+  \node[att,below=of cli] (fone) {telefone};
+  \node[att,above=of ped] (data) {data};
+  \draw (cli) -- (rel);  \draw (rel) -- (ped);
+  \draw (cli) -- (nome); \draw (cli) -- (fone);
+  \draw (ped) -- (data);
+\end{tikzpicture}
+\end{center}
+```
+
+::: {.callout-note}
+O modelo ER é a "planta" do banco: pensamos no **negócio**, não ainda em tabelas ou SQL.
+:::
+
+## Vantagens
+
+- Visão **clara e visual**.
+- Facilita **discussão** com usuários.
+- Evita erros **antes** de programar.
+
+## Ferramentas
+
+- **brModelo**, **draw.io**, **MySQL Workbench**.
+- Papel e quadro também **valem**!
+
+## Resumo da Aula
+
+- O modelo **ER** é conceitual e visual.
+- Usa **entidades, atributos e relacionamentos**.
+- É a base do projeto de banco de dados.
+
+## Atividade Rápida
+
+- Desenhe uma entidade com **três** atributos.
+
+## Referências
+
+- HEUSER, C. A. *Projeto de Banco de Dados*. Bookman.
+- ELMASRI, R.; NAVATHE, S. *Sistemas de Banco de Dados*. Pearson.
+
+## Aula 10 — Entidades e Tipos Formais de Representação
+
+## Objetivos da Aula
+
+- Compreender o conceito de **entidade**.
+- Diferenciar **entidade** de **conjunto de entidades**.
+- Conhecer a representação formal.
+
+## O que é uma Entidade?
+
+- Um **objeto** do mundo real.
+- Ex.: um aluno específico, um livro específico.
+- Possui **existência própria**.
+
+## Conjunto de Entidades
+
+- Grupo de entidades **do mesmo tipo**.
+- Ex.: o conjunto de **todos os alunos**.
+- No DER, representamos o **conjunto**.
+
+## Exemplos
+
+- Aluno, Curso, Professor.
+- Produto, Cliente, Venda.
+- Livro, Autor, Empréstimo.
+
+## Tipos de Entidades
+
+- **Fortes:** existem por si.
+- **Fracas:** dependem de outra.
+- Ex. fraco: **Dependente** de um **Funcionário**.
+
+## Representação
+
+- **Retângulo** = entidade forte.
+- **Retângulo duplo** = entidade fraca.
+- Nome no **singular**, maiúsculo inicial.
+
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\small,node distance=26mm,
+  e/.style={draw,fill=blue!10,minimum width=2.7cm,minimum height=0.9cm,align=center},
+  f/.style={draw,double,fill=blue!10,minimum width=2.7cm,minimum height=0.9cm,align=center}]
+  \node[e] (a) {Entidade forte};
+  \node[f,right=of a] (b) {Entidade fraca};
+\end{tikzpicture}
+\end{center}
+```
+
+## Como Identificar Entidades
+
+- É um **substantivo** importante?
+- O negócio precisa **guardar dados** dele?
+- Tem **existência própria**?
+
+::: {.callout-note}
+Se o negócio precisa "guardar informações" sobre algo, provavelmente é uma **entidade**.
+:::
+
+## Atributos da Entidade
+
+- Cada entidade tem **características**.
+- Vamos detalhar na **próxima aula**.
+
+## Resumo da Aula
+
+- **Entidade** é um objeto do mundo real.
+- Representamos o **conjunto** de entidades.
+- Há entidades **fortes** e **fracas**.
+
+## Atividade Rápida
+
+- Liste **cinco** entidades de uma escola.
+
+## Referências
+
+- HEUSER, C. A. *Projeto de Banco de Dados*. Bookman.

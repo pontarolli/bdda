@@ -1,0 +1,148 @@
+---
+title: "Semana 12 — Conteúdo de 2 aulas"
+---
+
+## Semana 12 — Conteúdo de 2 aulas
+
+- **Aula 19:** Introdução à Linguagem DML
+- **Aula 20:** Apresentando o SGBD MySQL
+
+## Aula 19 — Introdução à Linguagem DML
+
+## Objetivos da Aula
+
+- Compreender o que é **DML**.
+- Conhecer os comandos principais.
+- Entender seu papel na manipulação de dados.
+
+## O que é DML?
+
+- **Data Manipulation Language**.
+- Linguagem para **manipular** os dados.
+- Parte da **SQL**.
+
+## Manipular = ?
+
+- **Inserir** dados.
+- **Consultar** dados.
+- **Atualizar** dados.
+- **Excluir** dados.
+
+## Os Quatro Comandos
+
+- **INSERT** — inserir.
+- **SELECT** — consultar.
+- **UPDATE** — atualizar.
+- **DELETE** — excluir.
+
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\small,node distance=10mm and 12mm,
+  c/.style={draw,rounded corners,fill=blue!10,minimum width=2.8cm,minimum height=0.9cm,align=center}]
+  \node[c] (i) {INSERT\\ \footnotesize inserir};
+  \node[c,right=of i] (s) {SELECT\\ \footnotesize consultar};
+  \node[c,below=of i] (u) {UPDATE\\ \footnotesize atualizar};
+  \node[c,below=of s] (d) {DELETE\\ \footnotesize excluir};
+\end{tikzpicture}
+\end{center}
+```
+
+## DML x DDL
+
+- **DML:** mexe nos **dados**.
+- **DDL:** mexe na **estrutura**.
+- Vamos ver DDL mais adiante.
+
+## Será que Vai Dar Certo?
+
+- A DML trabalha sobre **tabelas existentes**.
+- Primeiro cria-se a estrutura.
+- Depois os dados.
+
+::: {.callout-note}
+DML é o "dia a dia" do banco: consultar, inserir, atualizar e excluir — o que mais se faz na prática.
+:::
+
+## Exemplo
+
+- `SELECT * FROM Cliente;` — lista clientes.
+- `INSERT INTO Cliente ...` — adiciona.
+
+## Resumo da Aula
+
+- **DML** manipula os **dados**.
+- Comandos: **INSERT, SELECT, UPDATE, DELETE**.
+- Trabalha sobre tabelas **já criadas**.
+
+## Atividade Rápida
+
+- Cite os **quatro** comandos DML e o que fazem.
+
+## Referências
+
+- ROB, P.; CORONEL, C. *Sistemas de Banco de Dados*. Cengage.
+
+## Aula 20 — Apresentando o SGBD MySQL
+
+## Objetivos da Aula
+
+- Conhecer o **MySQL**.
+- Entender por que é tão usado.
+- Conhecer o **MariaDB** e o contexto.
+
+## O que é o MySQL?
+
+- Um **SGBD relacional** muito popular.
+- **Software livre** (open source).
+- Amplamente usado na **web**.
+
+## Um Pouco de História
+
+- Criado em **1995**.
+- Popularizado com o **PHP** e a web.
+- Hoje pertence à **Oracle**.
+
+## Características
+
+- **Gratuito** e leve.
+- Multiplataforma (**Windows, Linux, macOS**).
+- Rápido e **confiável**.
+- Grande **comunidade**.
+
+## MariaDB
+
+- "**Fork**" comunitário do MySQL.
+- Muito **compatível**.
+- Bastante usado em **hospedagens**.
+
+## Onde é Usado
+
+- Sites e **lojas virtuais**.
+- **WordPress** e outros CMS.
+- Sistemas **escolares** e comerciais.
+- Aplicações **desktop** e web.
+
+::: {.callout-note}
+Escolhemos o MySQL pela **popularidade**: é fácil encontrar material, tutoriais e suporte.
+:::
+
+## Ferramentas
+
+- **MySQL Workbench** (gráfico).
+- **Linha de comando** (terminal).
+- Diversas **bibliotecas** para programação.
+
+## Resumo da Aula
+
+- **MySQL** é um SGBD relacional livre e popular.
+- Há o **MariaDB** como alternativa compatível.
+- É muito usado na **web** e em sistemas.
+
+## Atividade Rápida
+
+- Cite **dois** lugares onde o MySQL é usado.
+
+## Referências
+
+- Documentação oficial do MySQL.
+- ROB, P.; CORONEL, C. *Sistemas de Banco de Dados*. Cengage.

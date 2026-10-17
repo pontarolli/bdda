@@ -1,0 +1,190 @@
+---
+title: "Semana 36 — Conteúdo de 2 aulas"
+---
+
+## Semana 36 — Conteúdo de 2 aulas
+
+- **Aula 57:** Subconsultas (Subqueries)
+- **Aula 58:** Views e Índices
+
+## Aula 57 — Subconsultas (Subqueries)
+
+## Objetivos da Aula
+
+- Compreender o conceito de **subconsulta**.
+- Usar subconsultas em **WHERE** e **FROM**.
+- Resolver problemas em etapas.
+
+## O que é uma Subconsulta?
+
+- Uma consulta **dentro** de outra.
+- O resultado interno alimenta o externo.
+- Escrita entre **parênteses**.
+
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\footnotesize,node distance=5mm,
+  b/.style={draw,rounded corners,align=center,inner sep=5pt}]
+  \node[b,fill=blue!10] (o) {Consulta externa\\ \scriptsize (usa o resultado)};
+  \node[b,fill=green!12,below=of o] (i) {Consulta interna\\ \scriptsize (roda primeiro)};
+  \draw[-{Latex}] (i) -- (o);
+\end{tikzpicture}
+\end{center}
+```
+
+## Exemplo em WHERE
+
+```sql
+SELECT nome FROM Cliente
+WHERE id IN (
+    SELECT id_cliente FROM Pedido
+    WHERE valor > 100
+);
+```
+
+- Clientes que fizeram pedidos **acima de 100**.
+
+## Com Operador de Comparação
+
+```sql
+SELECT nome, salario FROM Funcionario
+WHERE salario > (
+    SELECT AVG(salario) FROM Funcionario
+);
+```
+
+- Quem ganha **acima da média**.
+
+## Subconsulta no FROM
+
+```sql
+SELECT cidade, media
+FROM (
+    SELECT cidade, AVG(idade) AS media
+    FROM Aluno
+    GROUP BY cidade
+) AS t
+WHERE media > 16;
+```
+
+- A subconsulta vira uma **tabela temporária**.
+
+## Subconsulta x JOIN
+
+- Muitas subconsultas podem virar **JOINs**.
+- JOINs costumam ser mais **eficientes**.
+- Subconsultas podem ser mais **legíveis**.
+
+::: {.callout-note}
+Subconsultas permitem **pensar em etapas**: resolva o problema interno primeiro e use o resultado no externo.
+:::
+
+## Prática
+
+- Liste produtos mais caros que a **média**.
+- Use uma subconsulta com `IN`.
+
+## Resumo da Aula
+
+- **Subconsulta** é uma consulta dentro de outra.
+- Pode ir no **WHERE** ou no **FROM**.
+- Muitas vezes equivale a um **JOIN**.
+
+## Referências
+
+- ROB, P.; CORONEL, C. *Sistemas de Banco de Dados*. Cengage.
+
+## Aula 58 — Views e Índices
+
+## Objetivos da Aula
+
+- Compreender o que são **views**.
+- Compreender o que são **índices**.
+- Saber quando usar cada um.
+
+## O que é uma View?
+
+- Uma **consulta salva**.
+- Funciona como uma **tabela virtual**.
+- Não guarda os dados em si.
+
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\footnotesize,node distance=5mm,
+  b/.style={draw,rounded corners,align=center,inner sep=5pt}]
+  \node[b,fill=green!12] (v) {View (tabela virtual)};
+  \node[b,fill=blue!10,below=of v] (q) {Consulta salva\\ \scriptsize (SELECT ... JOIN ...)};
+  \node[b,fill=gray!15,below=of q] (t) {Tabelas base};
+  \draw[-{Latex}] (t) -- (q);
+  \draw[-{Latex}] (q) -- (v);
+\end{tikzpicture}
+\end{center}
+```
+
+## Criando uma View
+
+```sql
+CREATE VIEW vw_total_cliente AS
+SELECT c.nome, SUM(p.valor) AS total
+FROM Cliente c
+JOIN Pedido p ON p.id_cliente = c.id
+GROUP BY c.nome;
+```
+
+- Depois, `SELECT * FROM vw_total_cliente;`.
+
+## Vantagens das Views
+
+- **Simplifica** consultas complexas.
+- Reutilização.
+- Esconde a **complexidade**.
+- Pode restringir **colunas**.
+
+## O que é um Índice?
+
+- Estrutura que **acelera** as buscas.
+- Como o índice de um **livro**.
+- Criado em colunas muito **consultadas**.
+
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\footnotesize,node distance=24mm,
+  b/.style={draw,rounded corners,align=center,inner sep=6pt}]
+  \node[b,fill=blue!10] (t) {Tabela\\ \scriptsize (busca lenta)};
+  \node[b,fill=green!12,right=of t] (i) {Índice\\ \scriptsize (busca rápida)};
+  \draw[-{Latex}] (t) -- node[above,font=\scriptsize]{CREATE INDEX} (i);
+\end{tikzpicture}
+\end{center}
+```
+
+## Criando um Índice
+
+```sql
+CREATE INDEX idx_nome ON Cliente(nome);
+```
+
+## Custo dos Índices
+
+- Aceleram **leitura**.
+- Deixam a **escrita** um pouco mais lenta.
+- Ocupam **espaço**.
+
+::: {.callout-note}
+Índice é um **trade-off**: ganha em consulta, paga um pouco em inserção/atualização.
+:::
+
+## Prática
+
+- Crie uma **view**.
+- Crie um **índice** e compare o tempo de busca.
+
+## Resumo da Aula
+
+- **Views** são consultas salvas (tabelas virtuais).
+- **Índices** aceleram as buscas.
+- Ambos têm **custos** e benefícios.
+
+## Referências
+
+- ROB, P.; CORONEL, C. *Sistemas de Banco de Dados*. Cengage.
+- Documentação oficial do MySQL.

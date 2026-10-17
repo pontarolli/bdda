@@ -1,0 +1,164 @@
+---
+title: "Semana 26 — Conteúdo de 2 aulas"
+---
+
+## Semana 26 — Conteúdo de 2 aulas
+
+- **Aula 41:** SELECT: Agrupamento com GROUP BY
+- **Aula 42:** SELECT: Filtrando Grupos com HAVING
+
+## Aula 41 — SELECT: Agrupamento com GROUP BY
+
+## Objetivos da Aula
+
+- Compreender o **agrupamento** de dados.
+- Usar **GROUP BY** com agregações.
+- Criar **resumos por categoria**.
+
+## Por que Agrupar?
+
+- Às vezes queremos o total **por grupo**.
+- Ex.: número de alunos **por cidade**.
+- O **GROUP BY** faz isso.
+
+## Sintaxe
+
+```sql
+SELECT cidade, COUNT(*) AS total
+FROM Aluno
+GROUP BY cidade;
+```
+
+- Agrupa por cidade.
+- Conta quantos em cada grupo.
+
+## Como Funciona
+
+- As linhas são **agrupadas** por valor.
+- A agregação é aplicada a **cada grupo**.
+- Resulta em **uma linha por grupo**.
+
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\footnotesize,node distance=14mm,
+  b/.style={draw,rounded corners,align=center,inner sep=5pt}]
+  \node[b,fill=blue!10] (l) {Linhas\\da tabela};
+  \node[b,fill=orange!20,right=of l] (g) {Grupos\\(1 por valor)};
+  \node[b,fill=green!12,right=of g] (r) {1 linha\\por grupo};
+  \draw[-{Latex}] (l) -- (g);
+  \draw[-{Latex}] (g) -- (r);
+\end{tikzpicture}
+\end{center}
+```
+
+## Mais Exemplos
+
+```sql
+SELECT id_cliente, SUM(valor) AS total
+FROM Pedido
+GROUP BY id_cliente;
+```
+
+- Total gasto por **cliente**.
+
+## Regra Importante
+
+- No SELECT, só pode haver:
+  - Colunas do **GROUP BY**.
+  - **Agregações**.
+
+::: {.callout-note}
+GROUP BY é como "separar em pilhas": cada pilha (grupo) vira **uma linha** no resultado.
+:::
+
+## Prática
+
+- Conte clientes **por cidade**.
+- Some vendas **por produto**.
+
+## Resumo da Aula
+
+- **GROUP BY** agrupa linhas.
+- Aplica **agregações** por grupo.
+- Só seleciona colunas do grupo ou agregações.
+
+## Referências
+
+- ROB, P.; CORONEL, C. *Sistemas de Banco de Dados*. Cengage.
+
+## Aula 42 — SELECT: Filtrando Grupos com HAVING
+
+## Objetivos da Aula
+
+- Compreender o **HAVING**.
+- Diferenciar **WHERE** de **HAVING**.
+- Filtrar **resultados de grupos**.
+
+## O Problema
+
+- O WHERE filtra **linhas** **antes** de agrupar.
+- E se quisermos filtrar **grupos** **depois**?
+- Usamos o **HAVING**.
+
+## Sintaxe
+
+```sql
+SELECT cidade, COUNT(*) AS total
+FROM Aluno
+GROUP BY cidade
+HAVING COUNT(*) > 5;
+```
+
+- Só cidades com **mais de 5** alunos.
+
+## WHERE x HAVING
+
+- **WHERE:** filtra linhas **antes** do agrupamento.
+- **HAVING:** filtra grupos **depois**.
+- Podem aparecer **juntos**.
+
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\footnotesize,node distance=8mm,
+  b/.style={draw,rounded corners,align=center,inner sep=4pt}]
+  \node[b,fill=blue!10] (l) {linhas};
+  \node[b,fill=orange!20,right=of l] (w) {WHERE\\ \scriptsize filtra linhas};
+  \node[b,fill=green!12,right=of w] (g) {GROUP BY\\ \scriptsize agrupa};
+  \node[b,fill=red!15,right=of g] (h) {HAVING\\ \scriptsize filtra grupos};
+  \draw[-{Latex}] (l)--(w); \draw[-{Latex}] (w)--(g); \draw[-{Latex}] (g)--(h);
+\end{tikzpicture}
+\end{center}
+```
+
+## Exemplo Completo
+
+```sql
+SELECT cidade, AVG(idade)
+FROM Aluno
+WHERE idade >= 15
+GROUP BY cidade
+HAVING AVG(idade) > 16;
+```
+
+## Ordem das Cláusulas
+
+- **SELECT → FROM → WHERE → GROUP BY → HAVING → ORDER BY**.
+
+::: {.callout-note}
+`WHERE` não enxerga agregações; para filtrar por `COUNT`, `SUM`, `AVG`... use sempre o **HAVING**.
+:::
+
+## Prática
+
+- Liste cidades com **mais de** 3 clientes.
+- Combine WHERE e HAVING na mesma consulta.
+
+## Resumo da Aula
+
+- **HAVING** filtra grupos.
+- Vem **depois** do GROUP BY.
+- Diferente do WHERE (que filtra linhas).
+
+## Referências
+
+- ROB, P.; CORONEL, C. *Sistemas de Banco de Dados*. Cengage.
