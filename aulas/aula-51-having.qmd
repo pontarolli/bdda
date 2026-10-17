@@ -1,0 +1,82 @@
+---
+title: "Aula 51 — SELECT: Filtrando Grupos com HAVING"
+---
+
+## Objetivos da Aula
+
+- Compreender o **HAVING**.
+- Diferenciar **WHERE** de **HAVING**.
+- Filtrar **resultados de grupos**.
+
+## O Problema
+
+- O WHERE filtra **linhas** **antes** de agrupar.
+- E se quisermos filtrar **grupos** **depois**?
+- Usamos o **HAVING**.
+
+## Sintaxe
+
+```sql
+SELECT cidade, COUNT(*) AS total
+FROM Aluno
+GROUP BY cidade
+HAVING COUNT(*) > 5;
+```
+
+- Só cidades com **mais de 5** alunos.
+
+## WHERE x HAVING
+
+- **WHERE:** filtra linhas **antes** do agrupamento.
+- **HAVING:** filtra grupos **depois**.
+- Podem aparecer **juntos**.
+
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\footnotesize,node distance=8mm,
+  b/.style={draw,rounded corners,align=center,inner sep=4pt}]
+  \node[b,fill=blue!10] (l) {linhas};
+  \node[b,fill=orange!20,right=of l] (w) {WHERE\\ \scriptsize filtra linhas};
+  \node[b,fill=green!12,right=of w] (g) {GROUP BY\\ \scriptsize agrupa};
+  \node[b,fill=red!15,right=of g] (h) {HAVING\\ \scriptsize filtra grupos};
+  \draw[-{Latex}] (l)--(w); \draw[-{Latex}] (w)--(g); \draw[-{Latex}] (g)--(h);
+\end{tikzpicture}
+\end{center}
+```
+
+## Exemplo Completo
+
+```sql
+SELECT cidade, AVG(idade)
+FROM Aluno
+WHERE idade >= 15
+GROUP BY cidade
+HAVING AVG(idade) > 16;
+```
+
+## Ordem das Cláusulas
+
+- **SELECT → FROM → WHERE → GROUP BY → HAVING → ORDER BY**.
+
+::: {.callout-note}
+`WHERE` não enxerga agregações; para filtrar por `COUNT`, `SUM`, `AVG`... use sempre o **HAVING**.
+:::
+
+## Prática
+
+- Liste cidades com **mais de** 3 clientes.
+- Combine WHERE e HAVING na mesma consulta.
+
+## Resumo da Aula
+
+- **HAVING** filtra grupos.
+- Vem **depois** do GROUP BY.
+- Diferente do WHERE (que filtra linhas).
+
+## Referências
+
+- ROB, P.; CORONEL, C. *Sistemas de Banco de Dados*. Cengage.
+
+## Próxima Aula
+
+- **Aula 52:** Funções de string e de data.

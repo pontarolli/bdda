@@ -1,0 +1,92 @@
+---
+title: "Aula 71 — Subconsultas (Subqueries)"
+---
+
+## Objetivos da Aula
+
+- Compreender o conceito de **subconsulta**.
+- Usar subconsultas em **WHERE** e **FROM**.
+- Resolver problemas em etapas.
+
+## O que é uma Subconsulta?
+
+- Uma consulta **dentro** de outra.
+- O resultado interno alimenta o externo.
+- Escrita entre **parênteses**.
+
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\footnotesize,node distance=5mm,
+  b/.style={draw,rounded corners,align=center,inner sep=5pt}]
+  \node[b,fill=blue!10] (o) {Consulta externa\\ \scriptsize (usa o resultado)};
+  \node[b,fill=green!12,below=of o] (i) {Consulta interna\\ \scriptsize (roda primeiro)};
+  \draw[-{Latex}] (i) -- (o);
+\end{tikzpicture}
+\end{center}
+```
+
+## Exemplo em WHERE
+
+```sql
+SELECT nome FROM Cliente
+WHERE id IN (
+    SELECT id_cliente FROM Pedido
+    WHERE valor > 100
+);
+```
+
+- Clientes que fizeram pedidos **acima de 100**.
+
+## Com Operador de Comparação
+
+```sql
+SELECT nome, salario FROM Funcionario
+WHERE salario > (
+    SELECT AVG(salario) FROM Funcionario
+);
+```
+
+- Quem ganha **acima da média**.
+
+## Subconsulta no FROM
+
+```sql
+SELECT cidade, media
+FROM (
+    SELECT cidade, AVG(idade) AS media
+    FROM Aluno
+    GROUP BY cidade
+) AS t
+WHERE media > 16;
+```
+
+- A subconsulta vira uma **tabela temporária**.
+
+## Subconsulta x JOIN
+
+- Muitas subconsultas podem virar **JOINs**.
+- JOINs costumam ser mais **eficientes**.
+- Subconsultas podem ser mais **legíveis**.
+
+::: {.callout-note}
+Subconsultas permitem **pensar em etapas**: resolva o problema interno primeiro e use o resultado no externo.
+:::
+
+## Prática
+
+- Liste produtos mais caros que a **média**.
+- Use uma subconsulta com `IN`.
+
+## Resumo da Aula
+
+- **Subconsulta** é uma consulta dentro de outra.
+- Pode ir no **WHERE** ou no **FROM**.
+- Muitas vezes equivale a um **JOIN**.
+
+## Referências
+
+- ROB, P.; CORONEL, C. *Sistemas de Banco de Dados*. Cengage.
+
+## Próxima Aula
+
+- **Aula 72:** Views e índices.

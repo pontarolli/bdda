@@ -81,4 +81,4 @@ GROUP BY é como "separar em pilhas": cada pilha (grupo) vira **uma linha** no r
 
 ## Próxima Aula
 
-- **Aula 50:** SELECT — filtrando grupos com HAVING.
+- **Aula 51:** SELECT — filtrando grupos com HAVING.

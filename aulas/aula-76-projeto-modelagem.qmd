@@ -1,0 +1,65 @@
+---
+title: "Aula 76 — Projeto Final: Modelagem de um Negócio"
+---
+
+## Objetivos da Aula
+
+- Iniciar o **projeto final**.
+- Escolher um **negócio** e levantar requisitos.
+- Produzir o **DER** e o **minimundo**.
+
+## O Projeto Final
+
+- **Trabalho** que integra todo o curso.
+- Modelagem **completa** de um negócio.
+- Entrega com **documentação**.
+
+## Escolhendo o Negócio
+
+- Loja, escola, clínica, biblioteca.
+- Restaurante, academia, oficina.
+- Um negócio **real** ou **realista**.
+
+## Etapas do Dia
+
+- **1.** Escolher o **negócio**.
+- **2.** Escrever o **minimundo**.
+- **3.** Levantar **requisitos**.
+- **4.** Esboçar o **DER**.
+
+## Requisitos a Considerar
+
+- Quais dados **guardar**?
+- Que **relatórios** são precisos?
+- Que **regras** existem?
+
+## Documentação
+
+- **Minimundo** claro.
+- **DER** com entidades, atributos, chaves e cardinalidades.
+- Justificativa das **decisões**.
+
+::: {.callout-note}
+O projeto final mostra se você consegue **percorrer todo o caminho**: do entendimento do negócio até o banco funcionando.
+:::
+
+## Checklist
+
+- [ ] Negócio escolhido
+- [ ] Minimundo escrito
+- [ ] Entidades e atributos
+- [ ] Cardinalidades definidas
+
+## Resumo da Aula
+
+- Iniciamos o **projeto final**.
+- Escolhemos negócio e **requisitos**.
+- Esboçamos o **DER**.
+
+## Referências
+
+- HEUSER, C. A. *Projeto de Banco de Dados*. Bookman.
+
+## Próxima Aula
+
+- **Aula 77:** Projeto final — implementação no banco.

@@ -95,4 +95,4 @@ O padrão `LEFT JOIN ... WHERE ... IS NULL` é a receita clássica para achar "q
 
 ## Próxima Aula
 
-- **Aula 70:** Subconsultas (subqueries).
+- **Aula 71:** Subconsultas (subqueries).

@@ -75,4 +75,4 @@ Um bom minimundo é **claro** o suficiente para outra pessoa desenhar o modelo s
 
 ## Próxima Aula
 
-- **Aula 10:** Modelo Entidade-Relacionamento — visão geral.
+- **Aula 11:** Modelo Entidade-Relacionamento — visão geral.

@@ -1,0 +1,69 @@
+---
+title: "Aula 33 — Criando Tabelas: o Papel das Chaves Estrangeiras"
+---
+
+## Objetivos da Aula
+
+- Definir uma **chave estrangeira** (FK).
+- Entender a **integridade referencial**.
+- Ligar tabelas na prática.
+
+## Relembrando
+
+- A **FK** referencia a chave primária de outra tabela.
+- Cria o **relacionamento**.
+- Garante **integridade referencial**.
+
+## Definindo uma FK
+
+```sql
+CREATE TABLE Pedido (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    data DATE,
+    id_cliente INT,
+    FOREIGN KEY (id_cliente)
+        REFERENCES Cliente(id)
+);
+```
+
+## O que a FK Garante
+
+- Não se cria pedido de cliente **inexistente**.
+- Não se apaga cliente com pedidos (por padrão).
+- Mantém a **coerência**.
+
+## Ações Referenciais
+
+- `ON DELETE CASCADE` — apaga os filhos.
+- `ON DELETE SET NULL` — anula a referência.
+- `ON DELETE RESTRICT` — bloqueia.
+- Definem o comportamento ao excluir/atualizar.
+
+## Nomeando a FK
+
+- Dar um **nome** ajuda a gerenciar.
+- Ex.: `CONSTRAINT fk_pedido_cliente`.
+
+::: {.callout-note}
+A **integridade referencial** é o que impede um pedido "órfão", apontando para um cliente que não existe.
+:::
+
+## Prática
+
+- Crie `Cliente` e `Pedido`.
+- Ligue `Pedido.id_cliente` a `Cliente.id`.
+- Verifique a FK no `DESCRIBE`.
+
+## Resumo da Aula
+
+- **FOREIGN KEY** cria a ligação entre tabelas.
+- `REFERENCES` aponta para a chave primária.
+- Ações referenciais definem o que fazer ao **excluir**.
+
+## Referências
+
+- ROB, P.; CORONEL, C. *Sistemas de Banco de Dados*. Cengage.
+
+## Próxima Aula
+
+- **Aula 34:** Criando tabelas e estabelecendo relacionamentos.

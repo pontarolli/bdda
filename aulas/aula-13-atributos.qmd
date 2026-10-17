@@ -1,0 +1,100 @@
+---
+title: "Aula 13 — Atributos no Modelo ER"
+---
+
+## Objetivos da Aula
+
+- Compreender o conceito de **atributo**.
+- Conhecer os **tipos** de atributos.
+- Representar atributos corretamente.
+
+## O que é um Atributo?
+
+- Uma **característica** de uma entidade.
+- Ex.: nome, idade, telefone de um Aluno.
+- Descreve a entidade.
+
+## Representação
+
+- **Elipse** ligada à entidade.
+- Nome em minúsculo.
+- Ex.: (Aluno) — (nome).
+
+## Tipos de Atributos
+
+- **Simples:** um valor.
+- **Composto:** subdividido.
+- **Multivalorado:** vários valores.
+- **Derivado:** calculado.
+
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\footnotesize,node distance=6mm and 12mm,
+  s/.style={draw,ellipse,fill=green!12,inner sep=2pt,minimum height=0.6cm},
+  m/.style={draw,double,ellipse,fill=green!12,inner sep=2pt,minimum height=0.6cm},
+  d/.style={draw,dashed,ellipse,fill=green!12,inner sep=2pt,minimum height=0.6cm}]
+  \node[s] (a) {simples};
+  \node[m,right=of a] (b) {multivalorado};
+  \node[d,right=of b] (c) {derivado};
+\end{tikzpicture}
+\end{center}
+```
+
+## Atributo Composto
+
+- Pode ser **dividido**.
+- Ex.: **endereço** → rua, número, cidade.
+- Representado por elipses **ligadas**.
+
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\footnotesize,
+  e/.style={draw,ellipse,fill=green!12,inner sep=2pt,minimum height=0.6cm}]
+  \node[e] (end) {endereço};
+  \node[e,below left=11mm and 12mm of end] (rua) {rua};
+  \node[e,below=11mm of end] (num) {número};
+  \node[e,below right=11mm and 12mm of end] (cid) {cidade};
+  \draw (end) -- (rua); \draw (end) -- (num); \draw (end) -- (cid);
+\end{tikzpicture}
+\end{center}
+```
+
+## Atributo Multivalorado
+
+- Tem **vários valores**.
+- Ex.: **telefones** de uma pessoa.
+- Representado por **elipse dupla**.
+
+## Atributo Derivado
+
+- Obtido a partir de **outros**.
+- Ex.: **idade** (a partir da data de nascimento).
+- Representado por **elipse tracejada**.
+
+::: {.callout-note}
+Nem toda característica vira atributo: só o que o negócio realmente precisa **guardar**.
+:::
+
+## Atributo Identificador
+
+- Identifica **unicamente** a entidade.
+- Anotado com **sublinhado**.
+- Será a **chave primária**.
+
+## Resumo da Aula
+
+- **Atributos** descrevem as entidades.
+- Podem ser **simples, compostos, multivalorados, derivados**.
+- O **identificador** será a chave primária.
+
+## Atividade Rápida
+
+- Classifique os atributos de um **cliente**.
+
+## Referências
+
+- HEUSER, C. A. *Projeto de Banco de Dados*. Bookman.
+
+## Próxima Aula
+
+- **Aula 14:** Relacionamentos no modelo ER.
