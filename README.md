@@ -58,17 +58,19 @@ O componente curricular aborda fundamentos e conceitos de banco de dados e as t�
 
 ### Conteúdo Programático
 
-- Introdução a Banco de Dados, Modelo Conceitual, Modelo Lógico e Modelo Físico;
-- Bases da análise de requisitos para elaboração do modelo conceitual;
-- Modelo Entidade-Relacionamento;
-- Modelo Relacional;
-- Mapeamento do Modelo Entidade-Relacionamento para o Modelo Relacional;
-- Linguagem SQL;
-- DDL — *Data Definition Language*;
-- DML — *Data Manipulation Language*;
-- Instalação e configuração de um sistema gerenciador de bancos de dados;
-- Acesso ao banco de dados utilizando clientes modo texto e modo gráfico;
-- Acesso ao banco de dados por uma aplicação.
+> Cada item indica entre parênteses as semanas (`sNN`) em que é trabalhado. Marque o checkbox ao confirmar a cobertura.
+
+- [ ] Introdução a Banco de Dados, Modelo Conceitual, Modelo Lógico e Modelo Físico (s01 a s04, retomado em s31)
+- [ ] Bases da análise de requisitos para elaboração do modelo conceitual (s04)
+- [ ] Modelo Entidade-Relacionamento (s06 a s09)
+- [ ] Modelo Relacional (s31)
+- [ ] Mapeamento do Modelo Entidade-Relacionamento para o Modelo Relacional (s31)
+- [ ] Linguagem SQL (s21 a s37)
+- [ ] DDL — *Data Definition Language* (s31 a s33)
+- [ ] DML — *Data Manipulation Language* (s21 a s29)
+- [ ] Instalação e configuração de um sistema gerenciador de bancos de dados (s11 a s14)
+- [ ] Acesso ao banco de dados utilizando clientes modo texto e modo gráfico (s13)
+- [ ] Acesso ao banco de dados por uma aplicação (s19, s37)
 
 ### Avaliação
 
