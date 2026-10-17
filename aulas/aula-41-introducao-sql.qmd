@@ -28,6 +28,18 @@ title: "Aula 41 — Revisão e Introdução à Linguagem SQL"
 - **DCL** — controle (GRANT, REVOKE).
 - **TCL** — transações (COMMIT, ROLLBACK).
 
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\footnotesize,node distance=10mm and 10mm,
+  c/.style={draw,rounded corners,fill=blue!10,minimum width=3.3cm,minimum height=1cm,align=center,inner sep=4pt}]
+  \node[c] (ddl) {DDL\\ \scriptsize CREATE, ALTER, DROP};
+  \node[c,right=of ddl] (dml) {DML\\ \scriptsize SELECT, INSERT,\\ \scriptsize UPDATE, DELETE};
+  \node[c,below=of ddl] (dcl) {DCL\\ \scriptsize GRANT, REVOKE};
+  \node[c,below=of dml] (tcl) {TCL\\ \scriptsize COMMIT, ROLLBACK};
+\end{tikzpicture}
+\end{center}
+```
+
 ## SQL é Declarativa
 
 - Você diz **o quê** quer, não **como**.

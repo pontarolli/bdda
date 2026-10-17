@@ -27,6 +27,17 @@ title: "Aula 22 — Componentes e Arquitetura de um SGBD"
 - **Conceitual:** estrutura geral.
 - **Interno:** armazenamento físico.
 
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\small,node distance=6mm,
+  l/.style={draw,rounded corners,minimum width=8cm,minimum height=0.7cm,align=center}]
+  \node[l,fill=blue!12] (ext) {Nível Externo --- visões dos usuários};
+  \node[l,fill=green!12,below=of ext] (con) {Nível Conceitual --- estrutura geral};
+  \node[l,fill=gray!20,below=of con] (int) {Nível Interno --- armazenamento físico};
+\end{tikzpicture}
+\end{center}
+```
+
 ## Independência de Dados
 
 - Mudar o nível interno **sem** afetar o externo.

@@ -14,6 +14,17 @@ title: "Aula 29 — Tipos de Dados e Campos"
 - Afeta o **espaço** usado.
 - Afeta a **validação**.
 
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\footnotesize,node distance=7mm,
+  c/.style={draw,rounded corners,fill=blue!10,minimum width=2.3cm,minimum height=0.95cm,align=center,inner sep=3pt}]
+  \node[c] (n) {Numéricos\\ \scriptsize INT, DECIMAL};
+  \node[c,right=of n] (t) {Texto\\ \scriptsize CHAR, VARCHAR};
+  \node[c,right=of t] (d) {Datas\\ \scriptsize DATE, DATETIME};
+\end{tikzpicture}
+\end{center}
+```
+
 ## Tipos Numéricos
 
 - **INT:** inteiros.

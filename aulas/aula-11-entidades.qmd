@@ -38,6 +38,17 @@ title: "Aula 11 — Entidades e Tipos Formais de Representação"
 - **Retângulo duplo** = entidade fraca.
 - Nome no **singular**, maiúsculo inicial.
 
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\small,node distance=26mm,
+  e/.style={draw,fill=blue!10,minimum width=2.7cm,minimum height=0.9cm,align=center},
+  f/.style={draw,double,fill=blue!10,minimum width=2.7cm,minimum height=0.9cm,align=center}]
+  \node[e] (a) {Entidade forte};
+  \node[f,right=of a] (b) {Entidade fraca};
+\end{tikzpicture}
+\end{center}
+```
+
 ## Como Identificar Entidades
 
 - É um **substantivo** importante?

@@ -37,6 +37,31 @@ JOIN Pedido p ON p.id_cliente = c.id;
 - **RIGHT JOIN:** todas da direita.
 - **CROSS JOIN:** produto cartesiano.
 
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[scale=0.7,font=\scriptsize]
+  \begin{scope}
+    \clip (0,0) circle (1);
+    \fill[orange!45] (0.85,0) circle (1);
+  \end{scope}
+  \draw (0,0) circle (1); \draw (0.85,0) circle (1);
+  \node at (0.4,-1.5) {INNER};
+
+  \begin{scope}[xshift=3.6cm]
+    \fill[orange!45] (0,0) circle (1);
+    \draw (0,0) circle (1); \draw (0.85,0) circle (1);
+  \end{scope}
+  \node at (4.0,-1.5) {LEFT};
+
+  \begin{scope}[xshift=7.2cm]
+    \fill[orange!45] (0.85,0) circle (1);
+    \draw (0,0) circle (1); \draw (0.85,0) circle (1);
+  \end{scope}
+  \node at (7.6,-1.5) {RIGHT};
+\end{tikzpicture}
+\end{center}
+```
+
 ## Por que Usar Alias
 
 - `c` para Cliente, `p` para Pedido.

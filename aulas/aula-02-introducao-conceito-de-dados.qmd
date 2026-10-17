@@ -20,6 +20,19 @@ title: "Aula 2 — Introdução ao Conceito de Dados"
 - **Informação:** dado com **contexto**.
 - **Conhecimento:** informação **interpretada**.
 
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\small,node distance=10mm,
+  b/.style={draw,rounded corners,minimum width=2.5cm,minimum height=0.9cm,align=center}]
+  \node[b,fill=blue!12] (d) {Dado};
+  \node[b,fill=green!15,right=of d] (i) {Informação};
+  \node[b,fill=orange!20,right=of i] (c) {Conhecimento};
+  \draw[-{Latex}] (d) -- (i);
+  \draw[-{Latex}] (i) -- (c);
+\end{tikzpicture}
+\end{center}
+```
+
 ::: {.callout-note}
 `37` é um dado. "A temperatura é 37 °C" é informação. "Isso indica febre" é conhecimento.
 :::

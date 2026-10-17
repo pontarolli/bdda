@@ -28,6 +28,18 @@ title: "Aula 23 — Introdução à Linguagem DML"
 - **UPDATE** — atualizar.
 - **DELETE** — excluir.
 
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\small,node distance=10mm and 12mm,
+  c/.style={draw,rounded corners,fill=blue!10,minimum width=2.8cm,minimum height=0.9cm,align=center}]
+  \node[c] (i) {INSERT\\ \footnotesize inserir};
+  \node[c,right=of i] (s) {SELECT\\ \footnotesize consultar};
+  \node[c,below=of i] (u) {UPDATE\\ \footnotesize atualizar};
+  \node[c,below=of s] (d) {DELETE\\ \footnotesize excluir};
+\end{tikzpicture}
+\end{center}
+```
+
 ## DML x DDL
 
 - **DML:** mexe nos **dados**.

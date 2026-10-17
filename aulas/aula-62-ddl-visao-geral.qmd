@@ -20,12 +20,34 @@ title: "Aula 62 — DDL: Linguagem de Definição de Dados"
 - **DML:** dados (linhas).
 - DDL "constrói a casa"; DML "mobília".
 
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\footnotesize,node distance=24mm,
+  b/.style={draw,rounded corners,align=center,inner sep=6pt}]
+  \node[b,fill=blue!10] (d) {DDL\\ \scriptsize constrói a casa\\ \scriptsize (estrutura)};
+  \node[b,fill=orange!20,right=of d] (m) {DML\\ \scriptsize mobília\\ \scriptsize (dados)};
+\end{tikzpicture}
+\end{center}
+```
+
 ## Principais Comandos DDL
 
 - **CREATE** — cria.
 - **ALTER** — altera.
 - **DROP** — remove.
 - **TRUNCATE** — esvazia.
+
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\footnotesize,node distance=9mm and 12mm,
+  c/.style={draw,rounded corners,fill=blue!10,minimum width=2.6cm,minimum height=0.85cm,align=center}]
+  \node[c] (cr) {CREATE\\ \scriptsize cria};
+  \node[c,right=of cr] (al) {ALTER\\ \scriptsize altera};
+  \node[c,below=of cr] (dr) {DROP\\ \scriptsize remove};
+  \node[c,below=of al] (tr) {TRUNCATE\\ \scriptsize esvazia};
+\end{tikzpicture}
+\end{center}
+```
 
 ## Objetos do Banco
 

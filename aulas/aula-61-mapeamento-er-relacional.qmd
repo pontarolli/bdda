@@ -20,6 +20,17 @@ title: "Aula 61 — Mapeamento do Modelo ER para o Relacional"
 - Os atributos viram **colunas**.
 - O identificador vira **chave primária**.
 
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\footnotesize,node distance=22mm,
+  b/.style={draw,rounded corners,align=center,inner sep=6pt}]
+  \node[b,fill=blue!10] (e) {Entidade\\ \scriptsize (retângulo)};
+  \node[b,fill=green!12,right=of e] (t) {Tabela\\ \scriptsize (colunas + PK)};
+  \draw[-{Latex}] (e) -- (t);
+\end{tikzpicture}
+\end{center}
+```
+
 ## Regra 2 — Relacionamentos 1:N
 
 - A chave do lado "**1**" vira **FK** no lado "**N**".

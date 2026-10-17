@@ -38,6 +38,19 @@ title: "Aula 15 — Chave Primária: Conceito"
 - Chamado de **atributo identificador**.
 - Cada entidade deve ter um.
 
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\small,
+  e/.style={draw,fill=blue!10,minimum width=3cm,minimum height=0.9cm,align=center},
+  a/.style={draw,ellipse,fill=green!12,inner sep=2pt,minimum height=0.6cm}]
+  \node[e] (al) {Aluno};
+  \node[a,above=of al] (mat) {\underline{matrícula}};
+  \node[a,below=of al] (nome) {nome};
+  \draw (al) -- (mat); \draw (al) -- (nome);
+\end{tikzpicture}
+\end{center}
+```
+
 ## Chave Natural x Surrogada
 
 - **Natural:** existe no mundo real (CPF).

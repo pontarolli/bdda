@@ -20,6 +20,18 @@ title: "Aula 21 — Introdução aos Sistemas Gerenciadores de Banco de Dados"
 - Cria, armazena, consulta e protege os dados.
 - Intermedeia o **usuário** e os **dados**.
 
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\small,node distance=13mm,
+  b/.style={draw,rounded corners,minimum width=4.5cm,minimum height=0.85cm,align=center}]
+  \node[b,fill=blue!12] (u) {Usuário / Aplicação};
+  \node[b,fill=orange!25,below=of u] (s) {\textbf{SGBD}};
+  \node[b,fill=green!12,below=of s] (d) {Banco de Dados};
+  \draw[<->] (u) -- (s); \draw[<->] (s) -- (d);
+\end{tikzpicture}
+\end{center}
+```
+
 ## Principais Funções
 
 - **Armazenar** os dados.

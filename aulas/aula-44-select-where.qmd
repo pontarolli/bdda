@@ -14,6 +14,19 @@ title: "Aula 44 — SELECT ... WHERE: Filtros Básicos"
 - O **WHERE** seleciona **linhas**.
 - Aplica uma **condição**.
 
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\footnotesize,node distance=12mm,
+  b/.style={draw,rounded corners,align=center,inner sep=5pt}]
+  \node[b,fill=blue!10] (t) {Todas as linhas};
+  \node[b,fill=orange!20,right=of t] (w) {WHERE condição};
+  \node[b,fill=green!12,right=of w] (r) {Linhas que\\atendem};
+  \draw[-{Latex}] (t) -- (w);
+  \draw[-{Latex}] (w) -- (r);
+\end{tikzpicture}
+\end{center}
+```
+
 ## Sintaxe
 
 ```sql

@@ -17,6 +17,18 @@ SELECT * FROM Aluno WHERE idade BETWEEN 15 AND 18;
 - Intervalo **inclusivo**.
 - Equivale a `>= 15 AND <= 18`.
 
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\footnotesize]
+  \draw[<->] (0,0) -- (6.2,0);
+  \foreach \x/\l in {0.2/14,1.9/15,3.7/18,5.6/20}
+     \draw (\x,0) -- (\x,-0.15) node[below] {\l};
+  \draw[ultra thick,orange] (1.9,0) -- (3.7,0);
+  \node[above,font=\scriptsize] at (2.8,0.05) {\textbf{BETWEEN 15 AND 18}};
+\end{tikzpicture}
+\end{center}
+```
+
 ## IN
 
 ```sql

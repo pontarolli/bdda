@@ -35,6 +35,17 @@ idade INT CHECK (idade >= 0)
 - Impõe uma **condição**.
 - Valida o valor na inserção.
 
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\footnotesize,node distance=10mm,
+  b/.style={draw,rounded corners,minimum width=2.1cm,minimum height=0.8cm,align=center}]
+  \node[b,fill=green!18] (ok) {idade 18\\ \scriptsize válido};
+  \node[b,fill=red!15,right=of ok] (no) {idade $-5$\\ \scriptsize inválido};
+  \node[above,font=\scriptsize] at ($(ok)!0.5!(no)+(0,0.55)$) {CHECK (idade >= 0)};
+\end{tikzpicture}
+\end{center}
+```
+
 ## DEFAULT
 
 ```sql

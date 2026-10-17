@@ -25,6 +25,17 @@ LEFT JOIN Pedido p ON p.id_cliente = c.id;
 - **Todos** os clientes aparecem.
 - Sem pedido → colunas do pedido ficam **NULL**.
 
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[scale=0.75,font=\footnotesize]
+  \fill[orange!45] (0,0) circle (1);
+  \draw (0,0) circle (1) node[left=2mm] {A};
+  \draw (0.85,0) circle (1) node[right=2mm] {B};
+  \node[below] at (0.42,-1.25) {LEFT: tudo de A};
+\end{tikzpicture}
+\end{center}
+```
+
 ## RIGHT JOIN
 
 ```sql
@@ -35,6 +46,17 @@ RIGHT JOIN Pedido p ON p.id_cliente = c.id;
 
 - **Todos** os pedidos aparecem.
 - Mesmo sem cliente correspondente.
+
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[scale=0.75,font=\footnotesize]
+  \fill[orange!45] (0.85,0) circle (1);
+  \draw (0,0) circle (1) node[left=2mm] {A};
+  \draw (0.85,0) circle (1) node[right=2mm] {B};
+  \node[below] at (0.42,-1.25) {RIGHT: tudo de B};
+\end{tikzpicture}
+\end{center}
+```
 
 ## O que é NULL aqui
 

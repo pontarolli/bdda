@@ -42,6 +42,17 @@ title: "Aula 6 — Tabelas e Relacionamentos: Abordagem Lúdica"
 - Duas tabelas: **Aluno** e **Curso**.
 - Ligadas por **id_curso**.
 
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\footnotesize,
+  t/.style={draw,rounded corners,fill=blue!10,align=center,inner sep=4pt}]
+  \node[t] (al) {Aluno\\ \scriptsize matrícula, nome, id\_curso};
+  \node[t,right=26mm of al,fill=green!12] (cu) {Curso\\ \scriptsize id, nome};
+  \draw[-{Latex}] (al.east) -- (cu.west) node[midway,above,font=\scriptsize]{id\_curso};
+\end{tikzpicture}
+\end{center}
+```
+
 ::: {.callout-note}
 Relacionar tabelas é como ligar pontos: cada tabela guarda "uma parte da história" e as chaves fazem a ponte.
 :::

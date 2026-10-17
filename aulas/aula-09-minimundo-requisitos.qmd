@@ -52,6 +52,17 @@ Um bom minimundo é **claro** o suficiente para outra pessoa desenhar o modelo s
 - É o **primeiro passo** do projeto.
 - Vamos converter nas próximas aulas.
 
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\footnotesize,node distance=18mm,
+  b/.style={draw,rounded corners,minimum height=0.9cm,align=center,inner sep=5pt}]
+  \node[b,fill=green!12] (t) {Minimundo\\(texto)};
+  \node[b,right=of t,align=center] (der) {DER\\(entidades, atributos,\\relacionamentos)};
+  \draw[-{Latex}] (t) -- (der);
+\end{tikzpicture}
+\end{center}
+```
+
 ## Resumo da Aula
 
 - **Minimundo** é a descrição textual do negócio.

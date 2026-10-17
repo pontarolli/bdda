@@ -31,6 +31,19 @@ HAVING COUNT(*) > 5;
 - **HAVING:** filtra grupos **depois**.
 - Podem aparecer **juntos**.
 
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\footnotesize,node distance=8mm,
+  b/.style={draw,rounded corners,align=center,inner sep=4pt}]
+  \node[b,fill=blue!10] (l) {linhas};
+  \node[b,fill=orange!20,right=of l] (w) {WHERE\\ \scriptsize filtra linhas};
+  \node[b,fill=green!12,right=of w] (g) {GROUP BY\\ \scriptsize agrupa};
+  \node[b,fill=red!15,right=of g] (h) {HAVING\\ \scriptsize filtra grupos};
+  \draw[-{Latex}] (l)--(w); \draw[-{Latex}] (w)--(g); \draw[-{Latex}] (g)--(h);
+\end{tikzpicture}
+\end{center}
+```
+
 ## Exemplo Completo
 
 ```sql

@@ -14,6 +14,19 @@ title: "Aula 71 — Views e Índices"
 - Funciona como uma **tabela virtual**.
 - Não guarda os dados em si.
 
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\footnotesize,node distance=5mm,
+  b/.style={draw,rounded corners,align=center,inner sep=5pt}]
+  \node[b,fill=green!12] (v) {View (tabela virtual)};
+  \node[b,fill=blue!10,below=of v] (q) {Consulta salva\\ \scriptsize (SELECT ... JOIN ...)};
+  \node[b,fill=gray!15,below=of q] (t) {Tabelas base};
+  \draw[-{Latex}] (t) -- (q);
+  \draw[-{Latex}] (q) -- (v);
+\end{tikzpicture}
+\end{center}
+```
+
 ## Criando uma View
 
 ```sql
@@ -38,6 +51,17 @@ GROUP BY c.nome;
 - Estrutura que **acelera** as buscas.
 - Como o índice de um **livro**.
 - Criado em colunas muito **consultadas**.
+
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\footnotesize,node distance=24mm,
+  b/.style={draw,rounded corners,align=center,inner sep=6pt}]
+  \node[b,fill=blue!10] (t) {Tabela\\ \scriptsize (busca lenta)};
+  \node[b,fill=green!12,right=of t] (i) {Índice\\ \scriptsize (busca rápida)};
+  \draw[-{Latex}] (t) -- node[above,font=\scriptsize]{CREATE INDEX} (i);
+\end{tikzpicture}
+\end{center}
+```
 
 ## Criando um Índice
 

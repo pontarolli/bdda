@@ -27,6 +27,23 @@ CREATE TABLE Cliente (
 - **email:** único.
 - **ativo:** com valor padrão.
 
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\footnotesize,node distance=0mm,
+  c/.style={draw,minimum width=2.9cm,minimum height=0.5cm,align=center,fill=blue!10},
+  r/.style={font=\scriptsize,align=left,right=5mm}]
+  \node[c] (id) {id INT};
+  \node[c,below=of id] (no) {nome VARCHAR};
+  \node[c,below=of no] (em) {email VARCHAR};
+  \node[c,below=of em] (at) {ativo BOOLEAN};
+  \node[font=\scriptsize,right=5mm of id] (idr) {PRIMARY KEY, AUTO\_INCREMENT};
+  \node[font=\scriptsize,right=5mm of no] (nor) {NOT NULL};
+  \node[font=\scriptsize,right=5mm of em] (emr) {UNIQUE};
+  \node[font=\scriptsize,right=5mm of at] (atr) {DEFAULT TRUE};
+\end{tikzpicture}
+\end{center}
+```
+
 ## Escolhendo Tipos
 
 - Números: **INT, DECIMAL**.

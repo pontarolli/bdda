@@ -26,6 +26,17 @@ title: "Aula 34 — Integridade Referencial na Prática"
 - **CASCADE:** propaga a ação.
 - **SET NULL:** anula a referência.
 
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\footnotesize,node distance=7mm,
+  c/.style={draw,rounded corners,minimum width=2.6cm,minimum height=1cm,align=center,inner sep=3pt}]
+  \node[c,fill=red!15] (r) {RESTRICT\\ \scriptsize bloqueia};
+  \node[c,fill=orange!20,right=of r] (ca) {CASCADE\\ \scriptsize propaga};
+  \node[c,fill=green!15,right=of ca] (sn) {SET NULL\\ \scriptsize anula};
+\end{tikzpicture}
+\end{center}
+```
+
 ## Exemplo
 
 ```sql

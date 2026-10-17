@@ -33,11 +33,37 @@ title: "Aula 10 — Modelo Entidade-Relacionamento: Visão Geral"
 - **Losango:** relacionamento.
 - **Linhas:** conexões.
 
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[node distance=6mm and 14mm,font=\small]
+  \node[ent] (e) {Entidade};
+  \node[att,right=of e] (a) {Atributo};
+  \node[rel,right=of a] (r) {Relac.};
+\end{tikzpicture}
+\end{center}
+```
+
 ## Exemplo
 
 - Cliente — realiza — Pedido.
 - Cliente tem atributos **nome, telefone**.
 - Pedido tem atributo **data**.
+
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[node distance=14mm and 20mm,font=\small]
+  \node[ent] (cli) {Cliente};
+  \node[rel,right=of cli] (rel) {realiza};
+  \node[ent,right=of rel] (ped) {Pedido};
+  \node[att,above=of cli] (nome) {nome};
+  \node[att,below=of cli] (fone) {telefone};
+  \node[att,above=of ped] (data) {data};
+  \draw (cli) -- (rel);  \draw (rel) -- (ped);
+  \draw (cli) -- (nome); \draw (cli) -- (fone);
+  \draw (ped) -- (data);
+\end{tikzpicture}
+\end{center}
+```
 
 ::: {.callout-note}
 O modelo ER é a "planta" do banco: pensamos no **negócio**, não ainda em tabelas ou SQL.

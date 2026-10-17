@@ -14,6 +14,17 @@ title: "Aula 70 — Subconsultas (Subqueries)"
 - O resultado interno alimenta o externo.
 - Escrita entre **parênteses**.
 
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\footnotesize,node distance=5mm,
+  b/.style={draw,rounded corners,align=center,inner sep=5pt}]
+  \node[b,fill=blue!10] (o) {Consulta externa\\ \scriptsize (usa o resultado)};
+  \node[b,fill=green!12,below=of o] (i) {Consulta interna\\ \scriptsize (roda primeiro)};
+  \draw[-{Latex}] (i) -- (o);
+\end{tikzpicture}
+\end{center}
+```
+
 ## Exemplo em WHERE
 
 ```sql
