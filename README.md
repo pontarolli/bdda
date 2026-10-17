@@ -58,19 +58,19 @@ O componente curricular aborda fundamentos e conceitos de banco de dados e as t�
 
 ### Conteúdo Programático
 
-> Cada item indica entre parênteses as semanas (`sNN`) em que é trabalhado. Marque o checkbox ao confirmar a cobertura.
+> Lista ordenada pela semana em que cada tópico é trabalhado (segue a ordem das aulas, de `s01` a `s40`). Os valores entre parênteses indicam as semanas correspondentes; marque o checkbox ao confirmar a cobertura.
 
-- [ ] Introdução a Banco de Dados, Modelo Conceitual, Modelo Lógico e Modelo Físico (s01 a s04, retomado em s31)
-- [ ] Bases da análise de requisitos para elaboração do modelo conceitual (s04)
+- [ ] Introdução a Banco de Dados, Modelo Conceitual, Modelo Lógico e Modelo Físico (s01 a s04)
+- [ ] Bases da análise de requisitos para elaboração do modelo conceitual (s04 a s06)
 - [ ] Modelo Entidade-Relacionamento (s06 a s09)
-- [ ] Modelo Relacional (s31)
-- [ ] Mapeamento do Modelo Entidade-Relacionamento para o Modelo Relacional (s31)
-- [ ] Linguagem SQL (s21 a s37)
-- [ ] DDL — *Data Definition Language* (s31 a s33)
-- [ ] DML — *Data Manipulation Language* (s21 a s29)
 - [ ] Instalação e configuração de um sistema gerenciador de bancos de dados (s11 a s14)
-- [ ] Acesso ao banco de dados utilizando clientes modo texto e modo gráfico (s13)
+- [ ] Acesso ao banco de dados utilizando clientes modo texto e modo gráfico (s13 a s14)
+- [ ] Modelo Relacional (s16 a s18, s31)
 - [ ] Acesso ao banco de dados por uma aplicação (s19, s37)
+- [ ] Linguagem SQL (s21 a s29)
+- [ ] DML — *Data Manipulation Language* (s21 a s29)
+- [ ] DDL — *Data Definition Language* (s31 a s33)
+- [ ] Mapeamento do Modelo Entidade-Relacionamento para o Modelo Relacional (s31 a s33)
 
 ### Avaliação
 
